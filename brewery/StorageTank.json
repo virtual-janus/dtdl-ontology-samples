@@ -1,0 +1,18 @@
+{
+    "@id": "dtmi:example:brewery:StorageTank;1",
+    "@type": "Interface",
+    "displayName": "Storage Tank",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "volume",
+        "schema": "double"
+      }
+    ]
+  }
+  

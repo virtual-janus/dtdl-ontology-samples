@@ -1,0 +1,28 @@
+{
+    "@id": "dtmi:example:brewery:Fermenter;1",
+    "@type": "Interface",
+    "displayName": "Fermenter",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "pressure",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "volume",
+        "schema": "double"
+      },
+      {
+        "@type": "Component",
+        "name": "batch",
+        "schema": "dtmi:example:brewery:Batch;1"
+      }
+    ]
+  }
+  

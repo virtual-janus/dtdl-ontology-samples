@@ -1,0 +1,18 @@
+{
+    "@id": "dtmi:example:brewery:BottlingLine;1",
+    "@type": "Interface",
+    "displayName": "Bottling Line",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "status",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "bottlesPerMinute",
+        "schema": "integer"
+      }
+    ]
+  }
+  

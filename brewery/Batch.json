@@ -1,0 +1,36 @@
+{
+    "@id": "dtmi:example:brewery:Batch;1",
+    "@type": "Interface",
+    "displayName": "Batch",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "batchId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "startTime",
+        "schema": "dateTime"
+      },
+      {
+        "@type": "Property",
+        "name": "endTime",
+        "schema": "dateTime"
+      },
+      {
+        "@type": "Property",
+        "name": "status",
+        "schema": {
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            { "name": "Fermenting", "value": "fermenting" },
+            { "name": "Completed", "value": "completed" },
+            { "name": "Cleaning", "value": "cleaning" }
+          ]
+        }
+      }
+    ]
+  }
+  

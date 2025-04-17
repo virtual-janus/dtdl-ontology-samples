@@ -1,0 +1,28 @@
+{
+    "@id": "dtmi:example:brewery:Brewery;1",
+    "@type": "Interface",
+    "displayName": "Brewery",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "brewKettles",
+        "target": "dtmi:example:brewery:BrewKettle;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "fermenters",
+        "target": "dtmi:example:brewery:Fermenter;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "storageTanks",
+        "target": "dtmi:example:brewery:StorageTank;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "bottlingLines",
+        "target": "dtmi:example:brewery:BottlingLine;1"
+      }
+    ]
+  }
+  

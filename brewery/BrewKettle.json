@@ -1,0 +1,23 @@
+{
+    "@id": "dtmi:example:brewery:BrewKettle;1",
+    "@type": "Interface",
+    "displayName": "Brew Kettle",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "volume",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "status",
+        "schema": "string"
+      }
+    ]
+  }
+  
