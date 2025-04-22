@@ -1,0 +1,25 @@
+{
+  "@id": "dtmi:example:Room;1",
+  "@type": "Interface",
+  "displayName": "Room Model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "hasThermometer",
+      "target": "dtmi:example:Thermometer;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasFan",
+      "target": "dtmi:example:Fan;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasAirCon",
+      "target": "dtmi:example:AirCon;1"
+    }
+  ],
+  "extends": [
+  ]
+}

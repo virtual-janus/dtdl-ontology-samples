@@ -1,0 +1,13 @@
+{
+  "@id": "dtmi:example:Thermometer;1",
+  "@type": "Interface",
+  "displayName": "Thermometer Interface Model",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "temperature",
+      "schema": "double"
+    }
+  ]
+}
