@@ -1,6 +1,36 @@
 [
   {
     "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:BaseHopper;1",
+    "@type": "Interface",
+    "displayName": "Base Hopper",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "itemReceived",
+        "schema": "boolean",
+        "displayName": "Item Received"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:HopperA;1",
+    "@type": "Interface",
+    "displayName": "Hopper A",
+    "extends": "dtmi:example:BaseHopper;1",
+    "contents": []
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:HopperB;1",
+    "@type": "Interface",
+    "displayName": "Hopper B",
+    "extends": "dtmi:example:BaseHopper;1",
+    "contents": []
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:ConveyorBelt;1",
     "@type": "Interface",
     "displayName": "Conveyor Belt",
@@ -56,34 +86,6 @@
           "schema": "string"
         },
         "displayName": "Pick and Sort Item"
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:HopperA;1",
-    "@type": "Interface",
-    "displayName": "Hopper A",
-    "contents": [
-      {
-        "@type": "Telemetry",
-        "name": "itemReceived",
-        "schema": "boolean",
-        "displayName": "Item Received"
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:HopperB;1",
-    "@type": "Interface",
-    "displayName": "Hopper B",
-    "contents": [
-      {
-        "@type": "Telemetry",
-        "name": "itemReceived",
-        "schema": "boolean",
-        "displayName": "Item Received"
       }
     ]
   },
