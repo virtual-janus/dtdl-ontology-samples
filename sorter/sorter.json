@@ -31,39 +31,10 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:Grabber;1",
-    "@type": "Interface",
-    "displayName": "Grabber",
-    "contents": [
-      {
-        "@type": "Telemetry",
-        "name": "isGripping",
-        "schema": "boolean",
-        "displayName": "Is Gripping"
-      },
-      {
-        "@type": "Command",
-        "name": "open",
-        "displayName": "Open Grabber"
-      },
-      {
-        "@type": "Command",
-        "name": "close",
-        "displayName": "Close Grabber"
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:RoboticArm;1",
     "@type": "Interface",
     "displayName": "Robotic Arm",
     "contents": [
-      {
-        "@type": "Component",
-        "name": "grabber",
-        "schema": "dtmi:example:Grabber;1"
-      },
       {
         "@type": "Telemetry",
         "name": "detectedColor",
@@ -75,6 +46,22 @@
         "name": "sortedToHopper",
         "schema": "string",
         "displayName": "Sorted To Hopper"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "isGripping",
+        "schema": "boolean",
+        "displayName": "Is Gripping"
+      },
+      {
+        "@type": "Command",
+        "name": "openGrabber",
+        "displayName": "Open Grabber"
+      },
+      {
+        "@type": "Command",
+        "name": "closeGrabber",
+        "displayName": "Close Grabber"
       },
       {
         "@type": "Command",
