@@ -31,28 +31,25 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:ConveyorBelt;1",
+    "@id": "dtmi:example:Grabber;1",
     "@type": "Interface",
-    "displayName": "Conveyor Belt",
+    "displayName": "Grabber",
     "contents": [
       {
         "@type": "Telemetry",
-        "name": "itemDetected",
+        "name": "isGripping",
         "schema": "boolean",
-        "displayName": "Item Detected"
+        "displayName": "Is Gripping"
       },
       {
-        "@type": "Relationship",
-        "name": "feeds",
-        "target": "dtmi:example:RoboticArm;1",
-        "displayName": "Feeds Robotic Arm",
-        "properties": [
-          {
-            "@type": "Property",
-            "name": "conveyorSpeed",
-            "schema": "double"
-          }
-        ]
+        "@type": "Command",
+        "name": "open",
+        "displayName": "Open Grabber"
+      },
+      {
+        "@type": "Command",
+        "name": "close",
+        "displayName": "Close Grabber"
       }
     ]
   },
@@ -62,6 +59,11 @@
     "@type": "Interface",
     "displayName": "Robotic Arm",
     "contents": [
+      {
+        "@type": "Component",
+        "name": "grabber",
+        "schema": "dtmi:example:Grabber;1"
+      },
       {
         "@type": "Telemetry",
         "name": "detectedColor",
@@ -86,6 +88,33 @@
           "schema": "string"
         },
         "displayName": "Pick and Sort Item"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:ConveyorBelt;1",
+    "@type": "Interface",
+    "displayName": "Conveyor Belt",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "itemDetected",
+        "schema": "boolean",
+        "displayName": "Item Detected"
+      },
+      {
+        "@type": "Relationship",
+        "name": "feeds",
+        "target": "dtmi:example:RoboticArm;1",
+        "displayName": "Feeds Robotic Arm",
+        "properties": [
+          {
+            "@type": "Property",
+            "name": "conveyorSpeed",
+            "schema": "double"
+          }
+        ]
       }
     ]
   },
