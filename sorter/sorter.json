@@ -1,40 +1,130 @@
-{
-  "@context": "dtmi:dtdl:context;2",
-  "@id": "dtmi:example:RoboticSortingSystem;1",
-  "@type": "Interface",
-  "displayName": "Robotic Sorting System",
-  "contents": [
-    {
-      "@type": "Component",
-      "name": "conveyorBelt",
-      "schema": "dtmi:example:ConveyorBelt;1"
-    },
-    {
-      "@type": "Component",
-      "name": "roboticArm",
-      "schema": "dtmi:example:RoboticArm;1"
-    },
-    {
-      "@type": "Component",
-      "name": "hopperA",
-      "schema": "dtmi:example:HopperA;1"
-    },
-    {
-      "@type": "Component",
-      "name": "hopperB",
-      "schema": "dtmi:example:HopperB;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "sortsIntoA",
-      "target": "dtmi:example:HopperA;1",
-      "displayName": "Sorts Into Hopper A"
-    },
-    {
-      "@type": "Relationship",
-      "name": "sortsIntoB",
-      "target": "dtmi:example:HopperB;1",
-      "displayName": "Sorts Into Hopper B"
-    }
-  ]
-}
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:ConveyorBelt;1",
+    "@type": "Interface",
+    "displayName": "Conveyor Belt",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "itemDetected",
+        "schema": "boolean",
+        "displayName": "Item Detected"
+      },
+      {
+        "@type": "Relationship",
+        "name": "feeds",
+        "target": "dtmi:example:RoboticArm;1",
+        "displayName": "Feeds",
+        "properties": [
+          {
+            "@type": "Property",
+            "name": "conveyorSpeed",
+            "schema": "double"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:RoboticArm;1",
+    "@type": "Interface",
+    "displayName": "Robotic Arm",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "detectedColor",
+        "schema": "string",
+        "displayName": "Detected Color"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "sortedToHopper",
+        "schema": "string",
+        "displayName": "Sorted To Hopper"
+      },
+      {
+        "@type": "Command",
+        "name": "pickAndSortItem",
+        "request": {
+          "name": "color",
+          "schema": "string"
+        },
+        "response": {
+          "name": "hopper",
+          "schema": "string"
+        },
+        "displayName": "Pick and Sort Item"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:HopperA;1",
+    "@type": "Interface",
+    "displayName": "Hopper A",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "itemReceived",
+        "schema": "boolean",
+        "displayName": "Item Received"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:HopperB;1",
+    "@type": "Interface",
+    "displayName": "Hopper B",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "itemReceived",
+        "schema": "boolean",
+        "displayName": "Item Received"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:RoboticSortingSystem;1",
+    "@type": "Interface",
+    "displayName": "Robotic Sorting System",
+    "contents": [
+      {
+        "@type": "Component",
+        "name": "conveyorBelt",
+        "schema": "dtmi:example:ConveyorBelt;1"
+      },
+      {
+        "@type": "Component",
+        "name": "roboticArm",
+        "schema": "dtmi:example:RoboticArm;1"
+      },
+      {
+        "@type": "Component",
+        "name": "hopperA",
+        "schema": "dtmi:example:HopperA;1"
+      },
+      {
+        "@type": "Component",
+        "name": "hopperB",
+        "schema": "dtmi:example:HopperB;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "sortsIntoA",
+        "target": "dtmi:example:HopperA;1",
+        "displayName": "Sorts Into Hopper A"
+      },
+      {
+        "@type": "Relationship",
+        "name": "sortsIntoB",
+        "target": "dtmi:example:HopperB;1",
+        "displayName": "Sorts Into Hopper B"
+      }
+    ]
+  }
+]
