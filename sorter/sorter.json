@@ -15,7 +15,7 @@
         "@type": "Relationship",
         "name": "feeds",
         "target": "dtmi:example:RoboticArm;1",
-        "displayName": "Feeds",
+        "displayName": "Feeds Robotic Arm",
         "properties": [
           {
             "@type": "Property",
@@ -112,6 +112,12 @@
         "@type": "Component",
         "name": "hopperB",
         "schema": "dtmi:example:HopperB;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "includesRoboticArm",
+        "target": "dtmi:example:RoboticArm;1",
+        "displayName": "Includes Robotic Arm"
       },
       {
         "@type": "Relationship",
