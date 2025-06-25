@@ -1,0 +1,98 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:example:RoboticSortingSystem;1",
+  "@type": "Interface",
+  "displayName": "Robotic Sorting System",
+  "contents": [
+    {
+      "@type": "Component",
+      "name": "conveyorBelt",
+      "schema": {
+        "@id": "dtmi:example:ConveyorBelt;1",
+        "@type": "Interface",
+        "displayName": "Conveyor Belt",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "itemDetected",
+            "schema": "boolean",
+            "displayName": "Item Detected"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "roboticArm",
+      "schema": {
+        "@id": "dtmi:example:RoboticArm;1",
+        "@type": "Interface",
+        "displayName": "Robotic Arm",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "detectedColor",
+            "schema": "string",
+            "displayName": "Detected Color",
+            "description": "Color detected by the robotic arm's sensor"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "sortedToHopper",
+            "schema": "string",
+            "displayName": "Sorted To Hopper",
+            "description": "The hopper where the item was placed"
+          },
+          {
+            "@type": "Command",
+            "name": "pickAndSortItem",
+            "request": {
+              "name": "color",
+              "schema": "string"
+            },
+            "response": {
+              "name": "hopper",
+              "schema": "string"
+            },
+            "displayName": "Pick and Sort Item",
+            "description": "Command to pick an item and sort based on color"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "hopperA",
+      "schema": {
+        "@id": "dtmi:example:HopperA;1",
+        "@type": "Interface",
+        "displayName": "Hopper A",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "itemReceived",
+            "schema": "boolean",
+            "displayName": "Item Received"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "hopperB",
+      "schema": {
+        "@id": "dtmi:example:HopperB;1",
+        "@type": "Interface",
+        "displayName": "Hopper B",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "itemReceived",
+            "schema": "boolean",
+            "displayName": "Item Received"
+          }
+        ]
+      }
+    }
+  ]
+}
