@@ -1,57 +1,109 @@
 [
   {
-    "@id": "dtmi:example:Device;1",
+    "@id": "dtmi:example:ConveyorBelt;1",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "displayName": "Device",
-    "description": "Base interface for all devices.",
+    "displayName": "Conveyor Belt",
+    "description": "Component representing the conveyor belt system.",
     "contents": [
       {
         "@type": "Property",
-        "name": "deviceId",
-        "schema": "string",
-        "writable": false
+        "name": "isRunning",
+        "schema": "boolean",
+        "writable": true,
+        "description": "Indicates whether the conveyor belt is running."
+      },
+      {
+        "@type": "Property",
+        "name": "speed",
+        "schema": "double",
+        "writable": true,
+        "description": "Speed of the conveyor belt in meters per second."
       },
       {
         "@type": "Telemetry",
-        "name": "batteryLevel",
-        "schema": "double"
+        "name": "itemDetected",
+        "schema": "boolean",
+        "description": "True if an item is currently detected on the conveyor belt."
       }
     ]
   },
   {
-    "@id": "dtmi:example:SmartLight;1",
+    "@id": "dtmi:example:RoboticArmSorter;1",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "displayName": "Smart Light",
-    "description": "A smart light that extends a generic device.",
-    "extends": [
-      "dtmi:example:Device;1"
-    ],
+    "displayName": "Robotic Arm Sorter",
+    "description": "A robotic arm that sorts items on a conveyor based on detected color.",
     "contents": [
       {
         "@type": "Property",
-        "name": "brightness",
-        "schema": "integer",
-        "writable": true
+        "name": "status",
+        "schema": "string",
+        "description": "Current status of the robotic arm (e.g., 'idle', 'sorting', 'error').",
+        "writable": false
       },
       {
         "@type": "Property",
-        "name": "color",
-        "schema": "string",
+        "name": "targetColors",
+        "schema": {
+          "@type": "Array",
+          "elementSchema": "string"
+        },
+        "description": "List of colors to sort (e.g., ['red', 'blue']).",
         "writable": true
       },
       {
+        "@type": "Telemetry",
+        "name": "detectedColor",
+        "schema": "string",
+        "description": "Color of the item currently detected on the conveyor belt."
+      },
+      {
+        "@type": "Property",
+        "name": "sortedItemCount",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "red",
+              "schema": "integer"
+            },
+            {
+              "name": "blue",
+              "schema": "integer"
+            }
+          ]
+        },
+        "description": "Count of items sorted by color.",
+        "writable": false
+      },
+      {
         "@type": "Command",
-        "name": "togglePower",
+        "name": "startSorting",
+        "description": "Starts the sorting operation.",
         "request": {
-          "name": "powerState",
-          "schema": "boolean"
+          "name": "operationMode",
+          "schema": "string"
         },
         "response": {
-          "name": "result",
+          "name": "ack",
           "schema": "string"
         }
+      },
+      {
+        "@type": "Command",
+        "name": "stopSorting",
+        "description": "Stops the sorting operation.",
+        "response": {
+          "name": "ack",
+          "schema": "string"
+        }
+      },
+      {
+        "@type": "Component",
+        "name": "conveyor",
+        "schema": "dtmi:example:ConveyorBelt;1",
+        "description": "Component that represents the conveyor belt."
       }
     ]
   }
