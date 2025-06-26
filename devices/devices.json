@@ -46,10 +46,19 @@
         "@type": "Property",
         "name": "targetColors",
         "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "red",
+              "schema": "boolean"
+            },
+            {
+              "name": "blue",
+              "schema": "boolean"
+            }
+          ]
         },
-        "description": "List of colors to sort (e.g., ['red', 'blue']).",
+        "description": "Which colors are enabled for sorting.",
         "writable": true
       },
       {
