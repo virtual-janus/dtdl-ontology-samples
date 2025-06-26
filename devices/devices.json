@@ -1,0 +1,58 @@
+[
+  {
+    "@id": "dtmi:example:Device;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Device",
+    "description": "Base interface for all devices.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "deviceId",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@type": "Telemetry",
+        "name": "batteryLevel",
+        "schema": "double"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:SmartLight;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Smart Light",
+    "description": "A smart light that extends a generic device.",
+    "extends": [
+      "dtmi:example:Device;1"
+    ],
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "brightness",
+        "schema": "integer",
+        "writable": true
+      },
+      {
+        "@type": "Property",
+        "name": "color",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@type": "Command",
+        "name": "togglePower",
+        "request": {
+          "name": "powerState",
+          "schema": "boolean"
+        },
+        "response": {
+          "name": "result",
+          "schema": "string"
+        }
+      }
+    ]
+  }
+]
