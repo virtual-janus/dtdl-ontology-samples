@@ -1,5 +1,35 @@
 [
   {
+    "@id": "dtmi:example:Joint;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Robotic Arm Joint",
+    "description": "Represents a single joint of a robotic arm.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "position",
+        "schema": "double",
+        "description": "Current angular position of the joint in degrees."
+      },
+      {
+        "@type": "Telemetry",
+        "name": "torque",
+        "schema": "double",
+        "description": "Torque applied to the joint in Newton-meters."
+      },
+      {
+        "@type": "Command",
+        "name": "calibrate",
+        "description": "Calibrate this joint to its home position.",
+        "response": {
+          "name": "status",
+          "schema": "string"
+        }
+      }
+    ]
+  },
+  {
     "@id": "dtmi:example:ConveyorBelt;1",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
@@ -29,11 +59,11 @@
     ]
   },
   {
-    "@id": "dtmi:example:RoboticArmSorter;1",
+    "@id": "dtmi:example:RoboticArm;1",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
-    "displayName": "Robotic Arm Sorter",
-    "description": "A robotic arm that sorts items on a conveyor based on detected color.",
+    "displayName": "Robotic Arm",
+    "description": "A robotic arm that sorts items based on detected color and uses joint components.",
     "contents": [
       {
         "@type": "Property",
@@ -113,6 +143,24 @@
         "name": "conveyor",
         "schema": "dtmi:example:ConveyorBelt;1",
         "description": "Component that represents the conveyor belt."
+      },
+      {
+        "@type": "Component",
+        "name": "joint1",
+        "schema": "dtmi:example:Joint;1",
+        "description": "Base joint of the robotic arm."
+      },
+      {
+        "@type": "Component",
+        "name": "joint2",
+        "schema": "dtmi:example:Joint;1",
+        "description": "Middle joint of the robotic arm."
+      },
+      {
+        "@type": "Component",
+        "name": "joint3",
+        "schema": "dtmi:example:Joint;1",
+        "description": "End-effector joint of the robotic arm."
       }
     ]
   }
