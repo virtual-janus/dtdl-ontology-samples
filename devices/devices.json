@@ -63,7 +63,7 @@
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;2",
     "displayName": "Robotic Arm",
-    "description": "A robotic arm that sorts items based on detected color and uses joint components.",
+    "description": "A robotic arm that sorts items and contains joints and conveyor belt.",
     "contents": [
       {
         "@type": "Property",
@@ -78,14 +78,8 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "red",
-              "schema": "boolean"
-            },
-            {
-              "name": "blue",
-              "schema": "boolean"
-            }
+            { "name": "red", "schema": "boolean" },
+            { "name": "blue", "schema": "boolean" }
           ]
         },
         "description": "Which colors are enabled for sorting.",
@@ -103,14 +97,8 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "red",
-              "schema": "integer"
-            },
-            {
-              "name": "blue",
-              "schema": "integer"
-            }
+            { "name": "red", "schema": "integer" },
+            { "name": "blue", "schema": "integer" }
           ]
         },
         "description": "Count of items sorted by color.",
@@ -161,6 +149,12 @@
         "name": "joint3",
         "schema": "dtmi:example:Joint;1",
         "description": "End-effector joint of the robotic arm."
+      },
+      {
+        "@type": "Relationship",
+        "name": "containsJoint",
+        "target": "dtmi:example:Joint;1",
+        "description": "Indicates that the robotic arm contains this joint."
       }
     ]
   }
