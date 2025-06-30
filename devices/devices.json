@@ -1,13 +1,14 @@
 [
 	{
 		"@id": "dtmi:example:Block;1",
+		"displayName": "Block",
 		"@type": "Interface",
 		"contents": [
 			{
 				"@type": "Relationship",
-				"name": "hasColor",
-				"target": "dtmi:example:Color;1",
-				"displayName": "hasColor"
+				"name": "hasColour",
+				"target": "dtmi:example:Colour;1",
+				"displayName": "hasColour"
 			},
 			{
 				"@type": "Relationship",
@@ -20,12 +21,13 @@
 		"description": ""
 	},
 	{
-		"@id": "dtmi:example:Color;1",
+		"@id": "dtmi:example:Colour;1",
+		"displayName": "Colour",
 		"@type": "Interface",
 		"contents": [
 			{
 				"@type": "Property",
-				"name": "colorValue",
+				"name": "colourValue",
 				"schema": "string",
 				"writable": true
 			}
@@ -35,6 +37,7 @@
 	},
 	{
 		"@id": "dtmi:example:Location;1",
+		"displayName": "Location",
 		"@type": "Interface",
 		"contents": [],
 		"@context": "dtmi:dtdl:context;2",
@@ -42,6 +45,7 @@
 	},
 	{
 		"@id": "dtmi:example:ConveyorBelt;1",
+		"displayName": "ConveyorBelt",
 		"@type": "Interface",
 		"contents": [
 			{
@@ -62,6 +66,7 @@
 	},
 	{
 		"@id": "dtmi:example:PickZone;1",
+		"displayName": "PickZone",
 		"@type": "Interface",
 		"contents": [],
 		"@context": "dtmi:dtdl:context;2",
@@ -69,6 +74,7 @@
 	},
 	{
 		"@id": "dtmi:example:Camera;1",
+		"displayName": "Camera",
 		"@type": "Interface",
 		"contents": [
 			{
@@ -83,6 +89,7 @@
 	},
 	{
 		"@id": "dtmi:example:RoboticArm;1",
+		"displayName": "RoboticArm",
 		"@type": "Interface",
 		"contents": [
 			{
@@ -115,6 +122,7 @@
 	},
 	{
 		"@id": "dtmi:example:Grabber;1",
+		"displayName": "Grabber",
 		"@type": "Interface",
 		"contents": [],
 		"@context": "dtmi:dtdl:context;2",
@@ -122,6 +130,7 @@
 	},
 	{
 		"@id": "dtmi:example:Hopper;1",
+		"displayName": "Hopper",
 		"@type": "Interface",
 		"contents": [],
 		"@context": "dtmi:dtdl:context;2",
@@ -129,6 +138,7 @@
 	},
 	{
 		"@id": "dtmi:example:Controller;1",
+		"displayName": "Controller",
 		"@type": "Interface",
 		"contents": [
 			{
@@ -148,6 +158,7 @@
 	},
 	{
 		"@id": "dtmi:example:DetectionEvent;1",
+		"displayName": "DetectionEvent",
 		"@type": "Interface",
 		"contents": [],
 		"@context": "dtmi:dtdl:context;2",
@@ -155,6 +166,7 @@
 	},
 	{
 		"@id": "dtmi:example:PickAndPlaceAction;1",
+		"displayName": "PickAndPlaceAction",
 		"@type": "Interface",
 		"contents": [],
 		"@context": "dtmi:dtdl:context;2",
