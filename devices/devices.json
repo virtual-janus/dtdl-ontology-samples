@@ -155,21 +155,5 @@
 		],
 		"@context": "dtmi:dtdl:context;2",
 		"description": ""
-	},
-	{
-		"@id": "dtmi:example:DetectionEvent;1",
-		"displayName": "DetectionEvent",
-		"@type": "Interface",
-		"contents": [],
-		"@context": "dtmi:dtdl:context;2",
-		"description": ""
-	},
-	{
-		"@id": "dtmi:example:PickAndPlaceAction;1",
-		"displayName": "PickAndPlaceAction",
-		"@type": "Interface",
-		"contents": [],
-		"@context": "dtmi:dtdl:context;2",
-		"description": ""
 	}
 ]
