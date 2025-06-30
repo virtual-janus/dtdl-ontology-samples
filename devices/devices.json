@@ -1,161 +1,163 @@
 [
-  {
-    "@id": "dtmi:example:Joint;1",
-    "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
-    "displayName": "Robotic Arm Joint",
-    "description": "Represents a single joint of a robotic arm.",
-    "contents": [
-      {
-        "@type": "Telemetry",
-        "name": "position",
-        "schema": "double",
-        "description": "Current angular position of the joint in degrees."
-      },
-      {
-        "@type": "Telemetry",
-        "name": "torque",
-        "schema": "double",
-        "description": "Torque applied to the joint in Newton-meters."
-      },
-      {
-        "@type": "Command",
-        "name": "calibrate",
-        "description": "Calibrate this joint to its home position.",
-        "response": {
-          "name": "status",
-          "schema": "string"
-        }
-      }
-    ]
-  },
-  {
-    "@id": "dtmi:example:ConveyorBelt;1",
-    "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
-    "displayName": "Conveyor Belt",
-    "description": "Component representing the conveyor belt system.",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "isRunning",
-        "schema": "boolean",
-        "writable": true,
-        "description": "Indicates whether the conveyor belt is running."
-      },
-      {
-        "@type": "Property",
-        "name": "speed",
-        "schema": "double",
-        "writable": true,
-        "description": "Speed of the conveyor belt in meters per second."
-      },
-      {
-        "@type": "Telemetry",
-        "name": "itemDetected",
-        "schema": "boolean",
-        "description": "True if an item is currently detected on the conveyor belt."
-      }
-    ]
-  },
-  {
-    "@id": "dtmi:example:RoboticArm;1",
-    "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
-    "displayName": "Robotic Arm",
-    "description": "A robotic arm that sorts items and contains joints and conveyor belt.",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "status",
-        "schema": "string",
-        "description": "Current status of the robotic arm (e.g., 'idle', 'sorting', 'error').",
-        "writable": false
-      },
-      {
-        "@type": "Property",
-        "name": "targetColors",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            { "name": "red", "schema": "boolean" },
-            { "name": "blue", "schema": "boolean" }
-          ]
-        },
-        "description": "Which colors are enabled for sorting.",
-        "writable": true
-      },
-      {
-        "@type": "Telemetry",
-        "name": "detectedColor",
-        "schema": "string",
-        "description": "Color of the item currently detected on the conveyor belt."
-      },
-      {
-        "@type": "Property",
-        "name": "sortedItemCount",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            { "name": "red", "schema": "integer" },
-            { "name": "blue", "schema": "integer" }
-          ]
-        },
-        "description": "Count of items sorted by color.",
-        "writable": false
-      },
-      {
-        "@type": "Command",
-        "name": "startSorting",
-        "description": "Starts the sorting operation.",
-        "request": {
-          "name": "operationMode",
-          "schema": "string"
-        },
-        "response": {
-          "name": "ack",
-          "schema": "string"
-        }
-      },
-      {
-        "@type": "Command",
-        "name": "stopSorting",
-        "description": "Stops the sorting operation.",
-        "response": {
-          "name": "ack",
-          "schema": "string"
-        }
-      },
-      {
-        "@type": "Component",
-        "name": "conveyor",
-        "schema": "dtmi:example:ConveyorBelt;1",
-        "description": "Component that represents the conveyor belt."
-      },
-      {
-        "@type": "Component",
-        "name": "joint1",
-        "schema": "dtmi:example:Joint;1",
-        "description": "Base joint of the robotic arm."
-      },
-      {
-        "@type": "Component",
-        "name": "joint2",
-        "schema": "dtmi:example:Joint;1",
-        "description": "Middle joint of the robotic arm."
-      },
-      {
-        "@type": "Component",
-        "name": "joint3",
-        "schema": "dtmi:example:Joint;1",
-        "description": "End-effector joint of the robotic arm."
-      },
-      {
-        "@type": "Relationship",
-        "name": "containsJoint",
-        "target": "dtmi:example:Joint;1",
-        "description": "Indicates that the robotic arm contains this joint."
-      }
-    ]
-  }
+	{
+		"@id": "dtmi:example:Block;1",
+		"@type": "Interface",
+		"contents": [
+			{
+				"@type": "Relationship",
+				"name": "hasColor",
+				"target": "dtmi:example:Color;1",
+				"displayName": "hasColor"
+			},
+			{
+				"@type": "Relationship",
+				"name": "hasLocation",
+				"target": "dtmi:example:Location;1",
+				"displayName": "hasLocation"
+			}
+		],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:Color;1",
+		"@type": "Interface",
+		"contents": [
+			{
+				"@type": "Property",
+				"name": "colorValue",
+				"schema": "string",
+				"writable": true
+			}
+		],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:Location;1",
+		"@type": "Interface",
+		"contents": [],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:ConveyorBelt;1",
+		"@type": "Interface",
+		"contents": [
+			{
+				"@type": "Relationship",
+				"name": "hasPickZone",
+				"target": "dtmi:example:PickZone;1",
+				"displayName": "hasPickZone"
+			},
+			{
+				"@type": "Property",
+				"name": "conveyorSpeed",
+				"schema": "float",
+				"writable": true
+			}
+		],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:PickZone;1",
+		"@type": "Interface",
+		"contents": [],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:Camera;1",
+		"@type": "Interface",
+		"contents": [
+			{
+				"@type": "Relationship",
+				"name": "detects",
+				"target": "dtmi:example:Block;1",
+				"displayName": "detects"
+			}
+		],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:RoboticArm;1",
+		"@type": "Interface",
+		"contents": [
+			{
+				"@type": "Relationship",
+				"name": "hasPart",
+				"target": "dtmi:example:Grabber;1",
+				"displayName": "hasPart"
+			},
+			{
+				"@type": "Relationship",
+				"name": "picksUp",
+				"target": "dtmi:example:Block;1",
+				"displayName": "picksUp"
+			},
+			{
+				"@type": "Relationship",
+				"name": "placesIn",
+				"target": "dtmi:example:Hopper;1",
+				"displayName": "placesIn"
+			},
+			{
+				"@type": "Property",
+				"name": "status",
+				"schema": "string",
+				"writable": true
+			}
+		],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:Grabber;1",
+		"@type": "Interface",
+		"contents": [],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:Hopper;1",
+		"@type": "Interface",
+		"contents": [],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:Controller;1",
+		"@type": "Interface",
+		"contents": [
+			{
+				"@type": "Relationship",
+				"name": "controls",
+				"displayName": "controls"
+			},
+			{
+				"@type": "Property",
+				"name": "state",
+				"schema": "string",
+				"writable": true
+			}
+		],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:DetectionEvent;1",
+		"@type": "Interface",
+		"contents": [],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	},
+	{
+		"@id": "dtmi:example:PickAndPlaceAction;1",
+		"@type": "Interface",
+		"contents": [],
+		"@context": "dtmi:dtdl:context;2",
+		"description": ""
+	}
 ]
