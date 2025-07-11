@@ -68,6 +68,7 @@
         "target": "dtmi:example:Substation;1",
         "properties": [
           {
+            "@type": "Property",
             "name": "connectionType",
             "schema": "string"
           }
