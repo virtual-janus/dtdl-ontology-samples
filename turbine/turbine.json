@@ -15,14 +15,8 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "unit",
-              "schema": "string"
-            }
+            { "name": "value", "schema": "double" },
+            { "name": "unit", "schema": "string" }
           ]
         }
       },
@@ -32,14 +26,8 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "unit",
-              "schema": "string"
-            }
+            { "name": "value", "schema": "double" },
+            { "name": "unit", "schema": "string" }
           ]
         }
       },
@@ -49,14 +37,8 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "unit",
-              "schema": "string"
-            }
+            { "name": "value", "schema": "double" },
+            { "name": "unit", "schema": "string" }
           ]
         }
       },
@@ -74,10 +56,27 @@
         "@type": "Component",
         "name": "tower",
         "schema": "dtmi:example:Tower;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "locatedAt",
+        "target": "dtmi:example:WindFarm;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "connectedToSubstation",
+        "target": "dtmi:example:Substation;1",
+        "properties": [
+          {
+            "name": "connectionType",
+            "schema": "string"
+          }
+        ]
       }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
+
   {
     "@id": "dtmi:example:Rotor;1",
     "@type": "Interface",
@@ -94,20 +93,15 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "unit",
-              "schema": "string"
-            }
+            { "name": "value", "schema": "double" },
+            { "name": "unit", "schema": "string" }
           ]
         }
       }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
+
   {
     "@id": "dtmi:example:Nacelle;1",
     "@type": "Interface",
@@ -124,20 +118,15 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "unit",
-              "schema": "string"
-            }
+            { "name": "value", "schema": "double" },
+            { "name": "unit", "schema": "string" }
           ]
         }
       }
     ],
     "@context": "dtmi:dtdl:context;2"
   },
+
   {
     "@id": "dtmi:example:Tower;1",
     "@type": "Interface",
@@ -149,18 +138,28 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            {
-              "name": "value",
-              "schema": "double"
-            },
-            {
-              "name": "unit",
-              "schema": "string"
-            }
+            { "name": "value", "schema": "double" },
+            { "name": "unit", "schema": "string" }
           ]
         }
       }
     ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+
+  {
+    "@id": "dtmi:example:WindFarm;1",
+    "@type": "Interface",
+    "displayName": "Wind Farm",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  },
+
+  {
+    "@id": "dtmi:example:Substation;1",
+    "@type": "Interface",
+    "displayName": "Substation",
+    "contents": [],
     "@context": "dtmi:dtdl:context;2"
   }
 ]
