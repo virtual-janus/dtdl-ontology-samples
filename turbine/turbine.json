@@ -1,0 +1,100 @@
+[
+  {
+    "@id": "dtmi:example:WindTurbine;1",
+    "@type": "Interface",
+    "displayName": "Wind Turbine",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "manufacturer",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "ratedPower",
+        "schema": "double",
+        "unit": "kilowatt"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "windSpeed",
+        "schema": "double",
+        "unit": "metersPerSecond"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "powerOutput",
+        "schema": "double",
+        "unit": "kilowatt"
+      },
+      {
+        "@type": "Component",
+        "name": "rotor",
+        "schema": "dtmi:example:Rotor;1"
+      },
+      {
+        "@type": "Component",
+        "name": "nacelle",
+        "schema": "dtmi:example:Nacelle;1"
+      },
+      {
+        "@type": "Component",
+        "name": "tower",
+        "schema": "dtmi:example:Tower;1"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:Rotor;1",
+    "@type": "Interface",
+    "displayName": "Rotor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "bladeCount",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "rotationalSpeed",
+        "schema": "double",
+        "unit": "revolutionsPerMinute"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:Nacelle;1",
+    "@type": "Interface",
+    "displayName": "Nacelle",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "hasGenerator",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "internalTemperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:Tower;1",
+    "@type": "Interface",
+    "displayName": "Tower",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "height",
+        "schema": "double",
+        "unit": "meter"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  }
+]
