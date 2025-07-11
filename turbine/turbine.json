@@ -12,20 +12,53 @@
       {
         "@type": "Property",
         "name": "ratedPower",
-        "schema": "double",
-        "unit": "kilowatt"
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "value",
+              "schema": "double"
+            },
+            {
+              "name": "unit",
+              "schema": "string"
+            }
+          ]
+        }
       },
       {
         "@type": "Telemetry",
         "name": "windSpeed",
-        "schema": "double",
-        "unit": "metersPerSecond"
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "value",
+              "schema": "double"
+            },
+            {
+              "name": "unit",
+              "schema": "string"
+            }
+          ]
+        }
       },
       {
         "@type": "Telemetry",
         "name": "powerOutput",
-        "schema": "double",
-        "unit": "kilowatt"
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "value",
+              "schema": "double"
+            },
+            {
+              "name": "unit",
+              "schema": "string"
+            }
+          ]
+        }
       },
       {
         "@type": "Component",
@@ -58,8 +91,19 @@
       {
         "@type": "Telemetry",
         "name": "rotationalSpeed",
-        "schema": "double",
-        "unit": "revolutionsPerMinute"
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "value",
+              "schema": "double"
+            },
+            {
+              "name": "unit",
+              "schema": "string"
+            }
+          ]
+        }
       }
     ],
     "@context": "dtmi:dtdl:context;2"
@@ -77,8 +121,19 @@
       {
         "@type": "Telemetry",
         "name": "internalTemperature",
-        "schema": "double",
-        "unit": "degreeCelsius"
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "value",
+              "schema": "double"
+            },
+            {
+              "name": "unit",
+              "schema": "string"
+            }
+          ]
+        }
       }
     ],
     "@context": "dtmi:dtdl:context;2"
@@ -91,8 +146,19 @@
       {
         "@type": "Property",
         "name": "height",
-        "schema": "double",
-        "unit": "meter"
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            {
+              "name": "value",
+              "schema": "double"
+            },
+            {
+              "name": "unit",
+              "schema": "string"
+            }
+          ]
+        }
       }
     ],
     "@context": "dtmi:dtdl:context;2"
