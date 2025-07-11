@@ -43,19 +43,19 @@
         }
       },
       {
-        "@type": "Component",
-        "name": "rotor",
-        "schema": "dtmi:example:Rotor;1"
+        "@type": "Relationship",
+        "name": "hasRotor",
+        "target": "dtmi:example:Rotor;1"
       },
       {
-        "@type": "Component",
-        "name": "nacelle",
-        "schema": "dtmi:example:Nacelle;1"
+        "@type": "Relationship",
+        "name": "hasNacelle",
+        "target": "dtmi:example:Nacelle;1"
       },
       {
-        "@type": "Component",
-        "name": "tower",
-        "schema": "dtmi:example:Tower;1"
+        "@type": "Relationship",
+        "name": "hasTower",
+        "target": "dtmi:example:Tower;1"
       },
       {
         "@type": "Relationship",
