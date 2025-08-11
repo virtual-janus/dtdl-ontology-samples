@@ -6,49 +6,49 @@
   "description": "Digital twin for a floating offshore wind turbine with attributes and relationships.",
   "contents": [
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "Manufacturer",
       "schema": "string",
       "writable": false,
       "description": "Manufacturer of the turbine"
     },
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "ModelNumber",
       "schema": "string",
       "writable": false,
       "description": "Model number of the turbine"
     },
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "RatedPower_kW",
       "schema": "double",
       "writable": false,
       "description": "Rated power output in kilowatts"
     },
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "Time",
       "schema": "double",
       "writable": true,
       "description": "Simulation time [s]"
     },
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "Azimuth",
       "schema": "double",
       "writable": true,
       "description": "Rotor azimuth angle [deg]"
     },
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "RotSpeed",
       "schema": "double",
       "writable": true,
       "description": "Rotor speed [rpm]"
     },
     {
-      "@type": "Attribute",
+      "@type": "Property",
       "name": "RotPwr",
       "schema": "double",
       "writable": true,
@@ -63,21 +63,21 @@
         "displayName": "Nacelle",
         "contents": [
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "GearboxType",
             "schema": "string",
             "writable": false,
             "description": "Type of gearbox in nacelle"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "GenSpeed",
             "schema": "double",
             "writable": true,
             "description": "Generator speed [rpm]"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "RootMyc1",
             "schema": "double",
             "writable": true,
@@ -95,21 +95,21 @@
         "displayName": "Tower",
         "contents": [
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "Height_m",
             "schema": "double",
             "writable": false,
             "description": "Tower height in meters"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "TwrBsFyt",
             "schema": "double",
             "writable": true,
             "description": "Tower base side-to-side bending moment [kNm]"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "TwrBsFzt",
             "schema": "double",
             "writable": true,
@@ -127,28 +127,28 @@
         "displayName": "Floating Platform",
         "contents": [
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "PlatformType",
             "schema": "string",
             "writable": false,
             "description": "Type of floating platform (e.g., spar, semi-submersible)"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "Pitch",
             "schema": "double",
             "writable": true,
             "description": "Platform pitch angle [deg]"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "Roll",
             "schema": "double",
             "writable": true,
             "description": "Platform roll angle [deg]"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "Heave",
             "schema": "double",
             "writable": true,
@@ -166,28 +166,28 @@
         "displayName": "Blade 1",
         "contents": [
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "Length_m",
             "schema": "double",
             "writable": false,
             "description": "Blade length in meters"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "OoPDefl1",
             "schema": "double",
             "writable": true,
             "description": "Blade 1 out-of-plane deflection [m]"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "IPDefl1",
             "schema": "double",
             "writable": true,
             "description": "Blade 1 in-plane deflection [m]"
           },
           {
-            "@type": "Attribute",
+            "@type": "Property",
             "name": "BldPitch1",
             "schema": "double",
             "writable": true,
