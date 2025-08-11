@@ -9,7 +9,7 @@
       "@type": "Component",
       "name": "Nacelle",
       "schema": {
-        "@id": "dtmi:example:FOWT.Nacelle;1",
+        "@id": "dtmi:example:FOWT_Nacelle;1",
         "@type": "Interface",
         "displayName": "Nacelle",
         "contents": [
@@ -37,7 +37,7 @@
       "@type": "Component",
       "name": "Tower",
       "schema": {
-        "@id": "dtmi:example:FOWT.Tower;1",
+        "@id": "dtmi:example:FOWT_Tower;1",
         "@type": "Interface",
         "displayName": "Tower",
         "contents": [
@@ -60,7 +60,7 @@
       "@type": "Component",
       "name": "FloatingPlatform",
       "schema": {
-        "@id": "dtmi:example:FOWT.Platform;1",
+        "@id": "dtmi:example:FOWT_Platform;1",
         "@type": "Interface",
         "displayName": "Floating Platform",
         "contents": [
