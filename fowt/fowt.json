@@ -1,9 +1,9 @@
 {
   "@id": "dtmi:example:FOWT;1",
   "@type": "Interface",
-  "displayName": "Floating Offshore Wind Turbine",
-  "comment": "Digital twin model for a floating offshore wind turbine, including turbine, tower, platform, and sensors.",
   "@context": "dtmi:dtdl:context;2",
+  "displayName": "Floating Offshore Wind Turbine",
+  "comment": "Self-contained DTDL model for a floating offshore wind turbine, including components, telemetry, properties, commands, and inline relationship targets.",
   "contents": [
     {
       "@type": "Component",
@@ -20,12 +20,22 @@
           },
           {
             "@type": "Telemetry",
+            "name": "torque",
+            "schema": "double"
+          },
+          {
+            "@type": "Telemetry",
             "name": "temperature",
             "schema": "double"
           },
           {
             "@type": "Property",
             "name": "operationalStatus",
+            "schema": "string"
+          },
+          {
+            "@type": "Property",
+            "name": "generatorHealth",
             "schema": "string"
           }
         ]
@@ -46,7 +56,17 @@
           },
           {
             "@type": "Telemetry",
+            "name": "strainGaugeReading",
+            "schema": "double"
+          },
+          {
+            "@type": "Property",
             "name": "tiltAngle",
+            "schema": "double"
+          },
+          {
+            "@type": "Property",
+            "name": "corrosionLevel",
             "schema": "double"
           }
         ]
@@ -77,7 +97,85 @@
           },
           {
             "@type": "Telemetry",
+            "name": "acceleration",
+            "schema": "double"
+          },
+          {
+            "@type": "Property",
+            "name": "anchorIntegrity",
+            "schema": "string"
+          },
+          {
+            "@type": "Property",
             "name": "mooringTension",
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "Substation",
+      "schema": {
+        "@id": "dtmi:example:FOWT_Substation;1",
+        "@type": "Interface",
+        "displayName": "Substation",
+        "contents": [
+          {
+            "@type": "Property",
+            "name": "substationID",
+            "schema": "string"
+          },
+          {
+            "@type": "Property",
+            "name": "connectionVoltage",
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "MaintenanceTeam",
+      "schema": {
+        "@id": "dtmi:example:FOWT_MaintenanceTeam;1",
+        "@type": "Interface",
+        "displayName": "Maintenance Team",
+        "contents": [
+          {
+            "@type": "Property",
+            "name": "teamID",
+            "schema": "string"
+          },
+          {
+            "@type": "Property",
+            "name": "contactEmail",
+            "schema": "string"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "WeatherStation",
+      "schema": {
+        "@id": "dtmi:example:FOWT_WeatherStation;1",
+        "@type": "Interface",
+        "displayName": "Weather Station",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "externalWindSpeed",
+            "schema": "double"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "airPressure",
+            "schema": "double"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "humidity",
             "schema": "double"
           }
         ]
@@ -88,6 +186,28 @@
       "name": "status",
       "schema": "string",
       "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "location",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "latitude",
+            "schema": "double"
+          },
+          {
+            "name": "longitude",
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "gridConnectionStatus",
+      "schema": "string"
     },
     {
       "@type": "Telemetry",
@@ -105,6 +225,11 @@
       "schema": "double"
     },
     {
+      "@type": "Telemetry",
+      "name": "turbineHealthScore",
+      "schema": "double"
+    },
+    {
       "@type": "Command",
       "name": "shutdown",
       "request": {
@@ -115,6 +240,26 @@
         "name": "result",
         "schema": "string"
       }
+    },
+    {
+      "@type": "Relationship",
+      "name": "connectedToSubstation",
+      "target": "dtmi:example:FOWT_Substation;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "assignedToMaintenanceTeam",
+      "target": "dtmi:example:FOWT_MaintenanceTeam;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "monitoredByWeatherStation",
+      "target": "dtmi:example:FOWT_WeatherStation;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "mountedOnPlatform",
+      "target": "dtmi:example:FOWT_Platform;1"
     }
   ]
 }
