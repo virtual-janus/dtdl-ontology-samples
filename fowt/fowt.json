@@ -16,14 +16,12 @@
           {
             "@type": "Telemetry",
             "name": "rotationSpeed",
-            "schema": "double",
-            "unit": "rpm"
+            "schema": "double"
           },
           {
             "@type": "Telemetry",
             "name": "temperature",
-            "schema": "double",
-            "unit": "celsius"
+            "schema": "double"
           },
           {
             "@type": "Property",
@@ -44,14 +42,12 @@
           {
             "@type": "Telemetry",
             "name": "vibrationLevel",
-            "schema": "double",
-            "unit": "mm/s"
+            "schema": "double"
           },
           {
             "@type": "Telemetry",
             "name": "tiltAngle",
-            "schema": "double",
-            "unit": "degrees"
+            "schema": "double"
           }
         ]
       }
@@ -67,26 +63,22 @@
           {
             "@type": "Telemetry",
             "name": "pitch",
-            "schema": "double",
-            "unit": "degrees"
+            "schema": "double"
           },
           {
             "@type": "Telemetry",
             "name": "roll",
-            "schema": "double",
-            "unit": "degrees"
+            "schema": "double"
           },
           {
             "@type": "Telemetry",
             "name": "heave",
-            "schema": "double",
-            "unit": "m"
+            "schema": "double"
           },
           {
             "@type": "Telemetry",
             "name": "mooringTension",
-            "schema": "double",
-            "unit": "kN"
+            "schema": "double"
           }
         ]
       }
@@ -100,20 +92,17 @@
     {
       "@type": "Telemetry",
       "name": "powerOutput",
-      "schema": "double",
-      "unit": "kW"
+      "schema": "double"
     },
     {
       "@type": "Telemetry",
       "name": "windSpeed",
-      "schema": "double",
-      "unit": "m/s"
+      "schema": "double"
     },
     {
       "@type": "Telemetry",
       "name": "waveHeight",
-      "schema": "double",
-      "unit": "m"
+      "schema": "double"
     },
     {
       "@type": "Command",
