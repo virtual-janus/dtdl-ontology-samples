@@ -1,0 +1,131 @@
+{
+  "@id": "dtmi:example:FOWT;1",
+  "@type": "Interface",
+  "displayName": "Floating Offshore Wind Turbine",
+  "comment": "Digital twin model for a floating offshore wind turbine, including turbine, tower, platform, and sensors.",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+      "@type": "Component",
+      "name": "Nacelle",
+      "schema": {
+        "@id": "dtmi:example:FOWT.Nacelle;1",
+        "@type": "Interface",
+        "displayName": "Nacelle",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "rotationSpeed",
+            "schema": "double",
+            "unit": "rpm"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "temperature",
+            "schema": "double",
+            "unit": "celsius"
+          },
+          {
+            "@type": "Property",
+            "name": "operationalStatus",
+            "schema": "string"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "Tower",
+      "schema": {
+        "@id": "dtmi:example:FOWT.Tower;1",
+        "@type": "Interface",
+        "displayName": "Tower",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "vibrationLevel",
+            "schema": "double",
+            "unit": "mm/s"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "tiltAngle",
+            "schema": "double",
+            "unit": "degrees"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "FloatingPlatform",
+      "schema": {
+        "@id": "dtmi:example:FOWT.Platform;1",
+        "@type": "Interface",
+        "displayName": "Floating Platform",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "pitch",
+            "schema": "double",
+            "unit": "degrees"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "roll",
+            "schema": "double",
+            "unit": "degrees"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "heave",
+            "schema": "double",
+            "unit": "m"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "mooringTension",
+            "schema": "double",
+            "unit": "kN"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "status",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Telemetry",
+      "name": "powerOutput",
+      "schema": "double",
+      "unit": "kW"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "windSpeed",
+      "schema": "double",
+      "unit": "m/s"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "waveHeight",
+      "schema": "double",
+      "unit": "m"
+    },
+    {
+      "@type": "Command",
+      "name": "shutdown",
+      "request": {
+        "name": "reason",
+        "schema": "string"
+      },
+      "response": {
+        "name": "result",
+        "schema": "string"
+      }
+    }
+  ]
+}
