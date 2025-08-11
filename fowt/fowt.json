@@ -3,40 +3,88 @@
   "@type": "Interface",
   "@context": "dtmi:dtdl:context;2",
   "displayName": "Floating Offshore Wind Turbine",
-  "comment": "Self-contained DTDL model for a floating offshore wind turbine, including components, telemetry, properties, commands, and inline relationship targets.",
+  "description": "Digital twin model for a floating offshore wind turbine with OpenFAST telemetry.",
   "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "Time",
+      "schema": "double",
+      "description": "Simulation time [s]"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "Azimuth",
+      "schema": "double",
+      "description": "Rotor azimuth angle [deg]"
+    },
     {
       "@type": "Component",
       "name": "Nacelle",
       "schema": {
-        "@id": "dtmi:example:FOWT_Nacelle;1",
-        "@type": "Interface",
-        "displayName": "Nacelle",
+        "@type": "Component",
         "contents": [
           {
             "@type": "Telemetry",
-            "name": "rotationSpeed",
-            "schema": "double"
+            "name": "RotSpeed",
+            "schema": "double",
+            "description": "Rotor speed [rad/s]"
           },
           {
             "@type": "Telemetry",
-            "name": "torque",
-            "schema": "double"
+            "name": "GenSpeed",
+            "schema": "double",
+            "description": "Generator speed [rad/s]"
           },
           {
             "@type": "Telemetry",
-            "name": "temperature",
-            "schema": "double"
+            "name": "RotThrust",
+            "schema": "double",
+            "description": "Rotor thrust force [N]"
           },
           {
-            "@type": "Property",
-            "name": "operationalStatus",
-            "schema": "string"
+            "@type": "Telemetry",
+            "name": "RotTorq",
+            "schema": "double",
+            "description": "Rotor torque [Nm]"
           },
           {
-            "@type": "Property",
-            "name": "generatorHealth",
-            "schema": "string"
+            "@type": "Telemetry",
+            "name": "RotPwr",
+            "schema": "double",
+            "description": "Rotor power output [kW]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "BldPitch1",
+            "schema": "double",
+            "description": "Blade pitch angle [deg]"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Component",
+      "name": "Blade1",
+      "schema": {
+        "@type": "Component",
+        "contents": [
+          {
+            "@type": "Telemetry",
+            "name": "OoPDefl1",
+            "schema": "double",
+            "description": "Out-of-plane blade deflection [m]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "IPDefl1",
+            "schema": "double",
+            "description": "In-plane blade deflection [m]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "RootMyc1",
+            "schema": "double",
+            "description": "Blade root moment (out-of-plane) [Nm]"
           }
         ]
       }
@@ -45,221 +93,91 @@
       "@type": "Component",
       "name": "Tower",
       "schema": {
-        "@id": "dtmi:example:FOWT_Tower;1",
-        "@type": "Interface",
-        "displayName": "Tower",
+        "@type": "Component",
         "contents": [
           {
             "@type": "Telemetry",
-            "name": "vibrationLevel",
-            "schema": "double"
+            "name": "TTDspFA",
+            "schema": "double",
+            "description": "Tower top fore-aft displacement [m]"
           },
           {
             "@type": "Telemetry",
-            "name": "strainGaugeReading",
-            "schema": "double"
+            "name": "TTDspSS",
+            "schema": "double",
+            "description": "Tower top side-to-side displacement [m]"
           },
           {
-            "@type": "Property",
-            "name": "tiltAngle",
-            "schema": "double"
+            "@type": "Telemetry",
+            "name": "TwrBsFxt",
+            "schema": "double",
+            "description": "Tower base force in X [N]"
           },
           {
-            "@type": "Property",
-            "name": "corrosionLevel",
-            "schema": "double"
+            "@type": "Telemetry",
+            "name": "TwrBsFyt",
+            "schema": "double",
+            "description": "Tower base force in Y [N]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "TwrBsFzt",
+            "schema": "double",
+            "description": "Tower base force in Z [N]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "TwrBsMxt",
+            "schema": "double",
+            "description": "Tower base moment around X [Nm]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "TwrBsMyt",
+            "schema": "double",
+            "description": "Tower base moment around Y [Nm]"
+          },
+          {
+            "@type": "Telemetry",
+            "name": "TwrBsMzt",
+            "schema": "double",
+            "description": "Tower base moment around Z [Nm]"
           }
         ]
       }
     },
     {
       "@type": "Component",
-      "name": "FloatingPlatform",
+      "name": "Platform",
       "schema": {
-        "@id": "dtmi:example:FOWT_Platform;1",
-        "@type": "Interface",
-        "displayName": "Floating Platform",
+        "@type": "Component",
         "contents": [
           {
             "@type": "Telemetry",
-            "name": "pitch",
-            "schema": "double"
+            "name": "Pitch",
+            "schema": "double",
+            "description": "Platform pitch angle [deg]"
           },
           {
             "@type": "Telemetry",
-            "name": "roll",
-            "schema": "double"
+            "name": "Roll",
+            "schema": "double",
+            "description": "Platform roll angle [deg]"
           },
           {
             "@type": "Telemetry",
-            "name": "heave",
-            "schema": "double"
+            "name": "Heave",
+            "schema": "double",
+            "description": "Platform heave displacement [m]"
           },
           {
             "@type": "Telemetry",
-            "name": "acceleration",
-            "schema": "double"
-          },
-          {
-            "@type": "Property",
-            "name": "anchorIntegrity",
-            "schema": "string"
-          },
-          {
-            "@type": "Property",
-            "name": "mooringTension",
-            "schema": "double"
+            "name": "MooringTension",
+            "schema": "double",
+            "description": "Mooring line tension force [N]"
           }
         ]
       }
-    },
-    {
-      "@type": "Component",
-      "name": "Substation",
-      "schema": {
-        "@id": "dtmi:example:FOWT_Substation;1",
-        "@type": "Interface",
-        "displayName": "Substation",
-        "contents": [
-          {
-            "@type": "Property",
-            "name": "substationID",
-            "schema": "string"
-          },
-          {
-            "@type": "Property",
-            "name": "connectionVoltage",
-            "schema": "double"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Component",
-      "name": "MaintenanceTeam",
-      "schema": {
-        "@id": "dtmi:example:FOWT_MaintenanceTeam;1",
-        "@type": "Interface",
-        "displayName": "Maintenance Team",
-        "contents": [
-          {
-            "@type": "Property",
-            "name": "teamID",
-            "schema": "string"
-          },
-          {
-            "@type": "Property",
-            "name": "contactEmail",
-            "schema": "string"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Component",
-      "name": "WeatherStation",
-      "schema": {
-        "@id": "dtmi:example:FOWT_WeatherStation;1",
-        "@type": "Interface",
-        "displayName": "Weather Station",
-        "contents": [
-          {
-            "@type": "Telemetry",
-            "name": "externalWindSpeed",
-            "schema": "double"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "airPressure",
-            "schema": "double"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "humidity",
-            "schema": "double"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Property",
-      "name": "status",
-      "schema": "string",
-      "writable": true
-    },
-    {
-      "@type": "Property",
-      "name": "location",
-      "schema": {
-        "@type": "Object",
-        "fields": [
-          {
-            "name": "latitude",
-            "schema": "double"
-          },
-          {
-            "name": "longitude",
-            "schema": "double"
-          }
-        ]
-      }
-    },
-    {
-      "@type": "Property",
-      "name": "gridConnectionStatus",
-      "schema": "string"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "powerOutput",
-      "schema": "double"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "windSpeed",
-      "schema": "double"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "waveHeight",
-      "schema": "double"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "turbineHealthScore",
-      "schema": "double"
-    },
-    {
-      "@type": "Command",
-      "name": "shutdown",
-      "request": {
-        "name": "reason",
-        "schema": "string"
-      },
-      "response": {
-        "name": "result",
-        "schema": "string"
-      }
-    },
-    {
-      "@type": "Relationship",
-      "name": "connectedToSubstation",
-      "target": "dtmi:example:FOWT_Substation;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "assignedToMaintenanceTeam",
-      "target": "dtmi:example:FOWT_MaintenanceTeam;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "monitoredByWeatherStation",
-      "target": "dtmi:example:FOWT_WeatherStation;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "mountedOnPlatform",
-      "target": "dtmi:example:FOWT_Platform;1"
     }
   ]
 }
