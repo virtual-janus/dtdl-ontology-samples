@@ -3,37 +3,56 @@
   "@type": "Interface",
   "@context": "dtmi:dtdl:context;2",
   "displayName": "Floating Offshore Wind Turbine",
-  "description": "Digital twin model for a floating offshore wind turbine with OpenFAST telemetry.",
+  "description": "Digital twin for a floating offshore wind turbine with attributes and relationships.",
   "contents": [
     {
-      "@type": "Telemetry",
+      "@type": "Attribute",
+      "name": "Manufacturer",
+      "schema": "string",
+      "writable": false,
+      "description": "Manufacturer of the turbine"
+    },
+    {
+      "@type": "Attribute",
+      "name": "ModelNumber",
+      "schema": "string",
+      "writable": false,
+      "description": "Model number of the turbine"
+    },
+    {
+      "@type": "Attribute",
+      "name": "RatedPower_kW",
+      "schema": "double",
+      "writable": false,
+      "description": "Rated power output in kilowatts"
+    },
+    {
+      "@type": "Attribute",
       "name": "Time",
       "schema": "double",
+      "writable": true,
       "description": "Simulation time [s]"
     },
     {
-      "@type": "Telemetry",
+      "@type": "Attribute",
       "name": "Azimuth",
       "schema": "double",
+      "writable": true,
       "description": "Rotor azimuth angle [deg]"
     },
     {
-      "@type": "Telemetry",
+      "@type": "Attribute",
       "name": "RotSpeed",
       "schema": "double",
+      "writable": true,
       "description": "Rotor speed [rpm]"
     },
     {
-      "@type": "Telemetry",
+      "@type": "Attribute",
       "name": "RotPwr",
       "schema": "double",
+      "writable": true,
       "description": "Rotor power output [kW]"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "TwrBsFxt",
-      "schema": "double",
-      "description": "Tower base fore-aft bending moment [kNm]"
     },
     {
       "@type": "Component",
@@ -44,15 +63,24 @@
         "displayName": "Nacelle",
         "contents": [
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
+            "name": "GearboxType",
+            "schema": "string",
+            "writable": false,
+            "description": "Type of gearbox in nacelle"
+          },
+          {
+            "@type": "Attribute",
             "name": "GenSpeed",
             "schema": "double",
+            "writable": true,
             "description": "Generator speed [rpm]"
           },
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
             "name": "RootMyc1",
             "schema": "double",
+            "writable": true,
             "description": "Root moment about y-axis for blade 1 [kNm]"
           }
         ]
@@ -67,15 +95,24 @@
         "displayName": "Tower",
         "contents": [
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
+            "name": "Height_m",
+            "schema": "double",
+            "writable": false,
+            "description": "Tower height in meters"
+          },
+          {
+            "@type": "Attribute",
             "name": "TwrBsFyt",
             "schema": "double",
+            "writable": true,
             "description": "Tower base side-to-side bending moment [kNm]"
           },
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
             "name": "TwrBsFzt",
             "schema": "double",
+            "writable": true,
             "description": "Tower base axial force [kN]"
           }
         ]
@@ -90,21 +127,31 @@
         "displayName": "Floating Platform",
         "contents": [
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
+            "name": "PlatformType",
+            "schema": "string",
+            "writable": false,
+            "description": "Type of floating platform (e.g., spar, semi-submersible)"
+          },
+          {
+            "@type": "Attribute",
             "name": "Pitch",
             "schema": "double",
+            "writable": true,
             "description": "Platform pitch angle [deg]"
           },
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
             "name": "Roll",
             "schema": "double",
+            "writable": true,
             "description": "Platform roll angle [deg]"
           },
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
             "name": "Heave",
             "schema": "double",
+            "writable": true,
             "description": "Platform heave displacement [m]"
           }
         ]
@@ -119,21 +166,31 @@
         "displayName": "Blade 1",
         "contents": [
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
+            "name": "Length_m",
+            "schema": "double",
+            "writable": false,
+            "description": "Blade length in meters"
+          },
+          {
+            "@type": "Attribute",
             "name": "OoPDefl1",
             "schema": "double",
+            "writable": true,
             "description": "Blade 1 out-of-plane deflection [m]"
           },
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
             "name": "IPDefl1",
             "schema": "double",
+            "writable": true,
             "description": "Blade 1 in-plane deflection [m]"
           },
           {
-            "@type": "Telemetry",
+            "@type": "Attribute",
             "name": "BldPitch1",
             "schema": "double",
+            "writable": true,
             "description": "Blade 1 pitch angle [deg]"
           }
         ]
