@@ -1,183 +1,201 @@
-{
-  "@id": "dtmi:example:FOWT;1",
-  "@type": "Interface",
-  "@context": "dtmi:dtdl:context;2",
-  "displayName": "Floating Offshore Wind Turbine",
-  "description": "Digital twin model for a floating offshore wind turbine with OpenFAST telemetry.",
-  "contents": [
-    {
-      "@type": "Telemetry",
-      "name": "Time",
-      "schema": "double",
-      "description": "Simulation time [s]"
-    },
-    {
-      "@type": "Telemetry",
-      "name": "Azimuth",
-      "schema": "double",
-      "description": "Rotor azimuth angle [deg]"
-    },
-    {
-      "@type": "Component",
-      "name": "Nacelle",
-      "schema": {
-        "@type": "Component",
-        "contents": [
-          {
-            "@type": "Telemetry",
-            "name": "RotSpeed",
-            "schema": "double",
-            "description": "Rotor speed [rad/s]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "GenSpeed",
-            "schema": "double",
-            "description": "Generator speed [rad/s]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "RotThrust",
-            "schema": "double",
-            "description": "Rotor thrust force [N]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "RotTorq",
-            "schema": "double",
-            "description": "Rotor torque [Nm]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "RotPwr",
-            "schema": "double",
-            "description": "Rotor power output [kW]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "BldPitch1",
-            "schema": "double",
-            "description": "Blade pitch angle [deg]"
-          }
-        ]
+[
+  {
+    "@id": "dtmi:example:FOWT_Nacelle;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Nacelle",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "RotSpeed",
+        "schema": "double",
+        "description": "Rotor speed [rad/s]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "GenSpeed",
+        "schema": "double",
+        "description": "Generator speed [rad/s]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "RotThrust",
+        "schema": "double",
+        "description": "Rotor thrust force [N]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "RotTorq",
+        "schema": "double",
+        "description": "Rotor torque [Nm]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "RotPwr",
+        "schema": "double",
+        "description": "Rotor power output [kW]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "BldPitch1",
+        "schema": "double",
+        "description": "Blade pitch angle [deg]"
       }
-    },
-    {
-      "@type": "Component",
-      "name": "Blade1",
-      "schema": {
-        "@type": "Component",
-        "contents": [
-          {
-            "@type": "Telemetry",
-            "name": "OoPDefl1",
-            "schema": "double",
-            "description": "Out-of-plane blade deflection [m]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "IPDefl1",
-            "schema": "double",
-            "description": "In-plane blade deflection [m]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "RootMyc1",
-            "schema": "double",
-            "description": "Blade root moment (out-of-plane) [Nm]"
-          }
-        ]
+    ]
+  },
+  {
+    "@id": "dtmi:example:FOWT_Blade1;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Blade 1",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "OoPDefl1",
+        "schema": "double",
+        "description": "Out-of-plane blade deflection [m]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "IPDefl1",
+        "schema": "double",
+        "description": "In-plane blade deflection [m]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "RootMyc1",
+        "schema": "double",
+        "description": "Blade root moment (out-of-plane) [Nm]"
       }
-    },
-    {
-      "@type": "Component",
-      "name": "Tower",
-      "schema": {
-        "@type": "Component",
-        "contents": [
-          {
-            "@type": "Telemetry",
-            "name": "TTDspFA",
-            "schema": "double",
-            "description": "Tower top fore-aft displacement [m]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TTDspSS",
-            "schema": "double",
-            "description": "Tower top side-to-side displacement [m]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TwrBsFxt",
-            "schema": "double",
-            "description": "Tower base force in X [N]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TwrBsFyt",
-            "schema": "double",
-            "description": "Tower base force in Y [N]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TwrBsFzt",
-            "schema": "double",
-            "description": "Tower base force in Z [N]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TwrBsMxt",
-            "schema": "double",
-            "description": "Tower base moment around X [Nm]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TwrBsMyt",
-            "schema": "double",
-            "description": "Tower base moment around Y [Nm]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "TwrBsMzt",
-            "schema": "double",
-            "description": "Tower base moment around Z [Nm]"
-          }
-        ]
+    ]
+  },
+  {
+    "@id": "dtmi:example:FOWT_Tower;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Tower",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "TTDspFA",
+        "schema": "double",
+        "description": "Tower top fore-aft displacement [m]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TTDspSS",
+        "schema": "double",
+        "description": "Tower top side-to-side displacement [m]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TwrBsFxt",
+        "schema": "double",
+        "description": "Tower base force in X [N]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TwrBsFyt",
+        "schema": "double",
+        "description": "Tower base force in Y [N]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TwrBsFzt",
+        "schema": "double",
+        "description": "Tower base force in Z [N]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TwrBsMxt",
+        "schema": "double",
+        "description": "Tower base moment around X [Nm]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TwrBsMyt",
+        "schema": "double",
+        "description": "Tower base moment around Y [Nm]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "TwrBsMzt",
+        "schema": "double",
+        "description": "Tower base moment around Z [Nm]"
       }
-    },
-    {
-      "@type": "Component",
-      "name": "Platform",
-      "schema": {
-        "@type": "Component",
-        "contents": [
-          {
-            "@type": "Telemetry",
-            "name": "Pitch",
-            "schema": "double",
-            "description": "Platform pitch angle [deg]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "Roll",
-            "schema": "double",
-            "description": "Platform roll angle [deg]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "Heave",
-            "schema": "double",
-            "description": "Platform heave displacement [m]"
-          },
-          {
-            "@type": "Telemetry",
-            "name": "MooringTension",
-            "schema": "double",
-            "description": "Mooring line tension force [N]"
-          }
-        ]
+    ]
+  },
+  {
+    "@id": "dtmi:example:FOWT_Platform;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Platform",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "Pitch",
+        "schema": "double",
+        "description": "Platform pitch angle [deg]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "Roll",
+        "schema": "double",
+        "description": "Platform roll angle [deg]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "Heave",
+        "schema": "double",
+        "description": "Platform heave displacement [m]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "MooringTension",
+        "schema": "double",
+        "description": "Mooring line tension force [N]"
       }
-    }
-  ]
-}
+    ]
+  },
+  {
+    "@id": "dtmi:example:FOWT;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Floating Offshore Wind Turbine",
+    "description": "Digital twin model for a floating offshore wind turbine with OpenFAST telemetry.",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "Time",
+        "schema": "double",
+        "description": "Simulation time [s]"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "Azimuth",
+        "schema": "double",
+        "description": "Rotor azimuth angle [deg]"
+      },
+      {
+        "@type": "Component",
+        "name": "Nacelle",
+        "schema": "dtmi:example:FOWT_Nacelle;1"
+      },
+      {
+        "@type": "Component",
+        "name": "Blade1",
+        "schema": "dtmi:example:FOWT_Blade1;1"
+      },
+      {
+        "@type": "Component",
+        "name": "Tower",
+        "schema": "dtmi:example:FOWT_Tower;1"
+      },
+      {
+        "@type": "Component",
+        "name": "Platform",
+        "schema": "dtmi:example:FOWT_Platform;1"
+      }
+    ]
+  }
+]
