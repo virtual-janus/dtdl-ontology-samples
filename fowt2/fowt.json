@@ -36,6 +36,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:windturbine:Rotor;1",
     "@type": "Interface",
     "displayName": "Rotor",
@@ -78,6 +79,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:windturbine:Generator;1",
     "@type": "Interface",
     "displayName": "Generator",
@@ -92,6 +94,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:windturbine:Blade;1",
     "@type": "Interface",
     "displayName": "Blade",
@@ -127,6 +130,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:windturbine:Tower;1",
     "@type": "Interface",
     "displayName": "Tower",
