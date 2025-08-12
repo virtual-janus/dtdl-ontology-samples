@@ -1,10 +1,10 @@
 [
   {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:windturbine:WindTurbineModel;1",
+    "@id": "dtmi:example:windturbine:WindTurbine;1",
     "@type": "Interface",
-    "displayName": "Wind Turbine Model",
-    "description": "A structured wind turbine model using components for rotor, generator, blade, and tower.",
+    "displayName": "Wind Turbine",
+    "description": "Wind turbine component containing rotor, generator, blade, and tower components.",
     "contents": [
       {
         "@type": "Property",
@@ -14,24 +14,32 @@
         "description": "Simulation time in seconds."
       },
       {
-        "@type": "Component",
-        "name": "rotor",
-        "schema": "dtmi:example:windturbine:Rotor;1"
+        "@type": "Relationship",
+        "name": "containsRotor",
+        "target": "dtmi:example:windturbine:Rotor;1",
+        "properties": [],
+        "description": "Contains the rotor component"
       },
       {
-        "@type": "Component",
-        "name": "generator",
-        "schema": "dtmi:example:windturbine:Generator;1"
+        "@type": "Relationship",
+        "name": "containsGenerator",
+        "target": "dtmi:example:windturbine:Generator;1",
+        "properties": [],
+        "description": "Contains the generator component"
       },
       {
-        "@type": "Component",
-        "name": "blade1",
-        "schema": "dtmi:example:windturbine:Blade;1"
+        "@type": "Relationship",
+        "name": "containsBlade1",
+        "target": "dtmi:example:windturbine:Blade;1",
+        "properties": [],
+        "description": "Contains the first blade component"
       },
       {
-        "@type": "Component",
-        "name": "tower",
-        "schema": "dtmi:example:windturbine:Tower;1"
+        "@type": "Relationship",
+        "name": "containsTower",
+        "target": "dtmi:example:windturbine:Tower;1",
+        "properties": [],
+        "description": "Contains the tower component"
       }
     ]
   },
