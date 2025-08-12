@@ -251,4 +251,9 @@
         "name": "twrBsMzt",
         "schema": "double",
         "writable": true,
-        "description":
+        "description": "Tower base yaw moment (kNm).",
+        "comment": "Tower base yaw moment (kNm)."
+      }
+    ]
+  }
+]
