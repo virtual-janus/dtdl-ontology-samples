@@ -4,41 +4,72 @@
     "@id": "dtmi:example:windturbine:WindTurbine;1",
     "@type": "Interface",
     "displayName": "Wind Turbine",
-    "description": "Wind turbine component containing rotor, generator, blade, and tower components.",
+    "description": "Wind turbine component with metadata and relationships to subcomponents.",
     "contents": [
       {
         "@type": "Property",
-        "name": "time",
+        "name": "manufacturer",
+        "schema": "string",
+        "writable": true,
+        "description": "Manufacturer of the wind turbine."
+      },
+      {
+        "@type": "Property",
+        "name": "manufacturedDate",
+        "schema": "date",
+        "writable": true,
+        "description": "Date the turbine was manufactured."
+      },
+      {
+        "@type": "Property",
+        "name": "modelNumber",
+        "schema": "string",
+        "writable": true,
+        "description": "Model number of the turbine."
+      },
+      {
+        "@type": "Property",
+        "name": "commissioningDate",
+        "schema": "date",
+        "writable": true,
+        "description": "Date the turbine was commissioned."
+      },
+      {
+        "@type": "Property",
+        "name": "latitude",
         "schema": "double",
         "writable": true,
-        "description": "Simulation time in seconds."
+        "description": "Latitude coordinate of the turbine location."
+      },
+      {
+        "@type": "Property",
+        "name": "longitude",
+        "schema": "double",
+        "writable": true,
+        "description": "Longitude coordinate of the turbine location."
       },
       {
         "@type": "Relationship",
         "name": "containsRotor",
         "target": "dtmi:example:windturbine:Rotor;1",
-        "properties": [],
         "description": "Contains the rotor component"
       },
       {
         "@type": "Relationship",
         "name": "containsGenerator",
         "target": "dtmi:example:windturbine:Generator;1",
-        "properties": [],
         "description": "Contains the generator component"
       },
       {
         "@type": "Relationship",
         "name": "containsBlade1",
         "target": "dtmi:example:windturbine:Blade;1",
-        "properties": [],
         "description": "Contains the first blade component"
       },
       {
         "@type": "Relationship",
         "name": "containsTower",
         "target": "dtmi:example:windturbine:Tower;1",
-        "properties": [],
         "description": "Contains the tower component"
       }
     ]
