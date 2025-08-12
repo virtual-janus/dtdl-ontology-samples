@@ -1,0 +1,192 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:WindTurbineModel;1",
+    "@type": "Interface",
+    "displayName": "Wind Turbine Model",
+    "description": "A structured wind turbine model using components for rotor, generator, blade, and tower.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "time",
+        "schema": "double",
+        "writable": true,
+        "description": "Simulation time in seconds."
+      },
+      {
+        "@type": "Component",
+        "name": "rotor",
+        "schema": "dtmi:example:windturbine:Rotor;1"
+      },
+      {
+        "@type": "Component",
+        "name": "generator",
+        "schema": "dtmi:example:windturbine:Generator;1"
+      },
+      {
+        "@type": "Component",
+        "name": "blade1",
+        "schema": "dtmi:example:windturbine:Blade;1"
+      },
+      {
+        "@type": "Component",
+        "name": "tower",
+        "schema": "dtmi:example:windturbine:Tower;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:windturbine:Rotor;1",
+    "@type": "Interface",
+    "displayName": "Rotor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "azimuth",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor azimuth angle (deg)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotSpeed",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor rotational speed (rev/s)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotThrust",
+        "schema": "double",
+        "writable": true,
+        "description": "Total rotor thrust (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotTorq",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor torque (kNm)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotPwr",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor mechanical power (kW)."
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:windturbine:Generator;1",
+    "@type": "Interface",
+    "displayName": "Generator",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "genSpeed",
+        "schema": "double",
+        "writable": true,
+        "description": "Generator speed (rev/s)."
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:windturbine:Blade;1",
+    "@type": "Interface",
+    "displayName": "Blade",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "ooPDefl1",
+        "schema": "double",
+        "writable": true,
+        "description": "Out-of-plane blade 1 deflection (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "ipDefl1",
+        "schema": "double",
+        "writable": true,
+        "description": "In-plane blade 1 deflection (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "bldPitch1",
+        "schema": "double",
+        "writable": true,
+        "description": "Blade 1 pitch angle (deg)."
+      },
+      {
+        "@type": "Property",
+        "name": "rootMyc1",
+        "schema": "double",
+        "writable": true,
+        "description": "Blade 1 out-of-plane root bending moment (kNm)."
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:windturbine:Tower;1",
+    "@type": "Interface",
+    "displayName": "Tower",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "ttDspFA",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower-top fore-aft displacement (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "ttDspSS",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower-top side-to-side displacement (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsFxt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base fore-aft shear force (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsFyt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base side-side shear force (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsFzt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base vertical force (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsMxt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base roll moment (kNm)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsMyt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base pitch moment (kNm)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsMzt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base yaw moment (kNm)."
+      }
+    ]
+  }
+]
