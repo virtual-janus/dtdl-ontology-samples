@@ -83,7 +83,7 @@
         "name": "connectedToMooringLines",
         "target": "dtmi:example:windturbine:MooringLine;1",
         "description": "Mooring lines connected to the platform.",
-        "maxMultiplicity": -1
+        "maxMultiplicity": 3
       }
     ]
   },
