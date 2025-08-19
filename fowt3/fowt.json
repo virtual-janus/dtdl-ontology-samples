@@ -80,7 +80,7 @@
       },
       {
         "@type": "Relationship",
-        "name": "connectedToMooringLines",
+        "name": "connectedToMoorings",
         "target": "dtmi:example:windturbine:MooringLine;1",
         "description": "Mooring lines connected to the platform.",
         "maxMultiplicity": 3
