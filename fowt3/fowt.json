@@ -77,13 +77,6 @@
         "name": "mountedOnPlatform",
         "target": "dtmi:example:windturbine:Platform;1",
         "description": "The platform on which the wind turbine is mounted."
-      },
-      {
-        "@type": "Relationship",
-        "name": "connectedToMoorings",
-        "target": "dtmi:example:windturbine:MooringLine;1",
-        "description": "Mooring lines connected to the platform.",
-        "maxMultiplicity": 3
       }
     ]
   },
@@ -278,6 +271,14 @@
         "schema": "double",
         "writable": true,
         "description": "Roll angle of the platform (deg)."
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasMooringLine",
+        "target": "dtmi:example:windturbine:MooringLine;1",
+        "description": "Mooring lines attached to the platform.",
+        "minMultiplicity": 3,
+        "maxMultiplicity": 6
       }
     ]
   },
