@@ -1,0 +1,320 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:WindTurbine;1",
+    "@type": "Interface",
+    "displayName": "Wind Turbine",
+    "description": "Wind turbine component with metadata and relationships to subcomponents.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "manufacturer",
+        "schema": "string",
+        "writable": true,
+        "description": "Manufacturer of the wind turbine."
+      },
+      {
+        "@type": "Property",
+        "name": "manufacturedDate",
+        "schema": "date",
+        "writable": true,
+        "description": "Date the turbine was manufactured."
+      },
+      {
+        "@type": "Property",
+        "name": "modelNumber",
+        "schema": "string",
+        "writable": true,
+        "description": "Model number of the turbine."
+      },
+      {
+        "@type": "Property",
+        "name": "commissioningDate",
+        "schema": "date",
+        "writable": true,
+        "description": "Date the turbine was commissioned."
+      },
+      {
+        "@type": "Property",
+        "name": "latitude",
+        "schema": "double",
+        "writable": true,
+        "description": "Latitude coordinate of the turbine location."
+      },
+      {
+        "@type": "Property",
+        "name": "longitude",
+        "schema": "double",
+        "writable": true,
+        "description": "Longitude coordinate of the turbine location."
+      },
+      {
+        "@type": "Relationship",
+        "name": "containsRotor",
+        "target": "dtmi:example:windturbine:Rotor;1",
+        "description": "Contains the rotor component"
+      },
+      {
+        "@type": "Relationship",
+        "name": "containsGenerator",
+        "target": "dtmi:example:windturbine:Generator;1",
+        "description": "Contains the generator component"
+      },
+      {
+        "@type": "Relationship",
+        "name": "containsBlade1",
+        "target": "dtmi:example:windturbine:Blade;1",
+        "description": "Contains the first blade component"
+      },
+      {
+        "@type": "Relationship",
+        "name": "containsTower",
+        "target": "dtmi:example:windturbine:Tower;1",
+        "description": "Contains the tower component"
+      },
+      {
+        "@type": "Relationship",
+        "name": "mountedOnPlatform",
+        "target": "dtmi:example:windturbine:Platform;1",
+        "description": "The platform on which the wind turbine is mounted."
+      },
+      {
+        "@type": "Relationship",
+        "name": "connectedToMooringLines",
+        "target": "dtmi:example:windturbine:MooringLine;1",
+        "description": "Mooring lines connected to the platform.",
+        "maxMultiplicity": -1
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:Rotor;1",
+    "@type": "Interface",
+    "displayName": "Rotor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "azimuth",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor azimuth angle (deg)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotSpeed",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor rotational speed (rev/s)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotThrust",
+        "schema": "double",
+        "writable": true,
+        "description": "Total rotor thrust (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotTorq",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor torque (kNm)."
+      },
+      {
+        "@type": "Property",
+        "name": "rotPwr",
+        "schema": "double",
+        "writable": true,
+        "description": "Rotor mechanical power (kW)."
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:Generator;1",
+    "@type": "Interface",
+    "displayName": "Generator",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "genSpeed",
+        "schema": "double",
+        "writable": true,
+        "description": "Generator speed (rev/s)."
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:Blade;1",
+    "@type": "Interface",
+    "displayName": "Blade",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "ooPDefl1",
+        "schema": "double",
+        "writable": true,
+        "description": "Out-of-plane blade 1 deflection (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "ipDefl1",
+        "schema": "double",
+        "writable": true,
+        "description": "In-plane blade 1 deflection (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "bldPitch1",
+        "schema": "double",
+        "writable": true,
+        "description": "Blade 1 pitch angle (deg)."
+      },
+      {
+        "@type": "Property",
+        "name": "rootMyc1",
+        "schema": "double",
+        "writable": true,
+        "description": "Blade 1 out-of-plane root bending moment (kNm)."
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:Tower;1",
+    "@type": "Interface",
+    "displayName": "Tower",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "ttDspFA",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower-top fore-aft displacement (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "ttDspSS",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower-top side-to-side displacement (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsFxt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base fore-aft shear force (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsFyt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base side-side shear force (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsFzt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base vertical force (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsMxt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base roll moment (kNm)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsMyt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base pitch moment (kNm)."
+      },
+      {
+        "@type": "Property",
+        "name": "twrBsMzt",
+        "schema": "double",
+        "writable": true,
+        "description": "Tower base yaw moment (kNm)."
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:Platform;1",
+    "@type": "Interface",
+    "displayName": "Platform",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "platformType",
+        "schema": "string",
+        "writable": true,
+        "description": "Type of floating platform (e.g., spar, semisubmersible, TLP)."
+      },
+      {
+        "@type": "Property",
+        "name": "heave",
+        "schema": "double",
+        "writable": true,
+        "description": "Vertical displacement of the platform (m)."
+      },
+      {
+        "@type": "Property",
+        "name": "pitch",
+        "schema": "double",
+        "writable": true,
+        "description": "Pitch angle of the platform (deg)."
+      },
+      {
+        "@type": "Property",
+        "name": "roll",
+        "schema": "double",
+        "writable": true,
+        "description": "Roll angle of the platform (deg)."
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:windturbine:MooringLine;1",
+    "@type": "Interface",
+    "displayName": "Mooring Line",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "lineId",
+        "schema": "string",
+        "writable": true,
+        "description": "Unique identifier for the mooring line."
+      },
+      {
+        "@type": "Property",
+        "name": "tension",
+        "schema": "double",
+        "writable": true,
+        "description": "Current tension in the mooring line (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "angle",
+        "schema": "double",
+        "writable": true,
+        "description": "Angle of the mooring line with respect to vertical (deg)."
+      },
+      {
+        "@type": "Property",
+        "name": "lineLength",
+        "schema": "double",
+        "writable": true,
+        "description": "Length of the mooring line (m)."
+      }
+    ]
+  }
+]
