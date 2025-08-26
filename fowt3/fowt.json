@@ -297,10 +297,17 @@
       },
       {
         "@type": "Property",
-        "name": "tension",
+        "name": "anchten",
         "schema": "double",
         "writable": true,
-        "description": "Current tension in the mooring line (kN)."
+        "description": "Current anchor tension in the mooring line (kN)."
+      },
+      {
+        "@type": "Property",
+        "name": "fairten",
+        "schema": "double",
+        "writable": true,
+        "description": "Current fair tension in the mooring line (kN)."
       },
       {
         "@type": "Property",
