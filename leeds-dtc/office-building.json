@@ -91,9 +91,9 @@
             "@type": "Enum",
             "valueSchema": "string",
             "enumValues": [
-              { "name": "cool", "value": "cool" },
-              { "name": "heat", "value": "heat" },
-              { "name": "auto", "value": "auto" }
+              { "name": "cool", "enumValue": "cool" },
+              { "name": "heat", "enumValue": "heat" },
+              { "name": "auto", "enumValue": "auto" }
             ]
           }
         }
@@ -120,11 +120,7 @@
         "name": "setBrightness",
         "request": {
           "name": "brightnessLevel",
-          "schema": {
-            "@type": "Double",
-            "minimum": 0,
-            "maximum": 100
-          }
+          "schema": "double"
         }
       },
       {
