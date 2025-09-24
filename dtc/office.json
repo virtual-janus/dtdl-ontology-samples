@@ -1,0 +1,281 @@
+[
+  {
+    "@id": "dtmi:example:Building;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Building",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "hasFloor",
+        "target": "dtmi:example:Floor;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:Floor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Floor",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "hasSpace",
+        "target": "dtmi:example:Space;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:Space;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Generic Space",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "areaSize",
+        "schema": "double"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasHVAC",
+        "target": "dtmi:example:HVAC;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasLighting",
+        "target": "dtmi:example:Lighting;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasCO2Sensor",
+        "target": "dtmi:example:CO2Sensor;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasOccupancySensor",
+        "target": "dtmi:example:OccupancySensor;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:HVAC;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "HVAC System",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "humidity",
+        "schema": "double"
+      },
+      {
+        "@type": "Command",
+        "name": "setTemperature",
+        "request": {
+          "name": "targetTemp",
+          "schema": "double"
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "turnOn",
+        "request": {
+          "name": "mode",
+          "schema": {
+            "@type": "Enum",
+            "valueSchema": "string",
+            "enumValues": [
+              { "name": "cool", "enumValue": "cool" },
+              { "name": "heat", "enumValue": "heat" },
+              { "name": "auto", "enumValue": "auto" }
+            ]
+          }
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "turnOff"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:Lighting;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Lighting System",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "brightness",
+        "schema": "double"
+      },
+      {
+        "@type": "Command",
+        "name": "setBrightness",
+        "request": {
+          "name": "brightnessLevel",
+          "schema": "double"
+        }
+      },
+      {
+        "@type": "Command",
+        "name": "turnOn"
+      },
+      {
+        "@type": "Command",
+        "name": "turnOff"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:CO2Sensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "CO2 Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "co2Level",
+        "schema": "double"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:OccupancySensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Occupancy Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "occupancyCount",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "isOccupied",
+        "schema": "boolean"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:Desk;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Desk",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "deskId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "occupied",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Property",
+        "name": "presence",
+        "schema": "boolean"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:OpenOffice;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Open Office Area",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "hasDesk",
+        "target": "dtmi:example:Desk;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:MeetingRoom;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Meeting Room",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "capacity",
+        "schema": "integer"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:Kitchen;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Kitchen"
+  },
+  {
+    "@id": "dtmi:example:CommonArea;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Common Area"
+  },
+  {
+    "@id": "dtmi:example:EventSpace;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Event Space"
+  },
+  {
+    "@id": "dtmi:example:ImmersiveRoom;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Immersive Room"
+  },
+  {
+    "@id": "dtmi:example:Lab;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Laboratory"
+  },
+  {
+    "@id": "dtmi:example:StorageRoom;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Storage Room"
+  },
+  {
+    "@id": "dtmi:example:ToiletArea;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Toilet Area"
+  },
+  {
+    "@id": "dtmi:example:Lift;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Lift"
+  },
+  {
+    "@id": "dtmi:example:FrontDoor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "extends": ["dtmi:example:Space;1"],
+    "displayName": "Front Door"
+  }
+]
