@@ -9,6 +9,29 @@
         "@type": "Relationship",
         "name": "hasFloor",
         "target": "dtmi:example:Floor;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasSite",
+        "target": "dtmi:example:Site;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:Site;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Site",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "location",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasTemperatureSensor",
+        "target": "dtmi:example:TemperatureSensor;1"
       }
     ]
   },
