@@ -55,6 +55,42 @@
         "@type": "Relationship",
         "name": "hasOccupancySensor",
         "target": "dtmi:example:OccupancySensor;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasTemperatureSensor",
+        "target": "dtmi:example:TemperatureSensor;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasPressureSensor",
+        "target": "dtmi:example:PressureSensor;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:TemperatureSensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:PressureSensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Pressure Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "pressure",
+        "schema": "double"
       }
     ]
   },
@@ -73,11 +109,6 @@
         "@type": "Property",
         "name": "humidity",
         "schema": "double"
-      },
-      {
-        "@type": "Component",
-        "name": "cyberSecurityStatus",
-        "schema": "dtmi:example:CyberSecurityStatus;1"
       },
       {
         "@type": "Command",
@@ -121,11 +152,6 @@
         "schema": "double"
       },
       {
-        "@type": "Component",
-        "name": "cyberSecurityStatus",
-        "schema": "dtmi:example:CyberSecurityStatus;1"
-      },
-      {
         "@type": "Command",
         "name": "setBrightness",
         "request": {
@@ -153,11 +179,6 @@
         "@type": "Property",
         "name": "co2Level",
         "schema": "double"
-      },
-      {
-        "@type": "Component",
-        "name": "cyberSecurityStatus",
-        "schema": "dtmi:example:CyberSecurityStatus;1"
       }
     ]
   },
@@ -176,11 +197,6 @@
         "@type": "Property",
         "name": "isOccupied",
         "schema": "boolean"
-      },
-      {
-        "@type": "Component",
-        "name": "cyberSecurityStatus",
-        "schema": "dtmi:example:CyberSecurityStatus;1"
       }
     ]
   },
@@ -297,37 +313,5 @@
     "@context": "dtmi:dtdl:context;2",
     "extends": ["dtmi:example:Space;1"],
     "displayName": "Front Door"
-  },
-  {
-    "@id": "dtmi:example:CyberSecurityStatus;1",
-    "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
-    "displayName": "Cyber Security Status",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "firewallEnabled",
-        "schema": "boolean",
-        "description": "Indicates if firewall is enabled"
-      },
-      {
-        "@type": "Property",
-        "name": "antivirusUpToDate",
-        "schema": "boolean",
-        "description": "Indicates if antivirus is up to date"
-      },
-      {
-        "@type": "Property",
-        "name": "intrusionDetectionActive",
-        "schema": "boolean",
-        "description": "Indicates if intrusion detection system is active"
-      },
-      {
-        "@type": "Property",
-        "name": "lastSecurityPatchDate",
-        "schema": "dateTime",
-        "description": "Timestamp of last security patch"
-      }
-    ]
   }
 ]
