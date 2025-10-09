@@ -1,0 +1,123 @@
+[
+  {
+    "@id": "dtmi:example:Building;1",
+    "@type": "Interface",
+    "displayName": "Building",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "floors",
+        "target": "dtmi:example:Floor;1",
+        "displayName": "Floors",
+        "maxMultiplicity": -1
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:Floor;1",
+    "@type": "Interface",
+    "displayName": "Floor",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "spaces",
+        "target": "dtmi:example:Space;1",
+        "displayName": "Spaces",
+        "maxMultiplicity": -1
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:Space;1",
+    "@type": "Interface",
+    "displayName": "Space",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "function",
+        "schema": "string",
+        "displayName": "Function"
+      },
+      {
+        "@type": "Relationship",
+        "name": "sensors",
+        "target": "dtmi:example:Sensor;1",
+        "displayName": "Sensors",
+        "maxMultiplicity": -1
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:Sensor;1",
+    "@type": "Interface",
+    "displayName": "Sensor",
+    "contents": [],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:TemperatureSensor;1",
+    "@type": "Interface",
+    "extends": ["dtmi:example:Sensor;1"],
+    "displayName": "Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "temperature",
+        "schema": "double",
+        "displayName": "Temperature"
+      },
+      {
+        "@type": "Property",
+        "name": "unit",
+        "schema": "string",
+        "displayName": "Unit"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:VendorATemperatureSensor;1",
+    "@type": "Interface",
+    "extends": ["dtmi:example:TemperatureSensor;1"],
+    "displayName": "Vendor A Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "vendorModel",
+        "schema": "string",
+        "displayName": "Vendor Model"
+      },
+      {
+        "@type": "Property",
+        "name": "calibrationDate",
+        "schema": "date",
+        "displayName": "Calibration Date"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  },
+  {
+    "@id": "dtmi:example:VendorBTemperatureSensor;1",
+    "@type": "Interface",
+    "extends": ["dtmi:example:TemperatureSensor;1"],
+    "displayName": "Vendor B Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "firmwareVersion",
+        "schema": "string",
+        "displayName": "Firmware Version"
+      },
+      {
+        "@type": "Property",
+        "name": "batteryLevel",
+        "schema": "double",
+        "displayName": "Battery Level"
+      }
+    ],
+    "@context": "dtmi:dtdl:context;2"
+  }
+]
