@@ -64,7 +64,7 @@
     "displayName": "Temperature Sensor",
     "contents": [
       {
-        "@type": "Telemetry",
+        "@type": "Property",
         "name": "temperature",
         "schema": "double",
         "displayName": "Temperature"
