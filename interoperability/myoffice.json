@@ -1,14 +1,15 @@
 [
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Room;1",
     "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
     "displayName": "Room",
     "contents": [
       {
         "@type": "Relationship",
         "name": "hasTemperatureSensor",
-        "target": "dtmi:example:TemperatureSensor;1"
+        "target": "dtmi:example:TemperatureSensor;1",
+        "displayName": "has temperature sensor"
       }
     ]
   },
@@ -20,16 +21,6 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "temperature",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "units",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
         "name": "model",
         "schema": "string"
       },
@@ -37,6 +28,35 @@
         "@type": "Property",
         "name": "sensorId",
         "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "producesTemperature",
+        "target": "dtmi:example:Temperature;1",
+        "displayName": "produces temperature"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:Temperature;1",
+    "@type": "Interface",
+    "displayName": "Temperature",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "value",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "unit",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "timestamp",
+        "schema": "dateTime"
       }
     ]
   },
@@ -69,4 +89,3 @@
     ]
   }
 ]
-
