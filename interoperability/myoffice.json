@@ -10,6 +10,13 @@
         "name": "hasTemperatureSensor",
         "target": "dtmi:example:TemperatureSensor;1",
         "displayName": "has temperature sensor"
+      },
+      {
+        "@type": "Property",
+        "name": "isOverheated",
+        "schema": "boolean",
+        "writable": true,
+        "description": "Indicates whether the room is overheated"
       }
     ]
   },
