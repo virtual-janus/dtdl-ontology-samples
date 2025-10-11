@@ -1,6 +1,6 @@
 {
   "@context": "dtmi:dtdl:context;2",
-  "contents": [
+  "models": [
     {
       "@id": "dtmi:example:TemperatureSensor;1",
       "@type": "Interface",
@@ -31,9 +31,7 @@
     {
       "@id": "dtmi:example:VendorATemperatureSensor;1",
       "@type": "Interface",
-      "extends": [
-        "dtmi:example:TemperatureSensor;1"
-      ],
+      "extends": ["dtmi:example:TemperatureSensor;1"],
       "displayName": "Vendor A Temperature Sensor",
       "contents": [
         {
@@ -46,9 +44,7 @@
     {
       "@id": "dtmi:example:VendorBTemperatureSensor;1",
       "@type": "Interface",
-      "extends": [
-        "dtmi:example:TemperatureSensor;1"
-      ],
+      "extends": ["dtmi:example:TemperatureSensor;1"],
       "displayName": "Vendor B Temperature Sensor",
       "contents": [
         {
