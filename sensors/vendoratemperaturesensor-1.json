@@ -1,0 +1,14 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:example:VendorATemperatureSensor;1",
+  "@type": "Interface",
+  "extends": ["dtmi:example:TemperatureSensor;1"],
+  "displayName": "Vendor A Temperature Sensor",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "battery",
+      "schema": "integer"
+    }
+  ]
+}
