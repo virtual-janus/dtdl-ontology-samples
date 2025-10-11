@@ -95,11 +95,6 @@
     "extends": ["dtmi:example:TemperatureSensor;1"],
     "displayName": "Vendor C Temperature Sensor",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "serial",
-        "schema": "string"
-      }
     ]
   }
 ]
