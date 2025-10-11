@@ -1,0 +1,28 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:example:TemperatureSensor;1",
+  "@type": "Interface",
+  "displayName": "Temperature Sensor",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "temperature",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "units",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "model",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "sensorId",
+      "schema": "string"
+    }
+  ]
+}
