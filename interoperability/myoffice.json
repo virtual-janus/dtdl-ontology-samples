@@ -87,5 +87,19 @@
         "schema": "string"
       }
     ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:VendorCTemperatureSensor;1",
+    "@type": "Interface",
+    "extends": ["dtmi:example:TemperatureSensor;1"],
+    "displayName": "Vendor C Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "serial",
+        "schema": "string"
+      }
+    ]
   }
 ]
