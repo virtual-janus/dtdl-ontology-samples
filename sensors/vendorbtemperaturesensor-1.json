@@ -1,0 +1,14 @@
+{
+  "@context": "dtmi:dtdl:context;2",
+  "@id": "dtmi:example:VendorBTemperatureSensor;1",
+  "@type": "Interface",
+  "extends": ["dtmi:example:TemperatureSensor;1"],
+  "displayName": "Vendor B Temperature Sensor",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "serial",
+      "schema": "string"
+    }
+  ]
+}
