@@ -1,58 +1,28 @@
 {
   "@context": "dtmi:dtdl:context;2",
-  "models": [
+  "@id": "dtmi:example:TemperatureSensor;1",
+  "@type": "Interface",
+  "displayName": "Temperature Sensor",
+  "contents": [
     {
-      "@id": "dtmi:example:TemperatureSensor;1",
-      "@type": "Interface",
-      "displayName": "Temperature Sensor",
-      "contents": [
-        {
-          "@type": "Property",
-          "name": "temperature",
-          "schema": "double"
-        },
-        {
-          "@type": "Property",
-          "name": "units",
-          "schema": "string"
-        },
-        {
-          "@type": "Property",
-          "name": "model",
-          "schema": "string"
-        },
-        {
-          "@type": "Property",
-          "name": "sensorId",
-          "schema": "string"
-        }
-      ]
+      "@type": "Property",
+      "name": "temperature",
+      "schema": "double"
     },
     {
-      "@id": "dtmi:example:VendorATemperatureSensor;1",
-      "@type": "Interface",
-      "extends": ["dtmi:example:TemperatureSensor;1"],
-      "displayName": "Vendor A Temperature Sensor",
-      "contents": [
-        {
-          "@type": "Property",
-          "name": "battery",
-          "schema": "integer"
-        }
-      ]
+      "@type": "Property",
+      "name": "units",
+      "schema": "string"
     },
     {
-      "@id": "dtmi:example:VendorBTemperatureSensor;1",
-      "@type": "Interface",
-      "extends": ["dtmi:example:TemperatureSensor;1"],
-      "displayName": "Vendor B Temperature Sensor",
-      "contents": [
-        {
-          "@type": "Property",
-          "name": "serial",
-          "schema": "string"
-        }
-      ]
+      "@type": "Property",
+      "name": "model",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "sensorId",
+      "schema": "string"
     }
   ]
-}
+},
