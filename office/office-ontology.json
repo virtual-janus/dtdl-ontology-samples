@@ -55,6 +55,11 @@
         "@type": "Relationship",
         "name": "hasOccupancySensor",
         "target": "dtmi:example:OccupancySensor;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasTemperatureSensor",
+        "target": "dtmi:example:TemperatureSensor;1"
       }
     ]
   },
@@ -277,5 +282,18 @@
     "@context": "dtmi:dtdl:context;2",
     "extends": ["dtmi:example:Space;1"],
     "displayName": "Front Door"
+  },
+  {
+    "@id": "dtmi:example:TemperatureSensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double"
+      }
+    ]
   }
 ]
