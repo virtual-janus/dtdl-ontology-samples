@@ -13,6 +13,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Car;1",
     "@type": "Interface",
     "displayName": "Car",
@@ -27,6 +28,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Engine;1",
     "@type": "Interface",
     "displayName": "Engine",
@@ -36,6 +38,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Transmission;1",
     "@type": "Interface",
     "displayName": "Transmission",
@@ -44,6 +47,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Wheels;1",
     "@type": "Interface",
     "displayName": "Wheels",
@@ -53,18 +57,21 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Wheel;1",
     "@type": "Interface",
     "displayName": "Wheel",
     "contents": []
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Tire;1",
     "@type": "Interface",
     "displayName": "Tire",
     "contents": []
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Body;1",
     "@type": "Interface",
     "displayName": "Body",
@@ -73,6 +80,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Interior;1",
     "@type": "Interface",
     "displayName": "Interior",
@@ -82,18 +90,21 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Seat;1",
     "@type": "Interface",
     "displayName": "Seat",
     "contents": []
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Dashboard;1",
     "@type": "Interface",
     "displayName": "Dashboard",
     "contents": []
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:InfotainmentSystem;1",
     "@type": "Interface",
     "displayName": "Infotainment System",
@@ -103,12 +114,14 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Screen;1",
     "@type": "Interface",
     "displayName": "Screen",
     "contents": []
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:PowerSystem;1",
     "@type": "Interface",
     "displayName": "Power System",
@@ -118,12 +131,14 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:FuelTank;1",
     "@type": "Interface",
     "displayName": "Fuel Tank",
     "contents": []
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Battery;1",
     "@type": "Interface",
     "displayName": "Battery",
