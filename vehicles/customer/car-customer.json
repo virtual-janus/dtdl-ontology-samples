@@ -53,7 +53,7 @@
     "displayName": "Wheels",
     "contents": [
       { "@type": "Relationship", "name": "wheel", "target": "dtmi:example:Wheel;1" },
-      { "@type": "Relationship", "name": "tire", "target": "dtmi:example:Tire;1" }
+      { "@type": "Relationship", "name": "tyre", "target": "dtmi:example:Tyre;1" }
     ]
   },
   {
@@ -65,9 +65,9 @@
   },
   {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:Tire;1",
+    "@id": "dtmi:example:Tyre;1",
     "@type": "Interface",
-    "displayName": "Tire",
+    "displayName": "Tyre",
     "contents": []
   },
   {
