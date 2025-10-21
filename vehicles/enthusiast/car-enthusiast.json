@@ -97,21 +97,14 @@
         "name": "aerodynamics",
         "schema": {
           "@type": "Object",
-          "@id": "dtmi:example:Aerodynamics;1"
+          "fields": [
+            { "name": "dragCoefficient", "schema": "double" },
+            { "name": "liftCoefficient", "schema": "double" }
+          ]
         }
       },
       { "@type": "Property", "name": "weightKg", "schema": "double" },
       { "@type": "Property", "name": "material", "schema": "string" }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@type": "Object",
-    "@id": "dtmi:example:Aerodynamics;1",
-    "displayName": "Aerodynamics",
-    "fields": [
-      { "name": "dragCoefficient", "schema": "double" },
-      { "name": "liftCoefficient", "schema": "double" }
     ]
   },
   {
