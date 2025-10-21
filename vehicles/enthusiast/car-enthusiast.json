@@ -52,21 +52,6 @@
         "@type": "Relationship",
         "name": "powerSystem",
         "target": "dtmi:example:PowerSystem;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "performance",
-        "target": "dtmi:example:Performance;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "maintenance",
-        "target": "dtmi:example:Maintenance;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "customization",
-        "target": "dtmi:example:Customization;1"
       }
     ]
   },
@@ -85,6 +70,21 @@
         "@type": "Property",
         "name": "fuelType",
         "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "horsePower",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "torque",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "cylinders",
+        "schema": "integer"
       }
     ]
   },
@@ -98,6 +98,16 @@
         "@type": "Property",
         "name": "transmissionType",
         "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "gears",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "manual",
+        "schema": "boolean"
       }
     ]
   },
@@ -124,14 +134,56 @@
     "@id": "dtmi:example:Wheel;1",
     "@type": "Interface",
     "displayName": "Wheel",
-    "contents": []
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "diameterInches",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "material",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "weightKg",
+        "schema": "double"
+      }
+    ]
   },
   {
     "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Tyre;1",
     "@type": "Interface",
     "displayName": "Tyre",
-    "contents": []
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "widthMm",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "aspectRatio",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "diameterInches",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "tyreType",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "pressurePsi",
+        "schema": "double"
+      }
+    ]
   },
   {
     "@context": "dtmi:dtdl:context;2",
@@ -147,7 +199,20 @@
       {
         "@type": "Property",
         "name": "aerodynamics",
-        "schema": "dtmi:example:Aerodynamics;1"
+        "schema": {
+          "@type": "Object",
+          "@id": "dtmi:example:Aerodynamics;1"
+        }
+      },
+      {
+        "@type": "Property",
+        "name": "weightKg",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "material",
+        "schema": "string"
       }
     ]
   },
@@ -184,6 +249,11 @@
         "@type": "Relationship",
         "name": "dashboard",
         "target": "dtmi:example:Dashboard;1"
+      },
+      {
+        "@type": "Property",
+        "name": "interiorMaterial",
+        "schema": "string"
       }
     ]
   },
@@ -218,13 +288,13 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "displayType",
-        "schema": "string"
+        "name": "hasHeadsUpDisplay",
+        "schema": "boolean"
       },
       {
         "@type": "Property",
-        "name": "hasHeadsUpDisplay",
-        "schema": "boolean"
+        "name": "material",
+        "schema": "string"
       }
     ]
   },
@@ -246,7 +316,12 @@
       },
       {
         "@type": "Property",
-        "name": "hasVoiceControl",
+        "name": "supportsAndroidAuto",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Property",
+        "name": "supportsAppleCarPlay",
         "schema": "boolean"
       }
     ]
@@ -264,8 +339,8 @@
       },
       {
         "@type": "Property",
-        "name": "resolution",
-        "schema": "string"
+        "name": "touchEnabled",
+        "schema": "boolean"
       }
     ]
   },
@@ -295,16 +370,13 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "capacity",
+        "name": "capacityLitres",
         "schema": "double"
       },
       {
         "@type": "Property",
-        "name": "fuelTypeCompatibility",
-        "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
-        }
+        "name": "fuelType",
+        "schema": "string"
       }
     ]
   },
@@ -316,129 +388,13 @@
     "contents": [
       {
         "@type": "Property",
-        "name": "capacity",
+        "name": "capacityKWh",
         "schema": "double"
       },
       {
         "@type": "Property",
-        "name": "type",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "chargeTime",
+        "name": "voltage",
         "schema": "double"
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:Performance;1",
-    "@type": "Interface",
-    "displayName": "Performance",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "zeroToSixty",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "topSpeed",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "brakeDistance",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "lapTime",
-        "schema": "double"
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:Maintenance;1",
-    "@type": "Interface",
-    "displayName": "Maintenance",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "lastServiceDate",
-        "schema": "date"
-      },
-      {
-        "@type": "Property",
-        "name": "nextServiceDue",
-        "schema": "date"
-      },
-      {
-        "@type": "Property",
-        "name": "serviceIntervalKm",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "partsReplaced",
-        "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
-        }
-      },
-      {
-        "@type": "Property",
-        "name": "oilType",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "oilChangeDate",
-        "schema": "date"
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:example:Customization;1",
-    "@type": "Interface",
-    "displayName": "Customization",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "exteriorModifications",
-        "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
-        }
-      },
-      {
-        "@type": "Property",
-        "name": "performanceUpgrades",
-        "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
-        }
-      },
-      {
-        "@type": "Property",
-        "name": "interiorModifications",
-        "schema": {
-          "@type": "Array",
-          "elementSchema": "string"
-        }
-      },
-      {
-        "@type": "Property",
-        "name": "customPaint",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "aftermarketParts",
-        "schema": "boolean"
       }
     ]
   }
