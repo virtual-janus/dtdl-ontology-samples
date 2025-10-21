@@ -18,44 +18,117 @@
       "@type": "Interface",
       "displayName": "Car",
       "contents": [
-        {
-          "@type": "Relationship",
-          "name": "engine",
-          "target": "dtmi:example:Engine;1"
-        },
-        {
-          "@type": "Relationship",
-          "name": "transmission",
-          "target": "dtmi:example:Transmission;1"
-        },
-        {
-          "@type": "Relationship",
-          "name": "wheels",
-          "target": "dtmi:example:Wheels;1"
-        },
-        {
-          "@type": "Relationship",
-          "name": "body",
-          "target": "dtmi:example:Body;1"
-        },
-        {
-          "@type": "Relationship",
-          "name": "interior",
-          "target": "dtmi:example:Interior;1"
-        },
-        {
-          "@type": "Relationship",
-          "name": "infotainmentSystem",
-          "target": "dtmi:example:InfotainmentSystem;1"
-        },
-        {
-          "@type": "Relationship",
-          "name": "powerSystem",
-          "target": "dtmi:example:PowerSystem;1"
-        }
+        { "@type": "Relationship", "name": "engine", "target": "dtmi:example:Engine;1" },
+        { "@type": "Relationship", "name": "transmission", "target": "dtmi:example:Transmission;1" },
+        { "@type": "Relationship", "name": "wheels", "target": "dtmi:example:Wheels;1" },
+        { "@type": "Relationship", "name": "body", "target": "dtmi:example:Body;1" },
+        { "@type": "Relationship", "name": "interior", "target": "dtmi:example:Interior;1" },
+        { "@type": "Relationship", "name": "infotainmentSystem", "target": "dtmi:example:InfotainmentSystem;1" },
+        { "@type": "Relationship", "name": "powerSystem", "target": "dtmi:example:PowerSystem;1" }
       ]
     },
-    ...
-    // (rest of the interfaces here)
+    {
+      "@id": "dtmi:example:Engine;1",
+      "@type": "Interface",
+      "displayName": "Engine",
+      "contents": [
+        { "@type": "Property", "name": "engineType", "schema": "string" },
+        { "@type": "Property", "name": "fuelType", "schema": "string" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:Transmission;1",
+      "@type": "Interface",
+      "displayName": "Transmission",
+      "contents": [
+        { "@type": "Property", "name": "transmissionType", "schema": "string" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:Wheels;1",
+      "@type": "Interface",
+      "displayName": "Wheels",
+      "contents": [
+        { "@type": "Relationship", "name": "wheel", "target": "dtmi:example:Wheel;1" },
+        { "@type": "Relationship", "name": "tire", "target": "dtmi:example:Tire;1" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:Wheel;1",
+      "@type": "Interface",
+      "displayName": "Wheel",
+      "contents": []
+    },
+    {
+      "@id": "dtmi:example:Tire;1",
+      "@type": "Interface",
+      "displayName": "Tire",
+      "contents": []
+    },
+    {
+      "@id": "dtmi:example:Body;1",
+      "@type": "Interface",
+      "displayName": "Body",
+      "contents": [
+        { "@type": "Property", "name": "bodyStyle", "schema": "string" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:Interior;1",
+      "@type": "Interface",
+      "displayName": "Interior",
+      "contents": [
+        { "@type": "Relationship", "name": "seat", "target": "dtmi:example:Seat;1" },
+        { "@type": "Relationship", "name": "dashboard", "target": "dtmi:example:Dashboard;1" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:Seat;1",
+      "@type": "Interface",
+      "displayName": "Seat",
+      "contents": []
+    },
+    {
+      "@id": "dtmi:example:Dashboard;1",
+      "@type": "Interface",
+      "displayName": "Dashboard",
+      "contents": []
+    },
+    {
+      "@id": "dtmi:example:InfotainmentSystem;1",
+      "@type": "Interface",
+      "displayName": "Infotainment System",
+      "contents": [
+        { "@type": "Relationship", "name": "screen", "target": "dtmi:example:Screen;1" },
+        { "@type": "Property", "name": "bluetooth", "schema": "boolean" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:Screen;1",
+      "@type": "Interface",
+      "displayName": "Screen",
+      "contents": []
+    },
+    {
+      "@id": "dtmi:example:PowerSystem;1",
+      "@type": "Interface",
+      "displayName": "Power System",
+      "contents": [
+        { "@type": "Relationship", "name": "fuelTank", "target": "dtmi:example:FuelTank;1" },
+        { "@type": "Relationship", "name": "battery", "target": "dtmi:example:Battery;1" }
+      ]
+    },
+    {
+      "@id": "dtmi:example:FuelTank;1",
+      "@type": "Interface",
+      "displayName": "Fuel Tank",
+      "contents": []
+    },
+    {
+      "@id": "dtmi:example:Battery;1",
+      "@type": "Interface",
+      "displayName": "Battery",
+      "contents": []
+    }
   ]
 }
