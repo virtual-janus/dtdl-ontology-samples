@@ -18,41 +18,13 @@
     "@type": "Interface",
     "displayName": "Car",
     "contents": [
-      {
-        "@type": "Relationship",
-        "name": "engine",
-        "target": "dtmi:example:Engine;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "transmission",
-        "target": "dtmi:example:Transmission;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "wheels",
-        "target": "dtmi:example:Wheels;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "body",
-        "target": "dtmi:example:Body;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "interior",
-        "target": "dtmi:example:Interior;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "infotainmentSystem",
-        "target": "dtmi:example:InfotainmentSystem;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "powerSystem",
-        "target": "dtmi:example:PowerSystem;1"
-      }
+      { "@type": "Relationship", "name": "engine", "target": "dtmi:example:Engine;1" },
+      { "@type": "Relationship", "name": "transmission", "target": "dtmi:example:Transmission;1" },
+      { "@type": "Relationship", "name": "wheels", "target": "dtmi:example:Wheels;1" },
+      { "@type": "Relationship", "name": "body", "target": "dtmi:example:Body;1" },
+      { "@type": "Relationship", "name": "interior", "target": "dtmi:example:Interior;1" },
+      { "@type": "Relationship", "name": "infotainmentSystem", "target": "dtmi:example:InfotainmentSystem;1" },
+      { "@type": "Relationship", "name": "powerSystem", "target": "dtmi:example:PowerSystem;1" }
     ]
   },
   {
@@ -61,31 +33,11 @@
     "@type": "Interface",
     "displayName": "Engine",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "engineType",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "fuelType",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "horsePower",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "torque",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "cylinders",
-        "schema": "integer"
-      }
+      { "@type": "Property", "name": "engineType", "schema": "string" },
+      { "@type": "Property", "name": "fuelType", "schema": "string" },
+      { "@type": "Property", "name": "horsePower", "schema": "integer" },
+      { "@type": "Property", "name": "torque", "schema": "integer" },
+      { "@type": "Property", "name": "cylinders", "schema": "integer" }
     ]
   },
   {
@@ -94,21 +46,9 @@
     "@type": "Interface",
     "displayName": "Transmission",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "transmissionType",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "gears",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "manual",
-        "schema": "boolean"
-      }
+      { "@type": "Property", "name": "transmissionType", "schema": "string" },
+      { "@type": "Property", "name": "gears", "schema": "integer" },
+      { "@type": "Property", "name": "manual", "schema": "boolean" }
     ]
   },
   {
@@ -117,16 +57,8 @@
     "@type": "Interface",
     "displayName": "Wheels",
     "contents": [
-      {
-        "@type": "Relationship",
-        "name": "wheel",
-        "target": "dtmi:example:Wheel;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "tyre",
-        "target": "dtmi:example:Tyre;1"
-      }
+      { "@type": "Relationship", "name": "wheel", "target": "dtmi:example:Wheel;1" },
+      { "@type": "Relationship", "name": "tyre", "target": "dtmi:example:Tyre;1" }
     ]
   },
   {
@@ -135,21 +67,9 @@
     "@type": "Interface",
     "displayName": "Wheel",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "diameterInches",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "material",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "weightKg",
-        "schema": "double"
-      }
+      { "@type": "Property", "name": "diameterInches", "schema": "double" },
+      { "@type": "Property", "name": "material", "schema": "string" },
+      { "@type": "Property", "name": "weightKg", "schema": "double" }
     ]
   },
   {
@@ -158,31 +78,11 @@
     "@type": "Interface",
     "displayName": "Tyre",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "widthMm",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "aspectRatio",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "diameterInches",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "tyreType",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "pressurePsi",
-        "schema": "double"
-      }
+      { "@type": "Property", "name": "widthMm", "schema": "integer" },
+      { "@type": "Property", "name": "aspectRatio", "schema": "integer" },
+      { "@type": "Property", "name": "diameterInches", "schema": "integer" },
+      { "@type": "Property", "name": "tyreType", "schema": "string" },
+      { "@type": "Property", "name": "pressurePsi", "schema": "double" }
     ]
   },
   {
@@ -191,11 +91,7 @@
     "@type": "Interface",
     "displayName": "Body",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "bodyStyle",
-        "schema": "string"
-      },
+      { "@type": "Property", "name": "bodyStyle", "schema": "string" },
       {
         "@type": "Property",
         "name": "aerodynamics",
@@ -204,34 +100,18 @@
           "@id": "dtmi:example:Aerodynamics;1"
         }
       },
-      {
-        "@type": "Property",
-        "name": "weightKg",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "material",
-        "schema": "string"
-      }
+      { "@type": "Property", "name": "weightKg", "schema": "double" },
+      { "@type": "Property", "name": "material", "schema": "string" }
     ]
   },
   {
     "@context": "dtmi:dtdl:context;2",
+    "@type": "Object",
     "@id": "dtmi:example:Aerodynamics;1",
-    "@type": "Interface",
     "displayName": "Aerodynamics",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "dragCoefficient",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "liftCoefficient",
-        "schema": "double"
-      }
+    "fields": [
+      { "name": "dragCoefficient", "schema": "double" },
+      { "name": "liftCoefficient", "schema": "double" }
     ]
   },
   {
@@ -240,21 +120,9 @@
     "@type": "Interface",
     "displayName": "Interior",
     "contents": [
-      {
-        "@type": "Relationship",
-        "name": "seat",
-        "target": "dtmi:example:Seat;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "dashboard",
-        "target": "dtmi:example:Dashboard;1"
-      },
-      {
-        "@type": "Property",
-        "name": "interiorMaterial",
-        "schema": "string"
-      }
+      { "@type": "Relationship", "name": "seat", "target": "dtmi:example:Seat;1" },
+      { "@type": "Relationship", "name": "dashboard", "target": "dtmi:example:Dashboard;1" },
+      { "@type": "Property", "name": "interiorMaterial", "schema": "string" }
     ]
   },
   {
@@ -263,21 +131,9 @@
     "@type": "Interface",
     "displayName": "Seat",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "material",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "heated",
-        "schema": "boolean"
-      },
-      {
-        "@type": "Property",
-        "name": "powerAdjustable",
-        "schema": "boolean"
-      }
+      { "@type": "Property", "name": "material", "schema": "string" },
+      { "@type": "Property", "name": "heated", "schema": "boolean" },
+      { "@type": "Property", "name": "powerAdjustable", "schema": "boolean" }
     ]
   },
   {
@@ -286,16 +142,8 @@
     "@type": "Interface",
     "displayName": "Dashboard",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "hasHeadsUpDisplay",
-        "schema": "boolean"
-      },
-      {
-        "@type": "Property",
-        "name": "material",
-        "schema": "string"
-      }
+      { "@type": "Property", "name": "hasHeadsUpDisplay", "schema": "boolean" },
+      { "@type": "Property", "name": "material", "schema": "string" }
     ]
   },
   {
@@ -304,26 +152,10 @@
     "@type": "Interface",
     "displayName": "Infotainment System",
     "contents": [
-      {
-        "@type": "Relationship",
-        "name": "screen",
-        "target": "dtmi:example:Screen;1"
-      },
-      {
-        "@type": "Property",
-        "name": "bluetooth",
-        "schema": "boolean"
-      },
-      {
-        "@type": "Property",
-        "name": "supportsAndroidAuto",
-        "schema": "boolean"
-      },
-      {
-        "@type": "Property",
-        "name": "supportsAppleCarPlay",
-        "schema": "boolean"
-      }
+      { "@type": "Relationship", "name": "screen", "target": "dtmi:example:Screen;1" },
+      { "@type": "Property", "name": "bluetooth", "schema": "boolean" },
+      { "@type": "Property", "name": "supportsAndroidAuto", "schema": "boolean" },
+      { "@type": "Property", "name": "supportsAppleCarPlay", "schema": "boolean" }
     ]
   },
   {
@@ -332,16 +164,8 @@
     "@type": "Interface",
     "displayName": "Screen",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "sizeInches",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "touchEnabled",
-        "schema": "boolean"
-      }
+      { "@type": "Property", "name": "sizeInches", "schema": "double" },
+      { "@type": "Property", "name": "touchEnabled", "schema": "boolean" }
     ]
   },
   {
@@ -350,16 +174,8 @@
     "@type": "Interface",
     "displayName": "Power System",
     "contents": [
-      {
-        "@type": "Relationship",
-        "name": "fuelTank",
-        "target": "dtmi:example:FuelTank;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "battery",
-        "target": "dtmi:example:Battery;1"
-      }
+      { "@type": "Relationship", "name": "fuelTank", "target": "dtmi:example:FuelTank;1" },
+      { "@type": "Relationship", "name": "battery", "target": "dtmi:example:Battery;1" }
     ]
   },
   {
@@ -368,16 +184,8 @@
     "@type": "Interface",
     "displayName": "Fuel Tank",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "capacityLitres",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "fuelType",
-        "schema": "string"
-      }
+      { "@type": "Property", "name": "capacityLitres", "schema": "double" },
+      { "@type": "Property", "name": "material", "schema": "string" }
     ]
   },
   {
@@ -386,16 +194,9 @@
     "@type": "Interface",
     "displayName": "Battery",
     "contents": [
-      {
-        "@type": "Property",
-        "name": "capacityKWh",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "voltage",
-        "schema": "double"
-      }
+      { "@type": "Property", "name": "capacityKWh", "schema": "double" },
+      { "@type": "Property", "name": "voltage", "schema": "double" },
+      { "@type": "Property", "name": "chemistry", "schema": "string" }
     ]
   }
 ]
