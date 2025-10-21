@@ -24,7 +24,13 @@
       { "@type": "Relationship", "name": "body", "target": "dtmi:example:Body;1" },
       { "@type": "Relationship", "name": "interior", "target": "dtmi:example:Interior;1" },
       { "@type": "Relationship", "name": "infotainmentSystem", "target": "dtmi:example:InfotainmentSystem;1" },
-      { "@type": "Relationship", "name": "powerSystem", "target": "dtmi:example:PowerSystem;1" }
+      { "@type": "Relationship", "name": "powerSystem", "target": "dtmi:example:PowerSystem;1" },
+      { "@type": "Relationship", "name": "brakingSystem", "target": "dtmi:example:BrakingSystem;1" },
+      { "@type": "Relationship", "name": "coolingSystem", "target": "dtmi:example:CoolingSystem;1" },
+      { "@type": "Relationship", "name": "suspension", "target": "dtmi:example:Suspension;1" },
+      { "@type": "Relationship", "name": "turbocharger", "target": "dtmi:example:Turbocharger;1" },
+      { "@type": "Relationship", "name": "ecu", "target": "dtmi:example:ECU;1" },
+      { "@type": "Relationship", "name": "exhaustSystem", "target": "dtmi:example:ExhaustSystem;1" }
     ]
   },
   {
@@ -34,10 +40,7 @@
     "displayName": "Engine",
     "contents": [
       { "@type": "Property", "name": "engineType", "schema": "string" },
-      { "@type": "Property", "name": "fuelType", "schema": "string" },
-      { "@type": "Property", "name": "horsePower", "schema": "integer" },
-      { "@type": "Property", "name": "torque", "schema": "integer" },
-      { "@type": "Property", "name": "cylinders", "schema": "integer" }
+      { "@type": "Property", "name": "fuelType", "schema": "string" }
     ]
   },
   {
@@ -46,9 +49,7 @@
     "@type": "Interface",
     "displayName": "Transmission",
     "contents": [
-      { "@type": "Property", "name": "transmissionType", "schema": "string" },
-      { "@type": "Property", "name": "gears", "schema": "integer" },
-      { "@type": "Property", "name": "manual", "schema": "boolean" }
+      { "@type": "Property", "name": "transmissionType", "schema": "string" }
     ]
   },
   {
@@ -66,24 +67,14 @@
     "@id": "dtmi:example:Wheel;1",
     "@type": "Interface",
     "displayName": "Wheel",
-    "contents": [
-      { "@type": "Property", "name": "diameterInches", "schema": "double" },
-      { "@type": "Property", "name": "material", "schema": "string" },
-      { "@type": "Property", "name": "weightKg", "schema": "double" }
-    ]
+    "contents": []
   },
   {
     "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Tyre;1",
     "@type": "Interface",
     "displayName": "Tyre",
-    "contents": [
-      { "@type": "Property", "name": "widthMm", "schema": "integer" },
-      { "@type": "Property", "name": "aspectRatio", "schema": "integer" },
-      { "@type": "Property", "name": "diameterInches", "schema": "integer" },
-      { "@type": "Property", "name": "tyreType", "schema": "string" },
-      { "@type": "Property", "name": "pressurePsi", "schema": "double" }
-    ]
+    "contents": []
   },
   {
     "@context": "dtmi:dtdl:context;2",
@@ -92,19 +83,7 @@
     "displayName": "Body",
     "contents": [
       { "@type": "Property", "name": "bodyStyle", "schema": "string" },
-      {
-        "@type": "Property",
-        "name": "aerodynamics",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            { "name": "dragCoefficient", "schema": "double" },
-            { "name": "liftCoefficient", "schema": "double" }
-          ]
-        }
-      },
-      { "@type": "Property", "name": "weightKg", "schema": "double" },
-      { "@type": "Property", "name": "material", "schema": "string" }
+      { "@type": "Property", "name": "aerodynamicsDragCoefficient", "schema": "double" }
     ]
   },
   {
@@ -114,8 +93,7 @@
     "displayName": "Interior",
     "contents": [
       { "@type": "Relationship", "name": "seat", "target": "dtmi:example:Seat;1" },
-      { "@type": "Relationship", "name": "dashboard", "target": "dtmi:example:Dashboard;1" },
-      { "@type": "Property", "name": "interiorMaterial", "schema": "string" }
+      { "@type": "Relationship", "name": "dashboard", "target": "dtmi:example:Dashboard;1" }
     ]
   },
   {
@@ -123,21 +101,14 @@
     "@id": "dtmi:example:Seat;1",
     "@type": "Interface",
     "displayName": "Seat",
-    "contents": [
-      { "@type": "Property", "name": "material", "schema": "string" },
-      { "@type": "Property", "name": "heated", "schema": "boolean" },
-      { "@type": "Property", "name": "powerAdjustable", "schema": "boolean" }
-    ]
+    "contents": []
   },
   {
     "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Dashboard;1",
     "@type": "Interface",
     "displayName": "Dashboard",
-    "contents": [
-      { "@type": "Property", "name": "hasHeadsUpDisplay", "schema": "boolean" },
-      { "@type": "Property", "name": "material", "schema": "string" }
-    ]
+    "contents": []
   },
   {
     "@context": "dtmi:dtdl:context;2",
@@ -146,9 +117,7 @@
     "displayName": "Infotainment System",
     "contents": [
       { "@type": "Relationship", "name": "screen", "target": "dtmi:example:Screen;1" },
-      { "@type": "Property", "name": "bluetooth", "schema": "boolean" },
-      { "@type": "Property", "name": "supportsAndroidAuto", "schema": "boolean" },
-      { "@type": "Property", "name": "supportsAppleCarPlay", "schema": "boolean" }
+      { "@type": "Property", "name": "bluetooth", "schema": "boolean" }
     ]
   },
   {
@@ -156,10 +125,7 @@
     "@id": "dtmi:example:Screen;1",
     "@type": "Interface",
     "displayName": "Screen",
-    "contents": [
-      { "@type": "Property", "name": "sizeInches", "schema": "double" },
-      { "@type": "Property", "name": "touchEnabled", "schema": "boolean" }
-    ]
+    "contents": []
   },
   {
     "@context": "dtmi:dtdl:context;2",
@@ -176,20 +142,80 @@
     "@id": "dtmi:example:FuelTank;1",
     "@type": "Interface",
     "displayName": "Fuel Tank",
-    "contents": [
-      { "@type": "Property", "name": "capacityLitres", "schema": "double" },
-      { "@type": "Property", "name": "material", "schema": "string" }
-    ]
+    "contents": []
   },
   {
     "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:example:Battery;1",
     "@type": "Interface",
     "displayName": "Battery",
+    "contents": []
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:BrakingSystem;1",
+    "@type": "Interface",
+    "displayName": "Braking System",
     "contents": [
-      { "@type": "Property", "name": "capacityKWh", "schema": "double" },
-      { "@type": "Property", "name": "voltage", "schema": "double" },
-      { "@type": "Property", "name": "chemistry", "schema": "string" }
+      { "@type": "Property", "name": "abs", "schema": "boolean" },
+      { "@type": "Property", "name": "brakePadMaterial", "schema": "string" },
+      { "@type": "Property", "name": "discDiameterMm", "schema": "integer" },
+      { "@type": "Property", "name": "caliperCount", "schema": "integer" }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:CoolingSystem;1",
+    "@type": "Interface",
+    "displayName": "Cooling System",
+    "contents": [
+      { "@type": "Property", "name": "radiatorMaterial", "schema": "string" },
+      { "@type": "Property", "name": "coolantType", "schema": "string" },
+      { "@type": "Property", "name": "fanCount", "schema": "integer" },
+      { "@type": "Property", "name": "thermostatTemperatureC", "schema": "double" }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:Suspension;1",
+    "@type": "Interface",
+    "displayName": "Suspension",
+    "contents": [
+      { "@type": "Property", "name": "type", "schema": "string" },
+      { "@type": "Property", "name": "springType", "schema": "string" },
+      { "@type": "Property", "name": "dampingAdjustable", "schema": "boolean" }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:Turbocharger;1",
+    "@type": "Interface",
+    "displayName": "Turbocharger",
+    "contents": [
+      { "@type": "Property", "name": "boostPressurePsi", "schema": "double" },
+      { "@type": "Property", "name": "wastegateType", "schema": "string" }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:ECU;1",
+    "@type": "Interface",
+    "displayName": "Engine Control Unit",
+    "contents": [
+      { "@type": "Property", "name": "softwareVersion", "schema": "string" },
+      { "@type": "Property", "name": "mappingType", "schema": "string" }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:example:ExhaustSystem;1",
+    "@type": "Interface",
+    "displayName": "Exhaust System",
+    "contents": [
+      { "@type": "Property", "name": "exhaustType", "schema": "string" },
+      { "@type": "Property", "name": "catalyticConverterPresent", "schema": "boolean" },
+      { "@type": "Property", "name": "mufflerType", "schema": "string" }
     ]
   }
 ]
