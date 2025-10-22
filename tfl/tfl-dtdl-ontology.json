@@ -21,14 +21,12 @@
       {
         "@type": "Property",
         "name": "stationId",
-        "schema": "string",
-        "writable": false
+        "schema": "string"
       },
       {
         "@type": "Property",
         "name": "name",
-        "schema": "string",
-        "writable": false
+        "schema": "string"
       },
       {
         "@type": "Property",
@@ -39,17 +37,15 @@
             { "name": "latitude", "schema": "double" },
             { "name": "longitude", "schema": "double" }
           ]
-        },
-        "writable": false
+        }
       },
       {
         "@type": "Property",
-        "name": "mode",
+        "name": "modes",
         "schema": {
           "@type": "Array",
           "elementSchema": "dtmi:com:tfl:TransportMode;1"
-        },
-        "writable": false
+        }
       }
     ]
   },
@@ -62,14 +58,23 @@
       {
         "@type": "Property",
         "name": "vehicleId",
-        "schema": "string",
-        "writable": false
+        "schema": "string"
       },
       {
         "@type": "Property",
         "name": "type",
-        "schema": "string",
-        "writable": false
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "currentLocation",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "latitude", "schema": "double" },
+            { "name": "longitude", "schema": "double" }
+          ]
+        }
       }
     ]
   },
@@ -82,8 +87,7 @@
       {
         "@type": "Property",
         "name": "roadLinkId",
-        "schema": "string",
-        "writable": false
+        "schema": "string"
       },
       {
         "@type": "Property",
@@ -94,8 +98,7 @@
             { "name": "latitude", "schema": "double" },
             { "name": "longitude", "schema": "double" }
           ]
-        },
-        "writable": false
+        }
       },
       {
         "@type": "Property",
@@ -106,8 +109,7 @@
             { "name": "latitude", "schema": "double" },
             { "name": "longitude", "schema": "double" }
           ]
-        },
-        "writable": false
+        }
       }
     ]
   },
@@ -120,8 +122,7 @@
       {
         "@type": "Property",
         "name": "intersectionId",
-        "schema": "string",
-        "writable": false
+        "schema": "string"
       },
       {
         "@type": "Property",
@@ -132,8 +133,51 @@
             { "name": "latitude", "schema": "double" },
             { "name": "longitude", "schema": "double" }
           ]
-        },
-        "writable": false
+        }
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:tfl:TransitLine;1",
+    "@type": "Interface",
+    "displayName": "Transit Line",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "lineId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "name",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "servesStation",
+        "target": "dtmi:com:tfl:Station;1",
+        "properties": [
+          {
+            "@type": "Property",
+            "name": "order",
+            "schema": "integer"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;2",
+    "@id": "dtmi:com:tfl:NearRoadLink;1",
+    "@type": "Relationship",
+    "displayName": "Near Road Link",
+    "target": "dtmi:com:tfl:RoadLink;1",
+    "properties": [
+      {
+        "@type": "Property",
+        "name": "distanceMeters",
+        "schema": "double"
       }
     ]
   }
