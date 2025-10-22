@@ -1,0 +1,208 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:com:tfl:RoadLink;1",
+    "@type": "Interface",
+    "displayName": "RoadLink",
+    "description": "A segment of road under TfL control",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "linkId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "geometryWKT",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "speedLimitKph",
+        "schema": "double"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "currentSpeedKph",
+        "schema": "double"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "vehicleCount",
+        "schema": "integer"
+      },
+      {
+        "@type": "Relationship",
+        "name": "connectsTo",
+        "target": "dtmi:com:tfl:RoadLink;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasStartIntersection",
+        "target": "dtmi:com:tfl:Intersection;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasEndIntersection",
+        "target": "dtmi:com:tfl:Intersection;1"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:com:tfl:Intersection;1",
+    "@type": "Interface",
+    "displayName": "Intersection",
+    "description": "A road junction/intersection under TfL network",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "intersectionId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "geometryWKT",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "connectedLinks",
+        "target": "dtmi:com:tfl:RoadLink;1",
+        "multiplicity": "many"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:com:tfl:Station;1",
+    "@type": "Interface",
+    "displayName": "Station",
+    "description": "A rail/underground station managed by TfL",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "stationId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "name",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "geometryWKT",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "servedByLine",
+        "target": "dtmi:com:tfl:TransitLine;1",
+        "multiplicity": "many"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "entryCountLastHour",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "exitCountLastHour",
+        "schema": "integer"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:com:tfl:TransitLine;1",
+    "@type": "Interface",
+    "displayName": "TransitLine",
+    "description": "A Tube/rail/bus line operated by TfL",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "lineId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "mode",
+        "schema": {
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            { "name": "Tube", "value": "Tube" },
+            { "name": "Rail", "value": "Rail" },
+            { "name": "Bus", "value": "Bus" },
+            { "name": "Tram", "value": "Tram" }
+          ]
+        }
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasStation",
+        "target": "dtmi:com:tfl:Station;1",
+        "multiplicity": "many"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "currentDelayMinutes",
+        "schema": "double"
+      }
+    ]
+  },
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:com:tfl:Vehicle;1",
+    "@type": "Interface",
+    "displayName": "Vehicle",
+    "description": "A vehicle (bus, train, tram) in the TfL network",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "vehicleId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "type",
+        "schema": {
+          "@type": "Enum",
+          "valueSchema": "string",
+          "enumValues": [
+            { "name": "Bus", "value": "Bus" },
+            { "name": "Train", "value": "Train" },
+            { "name": "Tram", "value": "Tram" }
+          ]
+        }
+      },
+      {
+        "@type": "Property",
+        "name": "capacity",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "currentLocation",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "latitude", "schema": "double" },
+            { "name": "longitude", "schema": "double" }
+          ]
+        }
+      },
+      {
+        "@type": "Telemetry",
+        "name": "occupancy",
+        "schema": "integer"
+      },
+      {
+        "@type": "Relationship",
+        "name": "onLine",
+        "target": "dtmi:com:tfl:TransitLine;1"
+      }
+    ]
+  }
+]
