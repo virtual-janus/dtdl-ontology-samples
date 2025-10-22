@@ -12,40 +12,9 @@
     ]
   },
   {
-    "@context": "dtmi:dtdl:context;3",
-    "@id": "dtmi:com:tfl:RoadLink;1",
-    "@type": "Interface",
-    "displayName": "RoadLink",
-    "description": "A segment of road under TfL control",
-    "contents": [
-      { "@type": "Property", "name": "linkId", "schema": "string" },
-      { "@type": "Property", "name": "geometryWKT", "schema": "string" },
-      { "@type": "Property", "name": "speedLimitKph", "schema": "double" },
-      { "@type": "Telemetry", "name": "currentSpeedKph", "schema": "double" },
-      { "@type": "Telemetry", "name": "vehicleCount", "schema": "integer" },
-      { "@type": "Relationship", "name": "connectsTo", "target": "dtmi:com:tfl:RoadLink;1" },
-      { "@type": "Relationship", "name": "hasStartIntersection", "target": "dtmi:com:tfl:Intersection;1" },
-      { "@type": "Relationship", "name": "hasEndIntersection", "target": "dtmi:com:tfl:Intersection;1" }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;3",
-    "@id": "dtmi:com:tfl:Intersection;1",
-    "@type": "Interface",
-    "displayName": "Intersection",
-    "description": "A road junction/intersection under TfL network",
-    "contents": [
-      { "@type": "Property", "name": "intersectionId", "schema": "string" },
-      { "@type": "Property", "name": "geometryWKT", "schema": "string" },
-      { "@type": "Relationship", "name": "connectedLinks", "target": "dtmi:com:tfl:RoadLink;1" }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:com:tfl:Station;1",
     "@type": "Interface",
     "displayName": "Station",
-    "description": "A rail/underground station managed by TfL",
     "contents": [
       {
         "@type": "Property",
@@ -54,75 +23,124 @@
         "writable": false,
         "description": "Unique identifier for the station"
       },
-      { "@type": "Property", "name": "stationId", "schema": "string" },
-      { "@type": "Property", "name": "name", "schema": "string" },
-      { "@type": "Property", "name": "geometryWKT", "schema": "string" },
-      { "@type": "Relationship", "name": "servedByLine", "target": "dtmi:com:tfl:TransitLine;1" },
-      { "@type": "Telemetry", "name": "entryCountLastHour", "schema": "integer" },
-      { "@type": "Telemetry", "name": "exitCountLastHour", "schema": "integer" }
-    ],
-  },
-  {
-    "@context": "dtmi:dtdl:context;3",
-    "@id": "dtmi:com:tfl:TransitLine;1",
-    "@type": "Interface",
-    "displayName": "TransitLine",
-    "description": "A Tube/rail/bus line operated by TfL",
-    "contents": [
-      { "@type": "Property", "name": "lineId", "schema": "string" },
       {
         "@type": "Property",
-        "name": "mode",
-        "schema": {
-          "@type": "Enum",
-          "valueSchema": "string",
-          "enumValues": [
-            { "name": "Tube", "enumValue": "Tube" },
-            { "name": "Rail", "enumValue": "Rail" },
-            { "name": "Bus", "enumValue": "Bus" },
-            { "name": "Tram", "enumValue": "Tram" }
-          ]
-        }
+        "name": "name",
+        "schema": "string",
+        "writable": false,
+        "description": "Name of the station"
       },
-      { "@type": "Relationship", "name": "hasStation", "target": "dtmi:com:tfl:Station;1" },
-      { "@type": "Telemetry", "name": "currentDelayMinutes", "schema": "double" }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;3",
-    "@id": "dtmi:com:tfl:Vehicle;1",
-    "@type": "Interface",
-    "displayName": "Vehicle",
-    "description": "A vehicle (bus, train, tram) in the TfL network",
-    "contents": [
-      { "@type": "Property", "name": "vehicleId", "schema": "string" },
       {
         "@type": "Property",
-        "name": "type",
-        "schema": {
-          "@type": "Enum",
-          "valueSchema": "string",
-          "enumValues": [
-            { "name": "Bus", "enumValue": "Bus" },
-            { "name": "Train", "enumValue": "Train" },
-            { "name": "Tram", "enumValue": "Tram" }
-          ]
-        }
-      },
-      { "@type": "Property", "name": "capacity", "schema": "integer" },
-      {
-        "@type": "Telemetry",
-        "name": "currentLocation",
+        "name": "location",
         "schema": {
           "@type": "Object",
           "fields": [
             { "name": "latitude", "schema": "double" },
             { "name": "longitude", "schema": "double" }
           ]
-        }
+        },
+        "writable": false,
+        "description": "Geographical location of the station"
       },
-      { "@type": "Telemetry", "name": "occupancy", "schema": "integer" },
-      { "@type": "Relationship", "name": "onLine", "target": "dtmi:com:tfl:TransitLine;1" }
+      {
+        "@type": "Property",
+        "name": "mode",
+        "schema": {
+          "@type": "Array",
+          "elementSchema": "dtmi:com:tfl:TransportMode;1"
+        },
+        "writable": false,
+        "description": "Transport modes served by this station"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:com:tfl:Vehicle;1",
+    "@type": "Interface",
+    "displayName": "Vehicle",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "vehicleId",
+        "schema": "string",
+        "writable": false,
+        "description": "Unique identifier for the vehicle"
+      },
+      {
+        "@type": "Property",
+        "name": "type",
+        "schema": "string",
+        "writable": false,
+        "description": "Type of vehicle (e.g., Bus, Train, Tram)"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:com:tfl:RoadLink;1",
+    "@type": "Interface",
+    "displayName": "RoadLink",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "roadLinkId",
+        "schema": "string",
+        "writable": false,
+        "description": "Unique identifier for the road link"
+      },
+      {
+        "@type": "Property",
+        "name": "startLocation",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "latitude", "schema": "double" },
+            { "name": "longitude", "schema": "double" }
+          ]
+        },
+        "writable": false,
+        "description": "Start location coordinates of the road link"
+      },
+      {
+        "@type": "Property",
+        "name": "endLocation",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "latitude", "schema": "double" },
+            { "name": "longitude", "schema": "double" }
+          ]
+        },
+        "writable": false,
+        "description": "End location coordinates of the road link"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:com:tfl:Intersection;1",
+    "@type": "Interface",
+    "displayName": "Intersection",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "intersectionId",
+        "schema": "string",
+        "writable": false,
+        "description": "Unique identifier for the intersection"
+      },
+      {
+        "@type": "Property",
+        "name": "location",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "latitude", "schema": "double" },
+            { "name": "longitude", "schema": "double" }
+          ]
+        },
+        "writable": false,
+        "description": "Geographical location of the intersection"
+      }
     ]
   }
 ]
