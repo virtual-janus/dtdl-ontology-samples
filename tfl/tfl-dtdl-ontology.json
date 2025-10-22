@@ -166,19 +166,5 @@
         ]
       }
     ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:com:tfl:NearRoadLink;1",
-    "@type": "Relationship",
-    "displayName": "Near Road Link",
-    "target": "dtmi:com:tfl:RoadLink;1",
-    "properties": [
-      {
-        "@type": "Property",
-        "name": "distanceMeters",
-        "schema": "double"
-      }
-    ]
   }
 ]
