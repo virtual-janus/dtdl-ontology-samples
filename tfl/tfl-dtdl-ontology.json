@@ -1,5 +1,6 @@
 [
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:tfl:TransportMode;1",
     "@type": "Enum",
     "displayName": "Transport Mode",
@@ -12,6 +13,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:tfl:Station;1",
     "@type": "Interface",
     "displayName": "Station",
@@ -52,6 +54,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:tfl:Vehicle;1",
     "@type": "Interface",
     "displayName": "Vehicle",
@@ -71,6 +74,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:tfl:RoadLink;1",
     "@type": "Interface",
     "displayName": "RoadLink",
@@ -108,6 +112,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:tfl:Intersection;1",
     "@type": "Interface",
     "displayName": "Intersection",
