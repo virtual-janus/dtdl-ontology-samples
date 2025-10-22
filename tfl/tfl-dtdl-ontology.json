@@ -40,7 +40,36 @@
       { "@type": "Property", "name": "geometryWKT", "schema": "string" },
       { "@type": "Relationship", "name": "servedByLine", "target": "dtmi:com:tfl:TransitLine;1" },
       { "@type": "Telemetry", "name": "entryCountLastHour", "schema": "integer" },
-      { "@type": "Telemetry", "name": "exitCountLastHour", "schema": "integer" }
+      { "@type": "Telemetry", "name": "exitCountLastHour", "schema": "integer" },
+      { "@type": "Property", "name": "mode", "schema": { "@type": "Array", "elementSchema": "dtmi:com:tfl:TransportMode;1" }, "writable": false, "description": "Transport modes served by this station"}
+    ],
+  },
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:com:tfl:TransportMode;1",
+    "@type": "Enum",
+    "displayName": "Transport Mode",
+    "enumValues": [
+      {
+        "name": "Tube",
+        "enumValue": 0
+      },
+      {
+        "name": "Rail",
+        "enumValue": 1
+      },
+      {
+        "name": "Bus",
+        "enumValue": 2
+      },
+      {
+        "name": "Tram",
+        "enumValue": 3
+      },
+      {
+        "name": "DLR",
+        "enumValue": 4
+      }
     ]
   },
   {
