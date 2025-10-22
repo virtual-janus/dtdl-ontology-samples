@@ -1,15 +1,22 @@
 [
   {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:com:tfl:TransportMode;1",
-    "@type": "Enum",
-    "valueSchema": "integer",
-    "enumValues": [
-      { "name": "Tube", "enumValue": 0 },
-      { "name": "Rail", "enumValue": 1 },
-      { "name": "Bus", "enumValue": 2 },
-      { "name": "Tram", "enumValue": 3 },
-      { "name": "DLR", "enumValue": 4 }
+    "@id": "dtmi:com:tfl:TransportSchemas;1",
+    "@type": "Interface",
+    "displayName": "Transport Schemas",
+    "contents": [
+      {
+        "@type": "Enum",
+        "name": "TransportMode",
+        "valueSchema": "integer",
+        "enumValues": [
+          { "name": "Tube", "enumValue": 0 },
+          { "name": "Rail", "enumValue": 1 },
+          { "name": "Bus", "enumValue": 2 },
+          { "name": "Tram", "enumValue": 3 },
+          { "name": "DLR", "enumValue": 4 }
+        ]
+      }
     ]
   },
   {
@@ -44,7 +51,17 @@
         "name": "modes",
         "schema": {
           "@type": "Array",
-          "elementSchema": "dtmi:com:tfl:TransportMode;1"
+          "elementSchema": {
+            "@type": "Enum",
+            "valueSchema": "integer",
+            "enumValues": [
+              { "name": "Tube", "enumValue": 0 },
+              { "name": "Rail", "enumValue": 1 },
+              { "name": "Bus", "enumValue": 2 },
+              { "name": "Tram", "enumValue": 3 },
+              { "name": "DLR", "enumValue": 4 }
+            ]
+          }
         }
       }
     ]
