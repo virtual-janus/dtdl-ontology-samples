@@ -1,26 +1,6 @@
 [
   {
     "@context": "dtmi:dtdl:context;2",
-    "@id": "dtmi:com:tfl:TransportSchemas;1",
-    "@type": "Interface",
-    "displayName": "Transport Schemas",
-    "contents": [
-      {
-        "@type": "Enum",
-        "name": "TransportMode",
-        "valueSchema": "integer",
-        "enumValues": [
-          { "name": "Tube", "enumValue": 0 },
-          { "name": "Rail", "enumValue": 1 },
-          { "name": "Bus", "enumValue": 2 },
-          { "name": "Tram", "enumValue": 3 },
-          { "name": "DLR", "enumValue": 4 }
-        ]
-      }
-    ]
-  },
-  {
-    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:tfl:Station;1",
     "@type": "Interface",
     "displayName": "Station",
@@ -41,8 +21,14 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            { "name": "latitude", "schema": "double" },
-            { "name": "longitude", "schema": "double" }
+            {
+              "name": "latitude",
+              "schema": "double"
+            },
+            {
+              "name": "longitude",
+              "schema": "double"
+            }
           ]
         }
       },
@@ -50,19 +36,17 @@
         "@type": "Property",
         "name": "modes",
         "schema": {
-          "@type": "Array",
-          "elementSchema": {
-            "@type": "Enum",
-            "valueSchema": "integer",
-            "enumValues": [
-              { "name": "Tube", "enumValue": 0 },
-              { "name": "Rail", "enumValue": 1 },
-              { "name": "Bus", "enumValue": 2 },
-              { "name": "Tram", "enumValue": 3 },
-              { "name": "DLR", "enumValue": 4 }
-            ]
-          }
-        }
+          "@type": "Enum",
+          "valueSchema": "integer",
+          "enumValues": [
+            { "name": "Tube", "enumValue": 0 },
+            { "name": "Rail", "enumValue": 1 },
+            { "name": "Bus", "enumValue": 2 },
+            { "name": "Tram", "enumValue": 3 },
+            { "name": "DLR", "enumValue": 4 }
+          ]
+        },
+        "writable": false
       }
     ]
   },
@@ -88,8 +72,14 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            { "name": "latitude", "schema": "double" },
-            { "name": "longitude", "schema": "double" }
+            {
+              "name": "latitude",
+              "schema": "double"
+            },
+            {
+              "name": "longitude",
+              "schema": "double"
+            }
           ]
         }
       }
@@ -112,8 +102,14 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            { "name": "latitude", "schema": "double" },
-            { "name": "longitude", "schema": "double" }
+            {
+              "name": "latitude",
+              "schema": "double"
+            },
+            {
+              "name": "longitude",
+              "schema": "double"
+            }
           ]
         }
       },
@@ -123,8 +119,14 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            { "name": "latitude", "schema": "double" },
-            { "name": "longitude", "schema": "double" }
+            {
+              "name": "latitude",
+              "schema": "double"
+            },
+            {
+              "name": "longitude",
+              "schema": "double"
+            }
           ]
         }
       }
@@ -147,8 +149,14 @@
         "schema": {
           "@type": "Object",
           "fields": [
-            { "name": "latitude", "schema": "double" },
-            { "name": "longitude", "schema": "double" }
+            {
+              "name": "latitude",
+              "schema": "double"
+            },
+            {
+              "name": "longitude",
+              "schema": "double"
+            }
           ]
         }
       }
