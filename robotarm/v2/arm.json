@@ -117,5 +117,44 @@
       { "@type": "Property", "name": "accuracy", "schema": "double" },
       { "@type": "Telemetry", "name": "sensorData", "schema": "string" }
     ]
+  },
+  {
+    "@id": "dtmi:example:robotics:Workpiece;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Workpiece",
+    "description": "An object being manipulated or processed by the robot arm.",
+    "contents": [
+        {
+          "@type": "Property",
+          "name": "workpieceId",
+          "schema": "string",
+          "description": "Unique identifier for the workpiece."
+        },
+        {
+          "@type": "Property",
+          "name": "material",
+          "schema": "string",
+          "description": "Material of the workpiece (e.g., steel, aluminum, plastic)."
+        },
+        {
+          "@type": "Property",
+          "name": "mass",
+          "schema": "double",
+          "description": "Weight of the workpiece."
+        },
+        {
+          "@type": "Property",
+          "name": "dimensions",
+          "schema": "string",
+          "description": "Serialized dimensions or bounding box of the workpiece."
+        },
+        {
+          "@type": "Telemetry",
+          "name": "status",
+          "schema": "string",
+          "description": "Current state of the workpiece (e.g., idle, being processed, finished)."
+        }
+    ]
   }
 ]
