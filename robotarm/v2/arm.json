@@ -87,6 +87,6 @@
         { "@type": "Property", "name": "velocity", "schema": "double" },
         { "@type": "Property", "name": "torque", "schema": "double" },
         { "@type": "Property", "name": "rangeOfMotion", "schema": "double" }
-  ]
-}
+    ]
+  }
 ]
