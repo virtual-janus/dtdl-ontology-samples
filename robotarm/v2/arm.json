@@ -88,5 +88,16 @@
         { "@type": "Property", "name": "torque", "schema": "double" },
         { "@type": "Property", "name": "rangeOfMotion", "schema": "double" }
     ]
+  },
+  {
+    "@id": "dtmi:example:robotics:Link;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Link",
+    "contents": [
+      { "@type": "Property", "name": "length", "schema": "double" },
+      { "@type": "Property", "name": "mass", "schema": "double" },
+      { "@type": "Property", "name": "inertiaTensor", "schema": "string" }
+    ]
   }
 ]
