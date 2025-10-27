@@ -51,6 +51,13 @@
         "name": "currentTask",
         "schema": "string",
         "displayName": "Current Task"
+      },
+      {
+        "@type": "Relationship",
+        "name": "handlesWorkpiece",
+        "target": "dtmi:example:robotics:Workpiece;1",
+        "displayName": "Handles Workpiece",
+        "description": "The workpiece currently being manipulated by the robot arm."
       }
     ]
   },
