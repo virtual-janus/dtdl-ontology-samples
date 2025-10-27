@@ -1,0 +1,11 @@
+{
+  "@id": "dtmi:example:robotics:Sensor;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;3",
+  "displayName": "Sensor",
+  "contents": [
+    { "@type": "Property", "name": "sensorType", "schema": "string" },
+    { "@type": "Property", "name": "accuracy", "schema": "double" },
+    { "@type": "Telemetry", "name": "sensorData", "schema": "string" }
+  ]
+}
