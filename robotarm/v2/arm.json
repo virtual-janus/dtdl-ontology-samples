@@ -75,5 +75,18 @@
         { "@type": "Property", "name": "gripForce", "schema": "double" },
         { "@type": "Telemetry", "name": "pose", "schema": "string" }
     ]
-  }
+  },
+  {
+    "@id": "dtmi:example:robotics:Joint;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Joint",
+    "contents": [
+        { "@type": "Property", "name": "jointType", "schema": "string" },
+        { "@type": "Property", "name": "position", "schema": "double" },
+        { "@type": "Property", "name": "velocity", "schema": "double" },
+        { "@type": "Property", "name": "torque", "schema": "double" },
+        { "@type": "Property", "name": "rangeOfMotion", "schema": "double" }
+  ]
+}
 ]
