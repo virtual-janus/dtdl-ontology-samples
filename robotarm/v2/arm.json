@@ -64,5 +64,16 @@
       { "@type": "Property", "name": "cycleTime", "schema": "double" },
       { "@type": "Telemetry", "name": "status", "schema": "string" }
     ]
+  },
+  {
+    "@id": "dtmi:example:robotics:EndEffector;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "End Effector",
+    "contents": [
+        { "@type": "Property", "name": "toolType", "schema": "string" },
+        { "@type": "Property", "name": "gripForce", "schema": "double" },
+        { "@type": "Telemetry", "name": "pose", "schema": "string" }
+    ]
   }
 ]
