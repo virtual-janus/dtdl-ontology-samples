@@ -42,8 +42,8 @@
       "@type": "Property",
       "name": "workspaceVolume",
       "schema": "double",
-      "unit": "cubicMeter",
-      "displayName": "Workspace Volume"
+      "displayName": "Workspace Volume",
+      "description": "Volume of the robot's reachable workspace, in cubic meters."
     },
     {
       "@type": "Telemetry",
