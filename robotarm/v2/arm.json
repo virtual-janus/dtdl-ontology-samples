@@ -61,7 +61,7 @@
     "displayName": "Controller",
     "contents": [
       { "@type": "Property", "name": "controlAlgorithm", "schema": "string" },
-      { "@type": "Property", "name": "cycleTime", "schema": "double", "unit": "second" },
+      { "@type": "Property", "name": "cycleTime", "schema": "double" },
       { "@type": "Telemetry", "name": "status", "schema": "string" }
     ]
   }
