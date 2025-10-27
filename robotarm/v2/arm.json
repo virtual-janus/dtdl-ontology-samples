@@ -1,0 +1,55 @@
+{
+  "@id": "dtmi:example:robotics:RobotArm;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;3",
+  "displayName": "Industrial Robot Arm",
+  "description": "An ontology model of an industrial robot arm including physical structure, sensors, and tasks.",
+  "contents": [
+    {
+      "@type": "Component",
+      "name": "controller",
+      "schema": "dtmi:example:robotics:Controller;1",
+      "displayName": "Controller"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasJoints",
+      "target": "dtmi:example:robotics:Joint;1",
+      "displayName": "Joints",
+      "description": "Links to the joints of the robot arm."
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasLinks",
+      "target": "dtmi:example:robotics:Link;1",
+      "displayName": "Links",
+      "description": "Links to the rigid links between joints."
+    },
+    {
+      "@type": "Component",
+      "name": "endEffector",
+      "schema": "dtmi:example:robotics:EndEffector;1",
+      "displayName": "End Effector"
+    },
+    {
+      "@type": "Relationship",
+      "name": "monitorsWith",
+      "target": "dtmi:example:robotics:Sensor;1",
+      "displayName": "Sensors",
+      "description": "Sensors monitoring robot operation or environment."
+    },
+    {
+      "@type": "Property",
+      "name": "workspaceVolume",
+      "schema": "double",
+      "unit": "cubicMeter",
+      "displayName": "Workspace Volume"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "currentTask",
+      "schema": "string",
+      "displayName": "Current Task"
+    }
+  ]
+}
