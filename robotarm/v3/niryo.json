@@ -1,5 +1,6 @@
 [
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:example:robotics:Motor;2",
     "@type": "Interface",
     "displayName": "Motor",
@@ -31,6 +32,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:example:robotics:Joint;2",
     "@type": "Interface",
     "displayName": "Joint",
@@ -75,6 +77,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:example:robotics:Sensor;2",
     "@type": "Interface",
     "displayName": "Sensor",
@@ -96,6 +99,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:example:robotics:EndEffector;2",
     "@type": "Interface",
     "displayName": "End Effector",
@@ -117,6 +121,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:example:robotics:RobotArm;2",
     "@type": "Interface",
     "displayName": "Robot Arm",
