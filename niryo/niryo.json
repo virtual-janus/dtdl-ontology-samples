@@ -24,21 +24,6 @@
       },
       {
         "@type": "Property",
-        "name": "operatingMode",
-        "displayName": "Operating Mode",
-        "schema": {
-          "@type": "Enum",
-          "valueSchema": "string",
-          "enumValues": [
-            { "name": "Calibration", "value": "calibration" },
-            { "name": "Programming", "value": "programming" },
-            { "name": "FreeMotion", "value": "freemotion" }
-          ]
-        },
-        "writable": true
-      },
-      {
-        "@type": "Property",
         "name": "calibrationRequired",
         "schema": "boolean",
         "displayName": "Calibration Required",
@@ -87,20 +72,6 @@
         "displayName": "LED Ring Status",
         "schema": "string",
         "comment": "Encoded color/pattern label per Ned2 LED table."
-      },
-      {
-        "@type": "Property",
-        "name": "wifiHotspot",
-        "displayName": "Wi-Fi Hotspot State",
-        "schema": {
-          "@type": "Enum",
-          "valueSchema": "string",
-          "enumValues": [
-            { "name": "On", "value": "on" },
-            { "name": "Off", "value": "off" }
-          ]
-        },
-        "writable": true
       },
       {
         "@type": "Property",
@@ -226,7 +197,6 @@
     "contents": [
       { "@type": "Property", "name": "acInputRange", "schema": "string", "writable": false, "comment": "AC 100–240 V, 50/60 Hz, 2.5 A" },
       { "@type": "Property", "name": "dcOutputs", "schema": { "@type": "Object", "fields": [ { "name": "rail12V_A", "schema": "double" }, { "name": "rail5V_A", "schema": "double" } ] }, "writable": false },
-      { "@type": "Property", "name": "powerState", "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [ { "name": "Off", "value": "off" }, { "name": "Booting", "value": "booting" }, { "name": "Ready", "value": "ready" } ] }, "writable": true }
     ]
   },
 
@@ -247,8 +217,7 @@
     "@context": "dtmi:dtdl:context;2",
     "displayName": "LED Ring",
     "contents": [
-      { "@type": "Property", "name": "pattern", "schema": { "@type": "Enum", "valueSchema": "string", "enumValues": [ { "name": "Solid", "value": "solid" }, { "name": "Flashing", "value": "flashing" }, { "name": "Alternate", "value": "alternate" }, { "name": "Chase", "value": "chase" }, { "name": "Rainbow", "value": "rainbow" }, { "name": "Breath", "value": "breath" }, { "name": "Snake", "value": "snake" } ] }, "writable": true },
-      { "@type": "Property", "name": "color", "schema": "string", "comment": "e.g., white, blue, green, orange, red, purple", "writable": true }
+           { "@type": "Property", "name": "color", "schema": "string", "comment": "e.g., white, blue, green, orange, red, purple", "writable": true }
     ]
   },
 
