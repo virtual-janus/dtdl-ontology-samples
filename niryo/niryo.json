@@ -196,7 +196,7 @@
     "displayName": "Power",
     "contents": [
       { "@type": "Property", "name": "acInputRange", "schema": "string", "writable": false, "comment": "AC 100–240 V, 50/60 Hz, 2.5 A" },
-      { "@type": "Property", "name": "dcOutputs", "schema": { "@type": "Object", "fields": [ { "name": "rail12V_A", "schema": "double" }, { "name": "rail5V_A", "schema": "double" } ] }, "writable": false },
+      { "@type": "Property", "name": "dcOutputs", "schema": { "@type": "Object", "fields": [ { "name": "rail12V_A", "schema": "double" }, { "name": "rail5V_A", "schema": "double" } ] }, "writable": false }  
     ]
   },
 
@@ -217,7 +217,7 @@
     "@context": "dtmi:dtdl:context;2",
     "displayName": "LED Ring",
     "contents": [
-           { "@type": "Property", "name": "color", "schema": "string", "comment": "e.g., white, blue, green, orange, red, purple", "writable": true }
+      { "@type": "Property", "name": "color", "schema": "string", "comment": "e.g., white, blue, green, orange, red, purple", "writable": true }
     ]
   },
 
