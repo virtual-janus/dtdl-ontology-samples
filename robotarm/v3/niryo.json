@@ -1,0 +1,181 @@
+[
+  {
+    "@id": "dtmi:example:robotics:Motor;2",
+    "@type": "Interface",
+    "displayName": "Motor",
+    "description": "Motor model representing a rotary actuator.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "ratedTorque",
+        "schema": "double",
+        "unit": "newtonMeter",
+        "description": "Nominal rated torque of the motor."
+      },
+      {
+        "@type": "Property",
+        "name": "currentSpeed",
+        "schema": "double",
+        "unit": "radianPerSecond",
+        "description": "Measured angular speed of the motor.",
+        "comment": "ROS2 topic: /motor_speed"
+      },
+      {
+        "@type": "Property",
+        "name": "currentCurrent",
+        "schema": "double",
+        "unit": "ampere",
+        "description": "Measured motor current draw.",
+        "comment": "ROS2 topic: /motor_current"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:robotics:Joint;2",
+    "@type": "Interface",
+    "displayName": "Joint",
+    "description": "Joint model representing a rotational or prismatic axis of the robot.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "jointName",
+        "schema": "string",
+        "description": "Joint name identifier."
+      },
+      {
+        "@type": "Property",
+        "name": "position",
+        "schema": "double",
+        "unit": "radian",
+        "description": "Joint position from encoder.",
+        "comment": "ROS2 topic: /joint_states.position"
+      },
+      {
+        "@type": "Property",
+        "name": "velocity",
+        "schema": "double",
+        "unit": "radianPerSecond",
+        "description": "Joint angular velocity.",
+        "comment": "ROS2 topic: /joint_states.velocity"
+      },
+      {
+        "@type": "Property",
+        "name": "effort",
+        "schema": "double",
+        "unit": "newtonMeter",
+        "description": "Joint torque or force.",
+        "comment": "ROS2 topic: /joint_states.effort"
+      },
+      {
+        "@type": "Relationship",
+        "name": "drivenBy",
+        "target": "dtmi:example:robotics:Motor;2",
+        "description": "The motor that actuates this joint."
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:robotics:Sensor;2",
+    "@type": "Interface",
+    "displayName": "Sensor",
+    "description": "Generic sensor interface for feedback devices.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "type",
+        "schema": "string",
+        "description": "Type of sensor, e.g. temperature, force, camera."
+      },
+      {
+        "@type": "Property",
+        "name": "value",
+        "schema": "double",
+        "description": "Primary measurement value.",
+        "comment": "ROS2 topic: varies, e.g., /force_sensor, /camera/image_raw"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:robotics:EndEffector;2",
+    "@type": "Interface",
+    "displayName": "End Effector",
+    "description": "Model representing the robot's tool or gripper.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "type",
+        "schema": "string",
+        "description": "Type of end effector, e.g., gripper, welder, suction."
+      },
+      {
+        "@type": "Property",
+        "name": "state",
+        "schema": "string",
+        "description": "Current state of the end effector (e.g., OPEN, CLOSED).",
+        "comment": "ROS2 topic: /gripper/state"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:example:robotics:RobotArm;2",
+    "@type": "Interface",
+    "displayName": "Robot Arm",
+    "description": "Full robot arm model integrating joints, sensors, motors, and end effector using relationships.",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "model",
+        "schema": "string",
+        "description": "Robot arm model identifier, e.g., UR5, FANUC M-10iA."
+      },
+      {
+        "@type": "Property",
+        "name": "manufacturer",
+        "schema": "string",
+        "description": "Robot arm manufacturer name."
+      },
+      {
+        "@type": "Property",
+        "name": "state",
+        "schema": "string",
+        "description": "High-level robot state (IDLE, MOVING, ERROR).",
+        "comment": "ROS2 topic: /robot_state"
+      },
+      {
+        "@type": "Property",
+        "name": "pose",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "x", "schema": "double" },
+            { "name": "y", "schema": "double" },
+            { "name": "z", "schema": "double" },
+            { "name": "roll", "schema": "double" },
+            { "name": "pitch", "schema": "double" },
+            { "name": "yaw", "schema": "double" }
+          ]
+        },
+        "description": "Current robot arm pose in 3D space.",
+        "comment": "ROS2 topic: /tf or /arm_pose"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasJoint",
+        "target": "dtmi:example:robotics:Joint;2",
+        "description": "A joint belonging to this robot arm."
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasSensor",
+        "target": "dtmi:example:robotics:Sensor;2",
+        "description": "A sensor installed on the robot arm."
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasEndEffector",
+        "target": "dtmi:example:robotics:EndEffector;2",
+        "description": "The end effector attached to the robot arm."
+      }
+    ]
+  }
+]
