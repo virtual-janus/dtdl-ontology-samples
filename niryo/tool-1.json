@@ -14,7 +14,6 @@
       "@type": "Property",
       "name": "mass_g",
       "schema": "double",
-      "unit": "gram",
       "writable": false
     }
   ]
