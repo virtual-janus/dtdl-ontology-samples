@@ -34,21 +34,18 @@
         "name": "repeatability_mm",
         "displayName": "Repeatability (mm)",
         "schema": "double",
-        "unit": "millimetre",
         "writable": false
       },
       {
         "@type": "Property",
         "name": "payload_g",
         "schema": "double",
-        "unit": "gram",
         "writable": false
       },
       {
         "@type": "Property",
         "name": "reach_mm",
         "schema": "double",
-        "unit": "millimetre",
         "writable": false
       },
       {
@@ -56,14 +53,12 @@
         "name": "tcpMaxSpeed_mmps",
         "displayName": "TCP Max Speed (mm/s)",
         "schema": "double",
-        "unit": "millimetrePerSecond",
         "writable": false
       },
       {
         "@type": "Property",
         "name": "temperatureC",
         "schema": "double",
-        "unit": "degreeCelsius",
         "writable": false
       },
       {
@@ -149,12 +144,12 @@
     "contents": [
       { "@type": "Property", "name": "index", "schema": "integer", "writable": false },
       { "@type": "Property", "name": "name", "schema": "string", "writable": false },
-      { "@type": "Property", "name": "minPos_rad", "schema": "double", "unit": "radian", "writable": false },
-      { "@type": "Property", "name": "maxPos_rad", "schema": "double", "unit": "radian", "writable": false },
-      { "@type": "Property", "name": "speedLimit_radps", "schema": "double", "unit": "radianPerSecond", "writable": false },
-      { "@type": "Telemetry", "name": "position_rad", "schema": "double", "unit": "radian" },
-      { "@type": "Telemetry", "name": "velocity_radps", "schema": "double", "unit": "radianPerSecond" },
-      { "@type": "Telemetry", "name": "motorTemperatureC", "schema": "double", "unit": "degreeCelsius" },
+      { "@type": "Property", "name": "minPos_rad", "schema": "double", "writable": false },
+      { "@type": "Property", "name": "maxPos_rad", "schema": "double", "writable": false },
+      { "@type": "Property", "name": "speedLimit_radps", "schema": "double", "writable": false },
+      { "@type": "Telemetry", "name": "position_rad", "schema": "double" },
+      { "@type": "Telemetry", "name": "velocity_radps", "schema": "double" },
+      { "@type": "Telemetry", "name": "motorTemperatureC", "schema": "double" },
       { "@type": "Property", "name": "errorCode", "schema": "string" },
       { "@type": "Property", "name": "collisionDetected", "schema": "boolean" }
     ]
@@ -228,7 +223,7 @@
     "displayName": "Generic Tool",
     "contents": [
       { "@type": "Property", "name": "toolType", "schema": "string", "writable": false },
-      { "@type": "Property", "name": "mass_g", "schema": "double", "unit": "gram", "writable": false }
+      { "@type": "Property", "name": "mass_g", "schema": "double", "writable": false }
     ]
   },
 
@@ -239,7 +234,7 @@
     "displayName": "Gripper",
     "extends": [ "dtmi:ukdtc:ned2:Tool;1" ],
     "contents": [
-      { "@type": "Property", "name": "jawOpening_mm", "schema": "double", "unit": "millimetre", "writable": true },
+      { "@type": "Property", "name": "jawOpening_mm", "schema": "double", "writable": true },
       { "@type": "Command", "name": "open", "response": { "name": "ok", "schema": "boolean" } },
       { "@type": "Command", "name": "close", "response": { "name": "ok", "schema": "boolean" } }
     ]
