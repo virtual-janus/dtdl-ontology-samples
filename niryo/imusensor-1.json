@@ -1,0 +1,50 @@
+{
+  "@id": "dtmi:ukdtc:ned2:IMUSensor;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "IMU Sensor (control panel)",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "accelerometer",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "ax",
+            "schema": "double"
+          },
+          {
+            "name": "ay",
+            "schema": "double"
+          },
+          {
+            "name": "az",
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Telemetry",
+      "name": "gyroscope",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "gx",
+            "schema": "double"
+          },
+          {
+            "name": "gy",
+            "schema": "double"
+          },
+          {
+            "name": "gz",
+            "schema": "double"
+          }
+        ]
+      }
+    }
+  ]
+}

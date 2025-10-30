@@ -1,0 +1,53 @@
+{
+  "@id": "dtmi:ukdtc:ned2:LEDRing;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "LED Ring",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "pattern",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "Solid",
+            "value": "solid"
+          },
+          {
+            "name": "Flashing",
+            "value": "flashing"
+          },
+          {
+            "name": "Alternate",
+            "value": "alternate"
+          },
+          {
+            "name": "Chase",
+            "value": "chase"
+          },
+          {
+            "name": "Rainbow",
+            "value": "rainbow"
+          },
+          {
+            "name": "Breath",
+            "value": "breath"
+          },
+          {
+            "name": "Snake",
+            "value": "snake"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "color",
+      "schema": "string",
+      "writable": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "@id": "dtmi:ukdtc:ned2:ControlPanel;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Control Panel",
+  "contents": [
+    {
+      "@type": "Telemetry",
+      "name": "buttonEvent",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "button",
+            "schema": "string"
+          },
+          {
+            "name": "type",
+            "schema": "string"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "customButtonMode",
+      "schema": "string",
+      "writable": true
+    }
+  ]
+}

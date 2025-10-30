@@ -1,0 +1,102 @@
+{
+  "@id": "dtmi:ukdtc:ned2:BackPanelIO;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Back Panel I/O",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "digitalInputs_NPN",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "boolean"
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "digitalOutputs_PNP",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "boolean"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "analogInputs_V",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "double"
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "analogOutputs_V",
+      "schema": {
+        "@type": "Array",
+        "elementSchema": "double"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "usb2Count",
+      "schema": "integer",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "usb3Count",
+      "schema": "integer",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "ethernetPresent",
+      "schema": "boolean",
+      "writable": false
+    },
+    {
+      "@type": "Command",
+      "name": "setDO",
+      "request": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "index",
+            "schema": "integer"
+          },
+          {
+            "name": "state",
+            "schema": "boolean"
+          }
+        ]
+      },
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "setAO",
+      "request": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "index",
+            "schema": "integer"
+          },
+          {
+            "name": "volts",
+            "schema": "double"
+          }
+        ]
+      },
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    }
+  ]
+}

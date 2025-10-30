@@ -1,0 +1,234 @@
+{
+  "@id": "dtmi:ukdtc:ned2:Robot;2",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Ned2 Robot",
+  "extends": [
+    "dtmi:ukdtc:ned2:BaseAsset;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "manufacturer",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "model",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "firmwareVersion",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "operatingMode",
+      "displayName": "Operating Mode",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "Calibration",
+            "value": "calibration"
+          },
+          {
+            "name": "Programming",
+            "value": "programming"
+          },
+          {
+            "name": "FreeMotion",
+            "value": "freemotion"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "payload_g",
+      "schema": "double",
+      "unit": "gram",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "reach_mm",
+      "schema": "double",
+      "unit": "millimetre",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "repeatability_mm",
+      "schema": "double",
+      "unit": "millimetre",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "tcpMaxSpeed_mmps",
+      "schema": "double",
+      "unit": "millimetrePerSecond",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "wifiHotspot",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "On",
+            "value": "on"
+          },
+          {
+            "name": "Off",
+            "value": "off"
+          }
+        ]
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "ledStatus",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "eStopEngaged",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "runtimeStatus",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "uptimeSec",
+            "schema": "long"
+          },
+          {
+            "name": "programState",
+            "schema": "string"
+          },
+          {
+            "name": "errorCode",
+            "schema": "string"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "nextMaintenanceDueHours",
+      "schema": "double",
+      "writable": false
+    },
+    {
+      "@type": "Command",
+      "name": "calibrate",
+      "request": {
+        "name": "force",
+        "schema": "boolean"
+      },
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "home",
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "setFreeMotion",
+      "request": {
+        "name": "enabled",
+        "schema": "boolean"
+      },
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    },
+    {
+      "@type": "Relationship",
+      "name": "attachedTool",
+      "target": "dtmi:ukdtc:ned2:Tool;1"
+    },
+    {
+      "@type": "Component",
+      "name": "j1",
+      "schema": "dtmi:ukdtc:ned2:Joint;2"
+    },
+    {
+      "@type": "Component",
+      "name": "j2",
+      "schema": "dtmi:ukdtc:ned2:Joint;2"
+    },
+    {
+      "@type": "Component",
+      "name": "j3",
+      "schema": "dtmi:ukdtc:ned2:Joint;2"
+    },
+    {
+      "@type": "Component",
+      "name": "j4",
+      "schema": "dtmi:ukdtc:ned2:Joint;2"
+    },
+    {
+      "@type": "Component",
+      "name": "j5",
+      "schema": "dtmi:ukdtc:ned2:Joint;2"
+    },
+    {
+      "@type": "Component",
+      "name": "j6",
+      "schema": "dtmi:ukdtc:ned2:Joint;2"
+    },
+    {
+      "@type": "Component",
+      "name": "imu",
+      "schema": "dtmi:ukdtc:ned2:IMUSensor;1"
+    },
+    {
+      "@type": "Component",
+      "name": "backPanel",
+      "schema": "dtmi:ukdtc:ned2:BackPanelIO;1"
+    },
+    {
+      "@type": "Component",
+      "name": "controlPanel",
+      "schema": "dtmi:ukdtc:ned2:ControlPanel;1"
+    },
+    {
+      "@type": "Component",
+      "name": "power",
+      "schema": "dtmi:ukdtc:ned2:Power;1"
+    },
+    {
+      "@type": "Component",
+      "name": "safetyBox",
+      "schema": "dtmi:ukdtc:ned2:SafetyBox;1"
+    },
+    {
+      "@type": "Component",
+      "name": "ledRing",
+      "schema": "dtmi:ukdtc:ned2:LEDRing;1"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "@id": "dtmi:ukdtc:ned2:Tool;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Generic Tool",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "toolType",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "mass_g",
+      "schema": "double",
+      "unit": "gram",
+      "writable": false
+    }
+  ]
+}

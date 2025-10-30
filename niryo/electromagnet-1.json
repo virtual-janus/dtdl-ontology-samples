@@ -1,0 +1,17 @@
+{
+  "@id": "dtmi:ukdtc:ned2:Electromagnet;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Electromagnet",
+  "extends": [
+    "dtmi:ukdtc:ned2:Tool;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "enabled",
+      "schema": "boolean",
+      "writable": true
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "@id": "dtmi:ukdtc:ned2:Power;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Power",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "acInputRange",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "dcOutputs",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "rail12V_A",
+            "schema": "double"
+          },
+          {
+            "name": "rail5V_A",
+            "schema": "double"
+          }
+        ]
+      },
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "powerState",
+      "schema": {
+        "@type": "Enum",
+        "valueSchema": "string",
+        "enumValues": [
+          {
+            "name": "Off",
+            "value": "off"
+          },
+          {
+            "name": "Booting",
+            "value": "booting"
+          },
+          {
+            "name": "Ready",
+            "value": "ready"
+          }
+        ]
+      },
+      "writable": true
+    }
+  ]
+}

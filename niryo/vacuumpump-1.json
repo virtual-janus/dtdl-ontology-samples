@@ -1,0 +1,17 @@
+{
+  "@id": "dtmi:ukdtc:ned2:VacuumPump;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Vacuum Pump",
+  "extends": [
+    "dtmi:ukdtc:ned2:Tool;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "vacuumOn",
+      "schema": "boolean",
+      "writable": true
+    }
+  ]
+}

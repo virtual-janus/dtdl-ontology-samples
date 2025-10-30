@@ -1,0 +1,30 @@
+{
+  "@id": "dtmi:ukdtc:ned2:SafetyBox;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Safety Box",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "eStopEngaged",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "safetyEvent",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "type",
+            "schema": "string"
+          },
+          {
+            "name": "timestamp",
+            "schema": "dateTime"
+          }
+        ]
+      }
+    }
+  ]
+}

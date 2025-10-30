@@ -1,0 +1,34 @@
+{
+  "@id": "dtmi:ukdtc:ned2:Gripper;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Gripper",
+  "extends": [
+    "dtmi:ukdtc:ned2:Tool;1"
+  ],
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "jawOpening_mm",
+      "schema": "double",
+      "unit": "millimetre",
+      "writable": true
+    },
+    {
+      "@type": "Command",
+      "name": "open",
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    },
+    {
+      "@type": "Command",
+      "name": "close",
+      "response": {
+        "name": "ok",
+        "schema": "boolean"
+      }
+    }
+  ]
+}

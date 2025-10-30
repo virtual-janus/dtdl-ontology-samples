@@ -1,0 +1,124 @@
+{
+  "@id": "dtmi:ukdtc:ned2:Joint;2",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;2",
+  "displayName": "Robot Joint (with maintenance signals)",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "index",
+      "schema": "integer",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "name",
+      "schema": "string",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "minPos_rad",
+      "schema": "double",
+      "unit": "radian",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "maxPos_rad",
+      "schema": "double",
+      "unit": "radian",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "speedLimit_radps",
+      "schema": "double",
+      "unit": "radianPerSecond",
+      "writable": false
+    },
+    {
+      "@type": "Telemetry",
+      "name": "position_rad",
+      "schema": "double",
+      "unit": "radian"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "velocity_radps",
+      "schema": "double",
+      "unit": "radianPerSecond"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "motorTemperatureC",
+      "schema": "double",
+      "unit": "degreeCelsius"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "vibration",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "accelRMS",
+            "schema": "double"
+          },
+          {
+            "name": "gyroRMS",
+            "schema": "double"
+          },
+          {
+            "name": "bandEnergy",
+            "schema": "double"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "Property",
+      "name": "collisionDetected",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Property",
+      "name": "errorCode",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "healthScore",
+      "schema": "double",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "predictedMaintenanceHours",
+      "schema": "double",
+      "writable": false
+    },
+    {
+      "@type": "Property",
+      "name": "maintenanceThresholds",
+      "schema": {
+        "@type": "Object",
+        "fields": [
+          {
+            "name": "maxTempC",
+            "schema": "double"
+          },
+          {
+            "name": "maxAccelRMS",
+            "schema": "double"
+          },
+          {
+            "name": "maxGyroRMS",
+            "schema": "double"
+          }
+        ]
+      },
+      "writable": true
+    }
+  ]
+}
