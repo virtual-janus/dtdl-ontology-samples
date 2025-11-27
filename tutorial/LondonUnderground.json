@@ -1,0 +1,196 @@
+[
+  {
+    "@id": "dtmi:uk:tfl:LondonUnderground;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "London Underground Network",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "hasLine",
+        "target": "dtmi:uk:tfl:Line;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasStation",
+        "target": "dtmi:uk:tfl:Station;1"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Line;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Tube Line",
+    "contents": [
+      { "@type": "Property", "name": "lineId", "schema": "string" },
+      { "@type": "Property", "name": "name", "schema": "string" },
+      { "@type": "Property", "name": "mode", "schema": "string" },
+      { "@type": "Property", "name": "color", "schema": "string" },
+      { "@type": "Property", "name": "status", "schema": "string" },
+
+      { "@type": "Relationship", "name": "hasStation", "target": "dtmi:uk:tfl:Station;1" },
+      { "@type": "Relationship", "name": "hasServicePattern", "target": "dtmi:uk:tfl:ServicePattern;1" },
+      { "@type": "Relationship", "name": "hasDisruption", "target": "dtmi:uk:tfl:Disruption;1" },
+      { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:uk:tfl:Operator;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Station;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Station",
+    "contents": [
+      { "@type": "Property", "name": "stationId", "schema": "string" },
+      { "@type": "Property", "name": "name", "schema": "string" },
+      { "@type": "Property", "name": "latitude", "schema": "double" },
+      { "@type": "Property", "name": "longitude", "schema": "double" },
+      { "@type": "Property", "name": "zone", "schema": "string" },
+      { "@type": "Property", "name": "isInterchange", "schema": "boolean" },
+
+      { "@type": "Relationship", "name": "servedBy", "target": "dtmi:uk:tfl:Line;1" },
+      { "@type": "Relationship", "name": "containsStopPoint", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:uk:tfl:Station;1" },
+      { "@type": "Relationship", "name": "hasAccessibilityFeature", "target": "dtmi:uk:tfl:AccessibilityFeature;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:StopPoint;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "StopPoint",
+    "contents": [
+      { "@type": "Property", "name": "stopPointId", "schema": "string" },
+      { "@type": "Property", "name": "type", "schema": "string" },
+      { "@type": "Property", "name": "platformName", "schema": "string" },
+      { "@type": "Property", "name": "towards", "schema": "string" },
+      { "@type": "Property", "name": "latitude", "schema": "double" },
+      { "@type": "Property", "name": "longitude", "schema": "double" },
+
+      { "@type": "Relationship", "name": "partOfStation", "target": "dtmi:uk:tfl:Station;1" },
+      { "@type": "Relationship", "name": "servesLine", "target": "dtmi:uk:tfl:Line;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:ServicePattern;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Service Pattern",
+    "contents": [
+      { "@type": "Property", "name": "validFrom", "schema": "dateTime" },
+      { "@type": "Property", "name": "validTo", "schema": "dateTime" },
+      { "@type": "Property", "name": "frequencyDescription", "schema": "string" },
+
+      { "@type": "Relationship", "name": "forLine", "target": "dtmi:uk:tfl:Line;1" },
+      { "@type": "Relationship", "name": "definesJourneyPattern", "target": "dtmi:uk:tfl:JourneyPattern;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:JourneyPattern;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Journey Pattern",
+    "contents": [
+      { "@type": "Property", "name": "direction", "schema": "string" },
+
+      {
+        "@type": "Relationship",
+        "name": "sequenceOf",
+        "target": "dtmi:uk:tfl:StopPoint;1",
+        "properties": [
+          {
+            "@type": "Property",
+            "name": "order",
+            "schema": "integer"
+          }
+        ]
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasSegment",
+        "target": "dtmi:uk:tfl:TrackSegment;1"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:TrackSegment;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Track Segment",
+    "contents": [
+      { "@type": "Property", "name": "segmentId", "schema": "string" },
+      { "@type": "Property", "name": "distanceMeters", "schema": "double" },
+      { "@type": "Property", "name": "typicalTravelTimeSeconds", "schema": "integer" },
+
+      { "@type": "Relationship", "name": "from", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "to", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "belongsToLine", "target": "dtmi:uk:tfl:Line;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:RealTimeUpdate;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Real-Time Train Prediction",
+    "contents": [
+      { "@type": "Property", "name": "vehicleId", "schema": "string" },
+      { "@type": "Property", "name": "expectedArrival", "schema": "dateTime" },
+      { "@type": "Property", "name": "timeToStationSeconds", "schema": "integer" },
+      { "@type": "Property", "name": "platformName", "schema": "string" },
+
+      { "@type": "Relationship", "name": "forStopPoint", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "forLine", "target": "dtmi:uk:tfl:Line;1" },
+      { "@type": "Relationship", "name": "forJourneyPattern", "target": "dtmi:uk:tfl:JourneyPattern;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Disruption;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Disruption",
+    "contents": [
+      { "@type": "Property", "name": "category", "schema": "string" },
+      { "@type": "Property", "name": "description", "schema": "string" },
+      { "@type": "Property", "name": "startTime", "schema": "dateTime" },
+      { "@type": "Property", "name": "endTime", "schema": "dateTime" },
+      { "@type": "Property", "name": "severity", "schema": "string" },
+
+      { "@type": "Relationship", "name": "affectsLine", "target": "dtmi:uk:tfl:Line;1" },
+      { "@type": "Relationship", "name": "affectsStation", "target": "dtmi:uk:tfl:Station;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Operator;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Transport Operator",
+    "contents": [
+      { "@type": "Property", "name": "operatorId", "schema": "string" },
+      { "@type": "Property", "name": "name", "schema": "string" },
+      { "@type": "Relationship", "name": "operates", "target": "dtmi:uk:tfl:Line;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:AccessibilityFeature;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Accessibility Feature",
+    "contents": [
+      { "@type": "Property", "name": "featureId", "schema": "string" },
+      { "@type": "Property", "name": "type", "schema": "string" },
+      { "@type": "Property", "name": "isWorking", "schema": "boolean" },
+
+      { "@type": "Relationship", "name": "locatedAt", "target": "dtmi:uk:tfl:Station;1" }
+    ]
+  }
+]
