@@ -184,9 +184,7 @@
     "@context": "dtmi:dtdl:context;3",
     "displayName": "Accessibility Feature",
     "contents": [
-      { "@type": "Property", "name": "featureId", "schema": "string" },
       { "@type": "Property", "name": "type", "schema": "string" },
-      { "@type": "Property", "name": "isWorking", "schema": "boolean" },
 
       { "@type": "Relationship", "name": "locatedAt", "target": "dtmi:uk:tfl:Station;1" }
     ]
