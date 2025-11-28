@@ -47,8 +47,6 @@
       { "@type": "Property", "name": "name", "schema": "string" },
       { "@type": "Property", "name": "latitude", "schema": "double" },
       { "@type": "Property", "name": "longitude", "schema": "double" },
-      { "@type": "Property", "name": "zone", "schema": "string" },
-      { "@type": "Property", "name": "isInterchange", "schema": "boolean" },
 
       { "@type": "Relationship", "name": "servedBy", "target": "dtmi:uk:tfl:Line;1" },
       { "@type": "Relationship", "name": "containsStopPoint", "target": "dtmi:uk:tfl:StopPoint;1" },
