@@ -141,6 +141,15 @@
     "displayName": "Route",
     "contents": [
       {
+        "@type": "Property",
+        "name": "stationSequence",
+        "schema": {
+          "@type": "Array",
+          "elementSchema": "string"
+        },
+        "description": "Ordered list of station IDs along this route"
+      },
+      {
         "@type": "Relationship",
         "name": "startingStation",
         "target": "dtmi:example:Station;1"
