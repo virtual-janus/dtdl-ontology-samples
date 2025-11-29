@@ -8,8 +8,7 @@
       {
         "@type": "Relationship",
         "name": "operatesLine",
-        "target": "dtmi:example:Line;1",
-        "displayName": "Operates Line"
+        "target": "dtmi:example:Line;1"
       }
     ]
   },
@@ -142,14 +141,14 @@
     "displayName": "Route",
     "contents": [
       {
-        "@type": "Property",
+        "@type": "Relationship",
         "name": "startingStation",
-        "schema": "dtmi:example:Station;1"
+        "target": "dtmi:example:Station;1"
       },
       {
-        "@type": "Property",
+        "@type": "Relationship",
         "name": "terminatingStation",
-        "schema": "dtmi:example:Station;1"
+        "target": "dtmi:example:Station;1"
       },
       {
         "@type": "Relationship",
