@@ -1,166 +1,221 @@
-[
-  {
-    "@id": "dtmi:londonunderground:Network;1",
-    "@type": "Interface",
-    "displayName": "London Underground Network",
-    "contents": [
-      { "@type": "Relationship", "name": "hasLine", "target": "dtmi:londonunderground:TubeLine;1" },
-      { "@type": "Relationship", "name": "hasStation", "target": "dtmi:londonunderground:Station;1" },
-      { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:londonunderground:TransportOperator;1" },
-      { "@type": "Relationship", "name": "hasTrain", "target": "dtmi:londonunderground:Train;1" },
-
-      { "@type": "Telemetry", "name": "totalOperationalTrains", "schema": "integer", "description": "Number of trains currently in operation." }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:TubeLine;1",
-    "@type": "Interface",
-    "displayName": "Tube Line",
-    "contents": [
-      { "@type": "Property", "name": "lineId", "schema": "string" },
-      { "@type": "Property", "name": "colorHex", "schema": "string" },
-
-      { "@type": "Relationship", "name": "servesStation", "target": "dtmi:londonunderground:Station;1" },
-      { "@type": "Relationship", "name": "hasService", "target": "dtmi:londonunderground:Service;1" },
-      { "@type": "Relationship", "name": "hasRoute", "target": "dtmi:londonunderground:Route;1" },
-      { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:londonunderground:Disruption;1" },
-
-      { "@type": "Telemetry", "name": "lineStatus", "schema": "string", "description": "Current line status (e.g., Good Service, Minor Delays, Suspended)." },
-      { "@type": "Telemetry", "name": "averageHeadway", "schema": "double", "description": "Average minutes between trains." }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:Station;1",
-    "@type": "Interface",
-    "displayName": "Station",
-    "contents": [
-      { "@type": "Property", "name": "stationId", "schema": "string" },
-      { "@type": "Property", "name": "name", "schema": "string" },
-      { "@type": "Property", "name": "latitude", "schema": "double" },
-      { "@type": "Property", "name": "longitude", "schema": "double" },
-
-      { "@type": "Relationship", "name": "hasAccessibilityFeature", "target": "dtmi:londonunderground:AccessibilityFeature;1" },
-      { "@type": "Relationship", "name": "connectedBy", "target": "dtmi:londonunderground:TrackSegment;1" },
-      { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:londonunderground:Disruption;1" },
-
-      { "@type": "Telemetry", "name": "passengerCount", "schema": "integer", "description": "Real-time estimated number of passengers in the station." },
-      { "@type": "Telemetry", "name": "platformCrowdingLevel", "schema": "string", "description": "Low, Moderate, High, Severe." },
-      { "@type": "Telemetry", "name": "liftStatus", "schema": "string", "description": "Operational status of lifts (e.g., In Service, Out of Service)." }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:TransportOperator;1",
-    "@type": "Interface",
-    "displayName": "Transport Operator",
-    "contents": [
-      { "@type": "Property", "name": "operatorId", "schema": "string" },
-      { "@type": "Property", "name": "name", "schema": "string" }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:AccessibilityFeature;1",
-    "@type": "Interface",
-    "displayName": "Accessibility Feature",
-    "contents": [
-      { "@type": "Property", "name": "featureType", "schema": "string" },
-      { "@type": "Property", "name": "description", "schema": "string" }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:Route;1",
-    "@type": "Interface",
-    "displayName": "Route",
-    "contents": [
-      {
-        "@type": "Relationship",
-        "name": "consistsOf",
-        "target": "dtmi:londonunderground:Station;1",
-        "properties": [
-          { "@type": "Property", "name": "order", "schema": "integer" }
-        ]
-      },
-      { "@type": "Relationship", "name": "usesSegment", "target": "dtmi:londonunderground:TrackSegment;1" }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:Service;1",
-    "@type": "Interface",
-    "displayName": "Service",
-    "contents": [
-      { "@type": "Property", "name": "serviceId", "schema": "string" },
-      { "@type": "Property", "name": "startTime", "schema": "string" },
-      { "@type": "Property", "name": "endTime", "schema": "string" },
-
-      { "@type": "Relationship", "name": "runsOn", "target": "dtmi:londonunderground:TubeLine;1" },
-      { "@type": "Relationship", "name": "followsRoute", "target": "dtmi:londonunderground:Route;1" },
-      { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:londonunderground:TransportOperator;1" },
-
-      { "@type": "Telemetry", "name": "currentDelay", "schema": "double", "description": "Minutes of delay for this service." },
-      { "@type": "Telemetry", "name": "liveVehicleCount", "schema": "integer", "description": "Number of trains currently running for this service." }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:TrackSegment;1",
-    "@type": "Interface",
-    "displayName": "Track Segment",
-    "contents": [
-      { "@type": "Property", "name": "segmentId", "schema": "string" },
-
-      { "@type": "Relationship", "name": "fromStation", "target": "dtmi:londonunderground:Station;1" },
-      { "@type": "Relationship", "name": "toStation", "target": "dtmi:londonunderground:Station;1" }
-    ]
-  },
-
-  {
-    "@id": "dtmi:londonunderground:Train;1",
-    "@type": "Interface",
-    "displayName": "Train",
-    "contents": [
-      { "@type": "Property", "name": "trainId", "schema": "string" },
-      { "@type": "Property", "name": "rollingStockClass", "schema": "string" },
-
-      { "@type": "Relationship", "name": "assignedTo", "target": "dtmi:londonunderground:Service;1" },
-      { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:londonunderground:Disruption;1" },
-
-      {
-        "@type": "Telemetry",
-        "name": "realTimeLocation",
-        "schema": {
-          "@type": "Object",
-          "fields": [
-            { "name": "latitude", "schema": "double" },
-            { "name": "longitude", "schema": "double" }
-          ]
+{
+  "@context": "dtmi:dtdl:context;3",
+  "models": [
+    {
+      "@id": "dtmi:uk:tfl:LondonUndergroundNetwork;1",
+      "@type": "Interface",
+      "displayName": "London Underground Network",
+      "contents": [
+        { "@type": "Relationship", "name": "hasLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+        { "@type": "Relationship", "name": "hasStation", "target": "dtmi:uk:tfl:Station;1" },
+        { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:uk:tfl:TransportOperator;1" },
+        { "@type": "Relationship", "name": "hasTrain", "target": "dtmi:uk:tfl:Train;1" },
+        {
+          "@type": "Telemetry",
+          "name": "totalOperationalTrains",
+          "schema": "integer",
+          "description": "Number of trains currently in operation across the network."
         }
-      },
-      { "@type": "Telemetry", "name": "arrivalPrediction", "schema": "double", "description": "Predicted minutes to next station." },
-      { "@type": "Telemetry", "name": "occupancyLevel", "schema": "string", "description": "LOW, MEDIUM, HIGH, VERY_HIGH" }
-    ]
-  },
+      ]
+    },
 
-  {
-    "@id": "dtmi:londonunderground:Disruption;1",
-    "@type": "Interface",
-    "displayName": "Disruption",
-    "contents": [
-      { "@type": "Property", "name": "disruptionId", "schema": "string" },
-      { "@type": "Property", "name": "description", "schema": "string" },
-      { "@type": "Property", "name": "severity", "schema": "string" },
-      { "@type": "Property", "name": "status", "schema": "string" },
-      { "@type": "Property", "name": "startTime", "schema": "string" },
-      { "@type": "Property", "name": "endTime", "schema": "string" },
+    {
+      "@id": "dtmi:uk:tfl:TubeLine;1",
+      "@type": "Interface",
+      "displayName": "Tube Line",
+      "contents": [
+        { "@type": "Property", "name": "lineId", "schema": "string" },
+        { "@type": "Property", "name": "name", "schema": "string" },
+        { "@type": "Property", "name": "colorHex", "schema": "string" },
 
-      { "@type": "Relationship", "name": "affectsLine", "target": "dtmi:londonunderground:TubeLine;1" },
-      { "@type": "Relationship", "name": "affectsStation", "target": "dtmi:londonunderground:Station;1" },
-      { "@type": "Relationship", "name": "affectsRoute", "target": "dtmi:londonunderground:Route;1" },
-      { "@type": "Relationship", "name": "affectsService", "target": "dtmi:londonunderground:Service;1" }
-    ]
-  }
-]
+        { "@type": "Relationship", "name": "servesStation", "target": "dtmi:uk:tfl:Station;1" },
+        { "@type": "Relationship", "name": "hasService", "target": "dtmi:uk:tfl:Service;1" },
+        { "@type": "Relationship", "name": "hasRoute", "target": "dtmi:uk:tfl:Route;1" },
+        { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:uk:tfl:Disruption;1" },
+
+        {
+          "@type": "Telemetry",
+          "name": "lineStatus",
+          "schema": "string",
+          "description": "Current line status (Good Service, Minor Delays, Severe Delays, Suspended)."
+        },
+        {
+          "@type": "Telemetry",
+          "name": "averageHeadwayMinutes",
+          "schema": "double",
+          "description": "Average train headway in minutes."
+        }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:Station;1",
+      "@type": "Interface",
+      "displayName": "Station",
+      "contents": [
+        { "@type": "Property", "name": "stationId", "schema": "string" },
+        { "@type": "Property", "name": "name", "schema": "string" },
+        { "@type": "Property", "name": "latitude", "schema": "double" },
+        { "@type": "Property", "name": "longitude", "schema": "double" },
+
+        { "@type": "Relationship", "name": "hasAccessibilityFeature", "target": "dtmi:uk:tfl:AccessibilityFeature;1" },
+        { "@type": "Relationship", "name": "connectedBy", "target": "dtmi:uk:tfl:TrackSegment;1" },
+        { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:uk:tfl:Disruption;1" },
+
+        {
+          "@type": "Telemetry",
+          "name": "passengerCount",
+          "schema": "integer",
+          "description": "Real-time estimated number of passengers currently in the station."
+        },
+        {
+          "@type": "Telemetry",
+          "name": "platformCrowdingLevel",
+          "schema": "string",
+          "description": "Crowding level on platforms (Low, Moderate, High, Severe)."
+        },
+        {
+          "@type": "Telemetry",
+          "name": "liftStatus",
+          "schema": "string",
+          "description": "Operational status of station lifts."
+        }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:TransportOperator;1",
+      "@type": "Interface",
+      "displayName": "Transport Operator",
+      "contents": [
+        { "@type": "Property", "name": "operatorId", "schema": "string" },
+        { "@type": "Property", "name": "name", "schema": "string" }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:AccessibilityFeature;1",
+      "@type": "Interface",
+      "displayName": "Accessibility Feature",
+      "contents": [
+        { "@type": "Property", "name": "featureType", "schema": "string" },
+        { "@type": "Property", "name": "description", "schema": "string" },
+        { "@type": "Relationship", "name": "locatedAt", "target": "dtmi:uk:tfl:Station;1" }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:Route;1",
+      "@type": "Interface",
+      "displayName": "Route",
+      "contents": [
+        {
+          "@type": "Relationship",
+          "name": "consistsOf",
+          "target": "dtmi:uk:tfl:Station;1",
+          "properties": [
+            { "@type": "Property", "name": "order", "schema": "integer" }
+          ]
+        },
+        { "@type": "Relationship", "name": "usesSegment", "target": "dtmi:uk:tfl:TrackSegment;1" }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:Service;1",
+      "@type": "Interface",
+      "displayName": "Service",
+      "contents": [
+        { "@type": "Property", "name": "serviceId", "schema": "string" },
+        { "@type": "Property", "name": "startTime", "schema": "string" },
+        { "@type": "Property", "name": "endTime", "schema": "string" },
+
+        { "@type": "Relationship", "name": "runsOn", "target": "dtmi:uk:tfl:TubeLine;1" },
+        { "@type": "Relationship", "name": "followsRoute", "target": "dtmi:uk:tfl:Route;1" },
+        { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:uk:tfl:TransportOperator;1" },
+
+        {
+          "@type": "Telemetry",
+          "name": "currentDelayMinutes",
+          "schema": "double",
+          "description": "Real-time delay in minutes."
+        },
+        {
+          "@type": "Telemetry",
+          "name": "liveTrainCount",
+          "schema": "integer",
+          "description": "Number of trains currently active on this service."
+        }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:TrackSegment;1",
+      "@type": "Interface",
+      "displayName": "Track Segment",
+      "contents": [
+        { "@type": "Property", "name": "segmentId", "schema": "string" },
+        { "@type": "Property", "name": "distanceMeters", "schema": "double" },
+
+        { "@type": "Relationship", "name": "fromStation", "target": "dtmi:uk:tfl:Station;1" },
+        { "@type": "Relationship", "name": "toStation", "target": "dtmi:uk:tfl:Station;1" }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:Train;1",
+      "@type": "Interface",
+      "displayName": "Train",
+      "contents": [
+        { "@type": "Property", "name": "trainId", "schema": "string" },
+        { "@type": "Property", "name": "rollingStockClass", "schema": "string" },
+
+        { "@type": "Relationship", "name": "assignedTo", "target": "dtmi:uk:tfl:Service;1" },
+        { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:uk:tfl:Disruption;1" },
+
+        {
+          "@type": "Telemetry",
+          "name": "realTimeLocation",
+          "schema": {
+            "@type": "Object",
+            "fields": [
+              { "name": "latitude", "schema": "double" },
+              { "name": "longitude", "schema": "double" }
+            ]
+          }
+        },
+        {
+          "@type": "Telemetry",
+          "name": "arrivalPredictionMinutes",
+          "schema": "double",
+          "description": "Predicted minutes to next station."
+        },
+        {
+          "@type": "Telemetry",
+          "name": "occupancyLevel",
+          "schema": "string",
+          "description": "Passenger load: Low, Medium, High, VeryHigh."
+        }
+      ]
+    },
+
+    {
+      "@id": "dtmi:uk:tfl:Disruption;1",
+      "@type": "Interface",
+      "displayName": "Disruption",
+      "contents": [
+        { "@type": "Property", "name": "disruptionId", "schema": "string" },
+        { "@type": "Property", "name": "description", "schema": "string" },
+        { "@type": "Property", "name": "severity", "schema": "string" },
+        { "@type": "Property", "name": "status", "schema": "string" },
+        { "@type": "Property", "name": "startTime", "schema": "string" },
+        { "@type": "Property", "name": "endTime", "schema": "string" },
+
+        { "@type": "Relationship", "name": "affectsLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+        { "@type": "Relationship", "name": "affectsStation", "target": "dtmi:uk:tfl:Station;1" },
+        { "@type": "Relationship", "name": "affectsRoute", "target": "dtmi:uk:tfl:Route;1" },
+        { "@type": "Relationship", "name": "affectsService", "target": "dtmi:uk:tfl:Service;1" }
+      ]
+    }
+  ]
+}
