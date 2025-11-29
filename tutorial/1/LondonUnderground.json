@@ -5,21 +5,15 @@
     "@context": "dtmi:dtdl:context;3",
     "displayName": "London Underground Network",
     "contents": [
-      {
-        "@type": "Relationship",
-        "name": "hasLine",
-        "target": "dtmi:uk:tfl:TubeLine;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "hasStation",
-        "target": "dtmi:uk:tfl:Station;1"
-      },
+      { "@type": "Relationship", "name": "hasLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+      { "@type": "Relationship", "name": "hasStation", "target": "dtmi:uk:tfl:Station;1" },
+      { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:uk:tfl:TransportOperator;1" },
+      { "@type": "Relationship", "name": "hasTrain", "target": "dtmi:uk:tfl:Train;1" },
       {
         "@type": "Telemetry",
-        "name": "totalTrainsOperational",
+        "name": "totalOperationalTrains",
         "schema": "integer",
-        "description": "Real-time count of all trains currently in operation."
+        "description": "Real-time count of trains currently operational across the network."
       }
     ]
   },
@@ -39,19 +33,243 @@
       { "@type": "Relationship", "name": "hasStation", "target": "dtmi:uk:tfl:Station;1" },
       { "@type": "Relationship", "name": "hasServicePattern", "target": "dtmi:uk:tfl:ServicePattern;1" },
       { "@type": "Relationship", "name": "hasDisruption", "target": "dtmi:uk:tfl:Disruption;1" },
-      { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:uk:tfl:Operator;1" },
+      { "@type": "Relationship", "name": "operatedBy", "target": "dtmi:uk:tfl:TransportOperator;1" },
 
       {
         "@type": "Telemetry",
         "name": "currentStatus",
         "schema": "string",
-        "description": "Real-time operational status, e.g., Good Service, Minor Delays, Severe Delays."
+        "description": "Real-time operational status such as Good Service, Minor Delays, or Severe Delays."
       },
       {
         "@type": "Telemetry",
         "name": "averageHeadwayMinutes",
         "schema": "double",
-        "description": "Real-time average headway between trains in minutes."
+        "description": "Real-time average headway between trains on this line."
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Station;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Station",
+    "contents": [
+      { "@type": "Property", "name": "stationId", "schema": "string" },
+      { "@type": "Property", "name": "name", "schema": "string" },
+      { "@type": "Property", "name": "latitude", "schema": "double" },
+      { "@type": "Property", "name": "longitude", "schema": "double" },
+
+      { "@type": "Relationship", "name": "servedBy", "target": "dtmi:uk:tfl:TubeLine;1" },
+      { "@type": "Relationship", "name": "containsStopPoint", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:uk:tfl:Station;1" },
+      { "@type": "Relationship", "name": "hasAccessibilityFeature", "target": "dtmi:uk:tfl:AccessibilityFeature;1" },
+
+      {
+        "@type": "Telemetry",
+        "name": "passengerCount",
+        "schema": "integer",
+        "description": "Real-time estimated number of passengers currently in the station."
+      },
+      {
+        "@type": "Telemetry",
+        "name": "platformCrowdingLevel",
+        "schema": "string",
+        "description": "Level of platform crowding: Low, Moderate, High."
+      },
+      {
+        "@type": "Telemetry",
+        "name": "liftStatus",
+        "schema": "string",
+        "description": "Operational status of any station lifts."
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:StopPoint;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "StopPoint",
+    "contents": [
+      { "@type": "Property", "name": "stopPointId", "schema": "string" },
+      { "@type": "Property", "name": "type", "schema": "string" },
+      { "@type": "Property", "name": "platformName", "schema": "string" },
+      { "@type": "Property", "name": "towards", "schema": "string" },
+      { "@type": "Property", "name": "latitude", "schema": "double" },
+      { "@type": "Property", "name": "longitude", "schema": "double" },
+
+      { "@type": "Relationship", "name": "partOfStation", "target": "dtmi:uk:tfl:Station;1" },
+      { "@type": "Relationship", "name": "servesLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+
+      {
+        "@type": "Telemetry",
+        "name": "nextArrivalSeconds",
+        "schema": "integer",
+        "description": "Real-time predicted seconds until the next train arrives."
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:ServicePattern;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Service Pattern",
+    "contents": [
+      { "@type": "Property", "name": "validFrom", "schema": "dateTime" },
+      { "@type": "Property", "name": "validTo", "schema": "dateTime" },
+      { "@type": "Property", "name": "frequencyDescription", "schema": "string" },
+
+      { "@type": "Relationship", "name": "forLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+      { "@type": "Relationship", "name": "definesJourneyPattern", "target": "dtmi:uk:tfl:JourneyPattern;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:JourneyPattern;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Journey Pattern",
+    "contents": [
+      { "@type": "Property", "name": "direction", "schema": "string" },
+
+      {
+        "@type": "Relationship",
+        "name": "sequenceOf",
+        "target": "dtmi:uk:tfl:StopPoint;1",
+        "properties": [
+          { "@type": "Property", "name": "order", "schema": "integer" }
+        ]
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasSegment",
+        "target": "dtmi:uk:tfl:TrackSegment;1"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:TrackSegment;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Track Segment",
+    "contents": [
+      { "@type": "Property", "name": "segmentId", "schema": "string" },
+      { "@type": "Property", "name": "distanceMeters", "schema": "double" },
+      { "@type": "Property", "name": "typicalTravelTimeSeconds", "schema": "integer" },
+
+      { "@type": "Relationship", "name": "from", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "to", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "belongsToLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+
+      {
+        "@type": "Telemetry",
+        "name": "actualTravelTimeSeconds",
+        "schema": "integer",
+        "description": "Real-time measured travel time along this track segment."
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:RealTimeTrainPrediction;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Real-Time Train Prediction",
+    "contents": [
+      { "@type": "Property", "name": "vehicleId", "schema": "string" },
+      { "@type": "Property", "name": "expectedArrival", "schema": "dateTime" },
+      { "@type": "Property", "name": "timeToStationSeconds", "schema": "integer" },
+      { "@type": "Property", "name": "platformName", "schema": "string" },
+
+      { "@type": "Relationship", "name": "forStopPoint", "target": "dtmi:uk:tfl:StopPoint;1" },
+      { "@type": "Relationship", "name": "forLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+      { "@type": "Relationship", "name": "forJourneyPattern", "target": "dtmi:uk:tfl:JourneyPattern;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Disruption;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Disruption",
+    "contents": [
+      { "@type": "Property", "name": "category", "schema": "string" },
+      { "@type": "Property", "name": "description", "schema": "string" },
+      { "@type": "Property", "name": "startTime", "schema": "dateTime" },
+      { "@type": "Property", "name": "endTime", "schema": "dateTime" },
+      { "@type": "Property", "name": "severity", "schema": "string" },
+
+      { "@type": "Relationship", "name": "affectsLine", "target": "dtmi:uk:tfl:TubeLine;1" },
+      { "@type": "Relationship", "name": "affectsStation", "target": "dtmi:uk:tfl:Station;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:TransportOperator;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Transport Operator",
+    "contents": [
+      { "@type": "Property", "name": "operatorId", "schema": "string" },
+      { "@type": "Property", "name": "name", "schema": "string" },
+      { "@type": "Relationship", "name": "operates", "target": "dtmi:uk:tfl:TubeLine;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:AccessibilityFeature;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Accessibility Feature",
+    "contents": [
+      { "@type": "Property", "name": "type", "schema": "string" },
+      {
+        "@type": "Property",
+        "name": "description",
+        "schema": "string"
+      },
+      { "@type": "Relationship", "name": "locatedAt", "target": "dtmi:uk:tfl:Station;1" }
+    ]
+  },
+
+  {
+    "@id": "dtmi:uk:tfl:Train;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Train",
+    "contents": [
+      { "@type": "Property", "name": "trainId", "schema": "string" },
+      { "@type": "Property", "name": "rollingStockClass", "schema": "string" },
+
+      { "@type": "Relationship", "name": "assignedToService", "target": "dtmi:uk:tfl:ServicePattern;1" },
+      { "@type": "Relationship", "name": "impactedBy", "target": "dtmi:uk:tfl:Disruption;1" },
+
+      {
+        "@type": "Telemetry",
+        "name": "location",
+        "schema": {
+          "@type": "Object",
+          "fields": [
+            { "name": "latitude", "schema": "double" },
+            { "name": "longitude", "schema": "double" }
+          ]
+        }
+      },
+      {
+        "@type": "Telemetry",
+        "name": "nextStationArrivalSeconds",
+        "schema": "integer",
+        "description": "Predicted seconds until train reaches the next station."
+      },
+      {
+        "@type": "Telemetry",
+        "name": "occupancyLevel",
+        "schema": "string",
+        "description": "Passenger load: Low, Medium, High, VeryHigh."
       }
     ]
   }
