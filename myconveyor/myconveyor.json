@@ -1,0 +1,387 @@
+[ {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:Belt;1",
+  "@type" : "Interface",
+  "displayName" : "Belt",
+  "description" : "Conveyor belt component",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "beltId",
+    "schema" : "string"
+  }, {
+    "@type" : "Property",
+    "name" : "material",
+    "schema" : "string",
+    "description" : "Belt material type"
+  }, {
+    "@type" : "Property",
+    "name" : "length",
+    "schema" : "double",
+    "description" : "Belt length in meters"
+  }, {
+    "@type" : "Property",
+    "name" : "width",
+    "schema" : "double",
+    "description" : "Belt width in meters"
+  }, {
+    "@type" : "Relationship",
+    "name" : "carries",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Payload;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:Conveyor;1",
+  "@type" : "Interface",
+  "displayName" : "Conveyor",
+  "description" : "Main conveyor system interface",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "Manufacturer",
+    "schema" : "string",
+    "description" : "Manufacturer of the conveyor system"
+  }, {
+    "@type" : "Property",
+    "name" : "model",
+    "schema" : "string",
+    "description" : "Model of the conveyor system"
+  }, {
+    "@type" : "Telemetry",
+    "name" : "Version",
+    "schema" : "string",
+    "description" : "Version of the conveyor system"
+  }, {
+    "@type" : "Property",
+    "name" : "operationalStatus",
+    "schema" : {
+      "@type" : "Enum",
+      "valueSchema" : "string",
+      "enumValues" : [ {
+        "name" : "idle",
+        "enumValue" : "Idle"
+      }, {
+        "name" : "start",
+        "enumValue" : "Start"
+      }, {
+        "name" : "stop",
+        "enumValue" : "Stop"
+      } ]
+    }
+  }, {
+    "@type" : "Relationship",
+    "name" : "hasBelt",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Belt;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "hasDrivenEnd",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:DrivenEnd;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "hasIdleEnd",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:IdleEnd;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "hasStructuralFrame",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:StructuralFrame;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "sitsInWorkspace",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Workspace;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:DrivenEnd;1",
+  "@type" : "Interface",
+  "displayName" : "Driven End",
+  "description" : "The powered end of the conveyor connected to the motor",
+  "contents" : [ {
+    "@type" : "Relationship",
+    "name" : "isDrivenBy",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Motor;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "drives",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Belt;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:HumanOperator;1",
+  "@type" : "Interface",
+  "displayName" : "Human Operator",
+  "description" : "Human operator who controls and monitors the conveyor",
+  "contents" : [ {
+    "@type" : "Relationship",
+    "name" : "operates",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:SpeedControl;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:IdleEnd;1",
+  "@type" : "Interface",
+  "displayName" : "Idle End",
+  "description" : "The non-powered end of the conveyor with tensioning mechanism",
+  "contents" : [ {
+    "@type" : "Relationship",
+    "name" : "rotates",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Belt;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:Motor;1",
+  "@type" : "Interface",
+  "displayName" : "Motor",
+  "description" : "Electric motor that drives the conveyor belt",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "power",
+    "schema" : "double",
+    "description" : "power in kW"
+  }, {
+    "@type" : "Property",
+    "name" : "voltage",
+    "schema" : "double",
+    "description" : "Voltage in V"
+  }, {
+    "@type" : "Property",
+    "name" : "RotationsPerMinute",
+    "schema" : "double",
+    "description" : "Rotations per minute, RPM"
+  }, {
+    "@type" : "Telemetry",
+    "name" : "current",
+    "schema" : "double",
+    "description" : "Current in Amps"
+  }, {
+    "@type" : "Relationship",
+    "name" : "controlledBy",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:SpeedControl;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "drives",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:DrivenEnd;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:Payload;1",
+  "@type" : "Interface",
+  "displayName" : "Payload",
+  "description" : "Items being transported on the conveyor",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "weight",
+    "schema" : "double",
+    "description" : "Payload weight in kg"
+  }, {
+    "@type" : "Property",
+    "name" : "dimensions",
+    "schema" : {
+      "@type" : "Object",
+      "fields" : [ {
+        "name" : "length",
+        "schema" : "double"
+      }, {
+        "name" : "width",
+        "schema" : "double"
+      }, {
+        "name" : "height",
+        "schema" : "double"
+      } ]
+    }
+  }, {
+    "@type" : "Property",
+    "name" : "itemType",
+    "schema" : "string"
+  }, {
+    "@type" : "Relationship",
+    "name" : "carriedBy",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Belt;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:ProgrammableLogicController;1",
+  "@type" : "Interface",
+  "displayName" : "Programmable Logic Controller",
+  "description" : "PLC that controls the conveyor system",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "connection",
+    "schema" : "string",
+    "description" : "Connection type (e.g., Ethernet, Modbus)"
+  }, {
+    "@type" : "Property",
+    "name" : "voltage",
+    "schema" : "string",
+    "description" : "Operating voltage"
+  }, {
+    "@type" : "Property",
+    "name" : "numberOfPorts",
+    "schema" : "string",
+    "description" : "Number of i/o ports"
+  }, {
+    "@type" : "Telemetry",
+    "name" : "typeOfPorts",
+    "schema" : "string",
+    "description" : "Type of i/o ports"
+  }, {
+    "@type" : "Property",
+    "name" : "protocol",
+    "schema" : "string",
+    "description" : "Communication protocol"
+  }, {
+    "@type" : "Relationship",
+    "name" : "controls",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Conveyor;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "interfacesWith",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Sensor;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:Sensor;1",
+  "@type" : "Interface",
+  "displayName" : "Sensor",
+  "description" : "Generic sensor for monitoring conveyor operations",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "sensorId",
+    "schema" : "string"
+  }, {
+    "@type" : "Property",
+    "name" : "sensorType",
+    "schema" : "string",
+    "description" : "Type of sensor (e.g., proximity, weight)"
+  }, {
+    "@type" : "Property",
+    "name" : "isDumb",
+    "schema" : "string",
+    "description" : "Indicates if the sensor is a dumb sensor"
+  }, {
+    "@type" : "Property",
+    "name" : "communicationProtocol",
+    "schema" : "string",
+    "description" : "Communication protocol used by the sensor"
+  }, {
+    "@type" : "Property",
+    "name" : "iPRating",
+    "schema" : "string",
+    "description" : "Ingress Protection rating of the sensor"
+  }, {
+    "@type" : "Property",
+    "name" : "connectionType",
+    "schema" : "string",
+    "description" : "Type of connection used by the sensor"
+  }, {
+    "@type" : "Property",
+    "name" : "mountingType",
+    "schema" : "string",
+    "description" : "Type of mounting used for the sensor"
+  }, {
+    "@type" : "Telemetry",
+    "name" : "sensorValue",
+    "schema" : "double",
+    "description" : "Current sensor reading"
+  }, {
+    "@type" : "Telemetry",
+    "name" : "isTriggered",
+    "schema" : "boolean",
+    "description" : "Whether sensor is triggered"
+  }, {
+    "@type" : "Relationship",
+    "name" : "detects",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Payload;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "attachedToFrame",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:StructuralFrame;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "isReadBy",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:ProgrammableLogicController;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:SpeedControl;1",
+  "@type" : "Interface",
+  "displayName" : "Speed Control",
+  "description" : "Variable frequency drive or speed controller for the motor",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "minSpeed",
+    "schema" : "double",
+    "description" : "Minimum speed setting"
+  }, {
+    "@type" : "Property",
+    "name" : "maxSpeed",
+    "schema" : "double",
+    "description" : "Maximum speed setting"
+  }, {
+    "@type" : "Telemetry",
+    "name" : "speedValue",
+    "schema" : "double",
+    "description" : "Current speed value"
+  }, {
+    "@type" : "Relationship",
+    "name" : "commandedBy",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:HumanOperator;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "controls",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Motor;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:StructuralFrame;1",
+  "@type" : "Interface",
+  "displayName" : "Structural Frame",
+  "description" : "The supporting frame structure of the conveyor",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "length",
+    "schema" : "double",
+    "description" : "Frame length in meters"
+  }, {
+    "@type" : "Property",
+    "name" : "width",
+    "schema" : "double",
+    "description" : "Frame width in meters"
+  }, {
+    "@type" : "Property",
+    "name" : "height",
+    "schema" : "double",
+    "description" : "Frame height in meters"
+  }, {
+    "@type" : "Relationship",
+    "name" : "supports",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Conveyor;1"
+  } ]
+}, {
+  "@context" : "dtmi:dtdl:context;3",
+  "@id" : "dtmi:ex:Proposal_1:Conveyor:Workspace;1",
+  "@type" : "Interface",
+  "displayName" : "Workspace",
+  "description" : "The operational workspace area of the conveyor system",
+  "contents" : [ {
+    "@type" : "Property",
+    "name" : "length",
+    "schema" : "double",
+    "description" : "Workspace length in meters"
+  }, {
+    "@type" : "Property",
+    "name" : "width",
+    "schema" : "double",
+    "description" : "Workspace width in meters"
+  }, {
+    "@type" : "Property",
+    "name" : "height",
+    "schema" : "double",
+    "description" : "Workspace height clearance in meters"
+  }, {
+    "@type" : "Relationship",
+    "name" : "containsConveyor",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Conveyor;1"
+  }, {
+    "@type" : "Relationship",
+    "name" : "containsPayload",
+    "target" : "dtmi:ex:Proposal_1:Conveyor:Payload;1"
+  } ]
+} ]
