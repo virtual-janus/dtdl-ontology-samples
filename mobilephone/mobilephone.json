@@ -61,7 +61,10 @@
   {
   "@id": "dtmi:phone:Battery;1",
   "@type": "Interface",
-  "@context": "dtmi:dtdl:context;3",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
   "displayName": "Battery",
   "contents": [
     {
@@ -121,7 +124,10 @@
   {
   "@id": "dtmi:phone:Processor;1",
   "@type": "Interface",
-  "@context": "dtmi:dtdl:context;3",
+  "@context": [
+    "dtmi:dtdl:context;3",
+    "dtmi:dtdl:extension:quantitativeTypes;1"
+  ],
   "displayName": "Processor",
   "contents": [
     {
