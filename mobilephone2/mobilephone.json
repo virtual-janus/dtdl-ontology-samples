@@ -123,12 +123,34 @@
   {
     "@id": "dtmi:phone:Sensor;1",
     "@type": "Interface",
+    "displayName": "Generic Sensor",
     "@context": "dtmi:dtdl:context;3",
-    "displayName": "Sensor",
     "contents": [
       { "@type": "Property", "name": "type", "schema": "string" },
       { "@type": "Property", "name": "unit", "schema": "string" },
       { "@type": "Telemetry", "name": "value", "schema": "double" }
+    ]
+  },
+  {
+    "@id": "dtmi:phone:TemperatureSensor;1",
+    "@type": "Interface",
+    "displayName": "Temperature Sensor",
+    "@context": "dtmi:dtdl:context;3",
+    "extends": "dtmi:phone:Sensor;1",
+    "contents": [
+      { "@type": "Telemetry", "name": "temperature", "schema": "double" }
+    ]
+  },
+  {
+    "@id": "dtmi:phone:AccelerometerSensor;1",
+    "@type": "Interface",
+    "displayName": "Accelerometer Sensor",
+    "@context": "dtmi:dtdl:context;3",
+    "extends": "dtmi:phone:Sensor;1",
+    "contents": [
+      { "@type": "Telemetry", "name": "x", "schema": "double" },
+      { "@type": "Telemetry", "name": "y", "schema": "double" },
+      { "@type": "Telemetry", "name": "z", "schema": "double" }
     ]
   }
 ]
