@@ -25,6 +25,16 @@
         "schema": "dtmi:phone:Processor;1"
       },
       {
+        "@type": "Telemetry",
+        "name": "orientationQuaternion",
+        "schema": {
+          "@type": "Array",
+          "elementSchema": "double"
+        },
+        "displayName": "Orientation Quaternion",
+        "description": "Quaternion [w, x, y, z] representing device orientation in 3D space"
+      },
+      {
         "@type": "Component",
         "name": "network",
         "schema": "dtmi:phone:NetworkInterface;1"
