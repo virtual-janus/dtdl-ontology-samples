@@ -1,0 +1,226 @@
+[
+  {
+    "@id": "dtmi:phone:MobilePhone;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Mobile Phone",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "manufacturer",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "model",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "osVersion",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "imei",
+        "schema": "string"
+      },
+      {
+        "@type": "Component",
+        "name": "battery",
+        "schema": "dtmi:phone:Battery;1"
+      },
+      {
+        "@type": "Component",
+        "name": "display",
+        "schema": "dtmi:phone:Display;1"
+      },
+      {
+        "@type": "Component",
+        "name": "processor",
+        "schema": "dtmi:phone:Processor;1"
+      },
+      {
+        "@type": "Component",
+        "name": "network",
+        "schema": "dtmi:phone:NetworkInterface;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasCamera",
+        "target": "dtmi:phone:Camera;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "hasSensor",
+        "target": "dtmi:phone:Sensor;1"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:phone:Battery;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Battery",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "capacitymAh",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "chargeLevel",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Property",
+        "name": "charging",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "temperature",
+        "schema": "double"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:phone:Display;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Display",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "sizeInches",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "resolutionWidth",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "resolutionHeight",
+        "schema": "integer"
+      },
+      {
+        "@type": "Property",
+        "name": "brightness",
+        "schema": "integer"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:phone:Processor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Processor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "manufacturer",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "model",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "coreCount",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "cpuUsage",
+        "schema": "double",
+        "unit": "percent"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:phone:Camera;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Camera",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "position",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "megapixels",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "aperture",
+        "schema": "string"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:phone:NetworkInterface;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Network Interface",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "wifiEnabled",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Property",
+        "name": "bluetoothEnabled",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Property",
+        "name": "networkType",
+        "schema": "string"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "signalStrength",
+        "schema": "integer"
+      }
+    ]
+  },
+
+  {
+    "@id": "dtmi:phone:Sensor;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;3",
+    "displayName": "Sensor",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "type",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "unit",
+        "schema": "string"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "value",
+        "schema": "double"
+      }
+    ]
+  }
+]
