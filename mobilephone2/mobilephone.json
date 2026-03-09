@@ -132,19 +132,33 @@
     ]
   },
   {
-    "@id": "dtmi:phone:TemperatureSensor;1",
+    "@id": "dtmi:phone:Accelerometer;1",
     "@type": "Interface",
-    "displayName": "Temperature Sensor",
+    "displayName": "Accelerometer Sensor",
     "@context": "dtmi:dtdl:context;3",
     "extends": "dtmi:phone:Sensor;1",
     "contents": [
-      { "@type": "Telemetry", "name": "temperature", "schema": "double" }
+      { "@type": "Telemetry", "name": "x", "schema": "double" },
+      { "@type": "Telemetry", "name": "y", "schema": "double" },
+      { "@type": "Telemetry", "name": "z", "schema": "double" }
     ]
   },
   {
-    "@id": "dtmi:phone:AccelerometerSensor;1",
+    "@id": "dtmi:phone:Gyroscope;1",
     "@type": "Interface",
-    "displayName": "Accelerometer Sensor",
+    "displayName": "Gyroscope Sensor",
+    "@context": "dtmi:dtdl:context;3",
+    "extends": "dtmi:phone:Sensor;1",
+    "contents": [
+      { "@type": "Telemetry", "name": "x", "schema": "double" },
+      { "@type": "Telemetry", "name": "y", "schema": "double" },
+      { "@type": "Telemetry", "name": "z", "schema": "double" }
+    ]
+  },
+  {
+    "@id": "dtmi:phone:Magnetometer;1",
+    "@type": "Interface",
+    "displayName": "Magnetometer Sensor",
     "@context": "dtmi:dtdl:context;3",
     "extends": "dtmi:phone:Sensor;1",
     "contents": [
