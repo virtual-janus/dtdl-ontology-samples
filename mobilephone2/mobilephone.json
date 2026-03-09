@@ -176,5 +176,15 @@
       { "@type": "Telemetry", "name": "y", "schema": "double" },
       { "@type": "Telemetry", "name": "z", "schema": "double" }
     ]
+  },
+  {
+    "@id": "dtmi:phone:Thermometer;1",
+    "@type": "Interface",
+    "displayName": "Termperature Sensor",
+    "@context": "dtmi:dtdl:context;3",
+    "extends": "dtmi:phone:Sensor;1",
+    "contents": [
+      { "@type": "Telemetry", "name": "temperature", "schema": "double" }
+    ]
   }
 ]
