@@ -61,10 +61,7 @@
   {
   "@id": "dtmi:phone:Battery;1",
   "@type": "Interface",
-  "@context": [
-    "dtmi:dtdl:context;3",
-    "dtmi:dtdl:extension:quantitativeTypes;1"
-  ],
+  "@context": "dtmi:dtdl:context;3",
   "displayName": "Battery",
   "contents": [
     {
@@ -73,7 +70,7 @@
       "schema": "integer"
     },
     {
-      "@type": "Property",
+      "@type": "Telemetry",
       "name": "chargeLevel",
       "schema": "double",
       "unit": "dtmi:standard:unit:percent;2"
@@ -124,10 +121,7 @@
   {
   "@id": "dtmi:phone:Processor;1",
   "@type": "Interface",
-  "@context": [
-    "dtmi:dtdl:context;3",
-    "dtmi:dtdl:extension:quantitativeTypes;1"
-  ],
+  "@context": "dtmi:dtdl:context;3",
   "displayName": "Processor",
   "contents": [
     {
