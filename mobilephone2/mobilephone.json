@@ -25,8 +25,6 @@
         "name": "imei",
         "schema": "string"
       },
-
-      // Components
       {
         "@type": "Component",
         "name": "battery",
@@ -47,28 +45,6 @@
         "name": "network",
         "schema": "dtmi:phone:NetworkInterface;1"
       },
-
-      // Relationships for standalone twins
-      {
-        "@type": "Relationship",
-        "name": "hasBattery",
-        "target": "dtmi:phone:Battery;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "hasDisplay",
-        "target": "dtmi:phone:Display;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "hasProcessor",
-        "target": "dtmi:phone:Processor;1"
-      },
-      {
-        "@type": "Relationship",
-        "name": "hasNetworkInterface",
-        "target": "dtmi:phone:NetworkInterface;1"
-      },
       {
         "@type": "Relationship",
         "name": "hasCamera",
@@ -82,37 +58,35 @@
     ]
   },
 
-  // Battery
   {
-    "@id": "dtmi:phone:Battery;1",
-    "@type": "Interface",
-    "@context": "dtmi:dtdl:context;3",
-    "displayName": "Battery",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "capacitymAh",
-        "schema": "integer"
-      },
-      {
-        "@type": "Property",
-        "name": "charging",
-        "schema": "boolean"
-      },
-      {
-        "@type": "Telemetry",
-        "name": "chargeLevel",
-        "schema": "double"
-      },
-      {
-        "@type": "Telemetry",
-        "name": "temperature",
-        "schema": "double"
-      }
-    ]
-  },
+  "@id": "dtmi:phone:Battery;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;3",
+  "displayName": "Battery",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "capacitymAh",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "chargeLevel",
+      "schema": "double"
+    },
+    {
+      "@type": "Property",
+      "name": "charging",
+      "schema": "boolean"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "temperature",
+      "schema": "double"
+    }
+  ]
+},
 
-  // Display
   {
     "@id": "dtmi:phone:Display;1",
     "@type": "Interface",
@@ -142,37 +116,59 @@
     ]
   },
 
-  // Processor
   {
-    "@id": "dtmi:phone:Processor;1",
+  "@id": "dtmi:phone:Processor;1",
+  "@type": "Interface",
+  "@context": "dtmi:dtdl:context;3",
+  "displayName": "Processor",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "manufacturer",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "model",
+      "schema": "string"
+    },
+    {
+      "@type": "Property",
+      "name": "coreCount",
+      "schema": "integer"
+    },
+    {
+      "@type": "Telemetry",
+      "name": "cpuUsage",
+      "schema": "double"
+    }
+  ]
+},
+
+  {
+    "@id": "dtmi:phone:Camera;1",
     "@type": "Interface",
     "@context": "dtmi:dtdl:context;3",
-    "displayName": "Processor",
+    "displayName": "Camera",
     "contents": [
       {
         "@type": "Property",
-        "name": "manufacturer",
+        "name": "position",
         "schema": "string"
       },
       {
         "@type": "Property",
-        "name": "model",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "coreCount",
-        "schema": "integer"
-      },
-      {
-        "@type": "Telemetry",
-        "name": "cpuUsage",
+        "name": "megapixels",
         "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "aperture",
+        "schema": "string"
       }
     ]
   },
 
-  // Network Interface
   {
     "@id": "dtmi:phone:NetworkInterface;1",
     "@type": "Interface",
@@ -202,32 +198,6 @@
     ]
   },
 
-  // Camera
-  {
-    "@id": "dtmi:phone:Camera;1",
-    "@type": "Interface",
-    "@context": "dtmi:dtdl:context;3",
-    "displayName": "Camera",
-    "contents": [
-      {
-        "@type": "Property",
-        "name": "position",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "megapixels",
-        "schema": "double"
-      },
-      {
-        "@type": "Property",
-        "name": "aperture",
-        "schema": "string"
-      }
-    ]
-  },
-
-  // Sensor
   {
     "@id": "dtmi:phone:Sensor;1",
     "@type": "Interface",
