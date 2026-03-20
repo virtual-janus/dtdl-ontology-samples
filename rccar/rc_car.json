@@ -1,156 +1,74 @@
-{
-  "@context": "dtmi:dtdl:context;3",
-  "@id": "dtmi:rcCar:Ontology;1",
-  "@type": "Interface",
-  "displayName": "RC Car Ontology Root",
-  "contents": [
-    {
-      "@type": "Component",
-      "name": "rcCar",
-      "schema": "dtmi:rcCar:RC_Car;1"
-    }
-  ],
-  "schemas": [
-    {
-      "@id": "dtmi:rcCar:RC_Car;1",
-      "@type": "Interface",
-      "displayName": "RC Car",
-      "contents": [
-        { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Component;1" },
-        { "@type": "Relationship", "name": "controlledBy", "target": "dtmi:rcCar:RemoteControl;1" },
-        { "@type": "Relationship", "name": "canPerform", "target": "dtmi:rcCar:Action;1" },
-        { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Component;1",
-      "@type": "Interface",
-      "displayName": "Generic Component",
-      "contents": [
-        { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Component;1" },
-        { "@type": "Relationship", "name": "attachedTo", "target": "dtmi:rcCar:Component;1" },
-        { "@type": "Relationship", "name": "mountedOn", "target": "dtmi:rcCar:Component;1" },
-        { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:rcCar:Component;1" },
-        { "@type": "Relationship", "name": "poweredBy", "target": "dtmi:rcCar:Battery;1" },
-        { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" },
-        {
-          "@type": "Property",
-          "name": "powerConsumption",
-          "schema": "double"
-        }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Motor;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Property", "name": "maxSpeed", "schema": "double" },
-        { "@type": "Property", "name": "torque", "schema": "double" },
-        { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Gearbox;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Gearbox;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Property", "name": "gearRatio", "schema": "double" },
-        { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Driveshaft;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Driveshaft;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Axle;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Axle;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Wheel;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Wheel;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Tyre;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Battery;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Property", "name": "capacity", "schema": "double" },
-        { "@type": "Property", "name": "chargeLevel", "schema": "double" },
-        { "@type": "Property", "name": "voltage", "schema": "double" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Receiver;1",
-      "@type": "Interface",
-      "extends": "dtmi:rcCar:Component;1",
-      "contents": [
-        { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:rcCar:Component;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:RemoteControl;1",
-      "@type": "Interface",
-      "contents": [
-        { "@type": "Relationship", "name": "sendsSignalTo", "target": "dtmi:rcCar:Receiver;1" }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:Action;1",
-      "@type": "Interface",
-      "displayName": "Action",
-      "contents": [
-        { "@type": "Relationship", "name": "requiresComponent", "target": "dtmi:rcCar:Component;1" },
-        { "@type": "Relationship", "name": "allowedInState", "target": "dtmi:rcCar:State;1" },
-        { "@type": "Relationship", "name": "conflictsWith", "target": "dtmi:rcCar:Action;1" },
-        { "@type": "Relationship", "name": "canCombineWith", "target": "dtmi:rcCar:Action;1" },
-        {
-          "@type": "Property",
-          "name": "priority",
-          "schema": "integer"
-        }
-      ]
-    },
-
-    {
-      "@id": "dtmi:rcCar:State;1",
-      "@type": "Interface",
-      "displayName": "State",
-      "contents": [
-        {
-          "@type": "Property",
-          "name": "stateType",
-          "schema": "string"
-        },
-        {
-          "@type": "Property",
-          "name": "value",
-          "schema": "string"
-        }
-      ]
-    }
-  ]
-}
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:RC_Car;1",
+    "@type": "Interface",
+    "displayName": "RC Car",
+    "contents": [
+      { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "controlledBy", "target": "dtmi:rcCar:RemoteControl;1" },
+      { "@type": "Relationship", "name": "canPerform", "target": "dtmi:rcCar:Action;1" },
+      { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" }
+    ]
+  },
+  {
+    "@id": "dtmi:rcCar:Component;1",
+    "@type": "Interface",
+    "displayName": "Component",
+    "contents": [
+      { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "attachedTo", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "mountedOn", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "poweredBy", "target": "dtmi:rcCar:Battery;1" },
+      { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" },
+      { "@type": "Property", "name": "powerConsumption", "schema": "double" }
+    ]
+  },
+  {
+    "@id": "dtmi:rcCar:Motor;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Property", "name": "maxSpeed", "schema": "double" },
+      { "@type": "Property", "name": "torque", "schema": "double" },
+      { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+  {
+    "@id": "dtmi:rcCar:Battery;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Property", "name": "capacity", "schema": "double" },
+      { "@type": "Property", "name": "chargeLevel", "schema": "double" },
+      { "@type": "Property", "name": "voltage", "schema": "double" }
+    ]
+  },
+  {
+    "@id": "dtmi:rcCar:RemoteControl;1",
+    "@type": "Interface",
+    "contents": [
+      { "@type": "Relationship", "name": "sendsSignalTo", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+  {
+    "@id": "dtmi:rcCar:Action;1",
+    "@type": "Interface",
+    "contents": [
+      { "@type": "Relationship", "name": "requiresComponent", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "allowedInState", "target": "dtmi:rcCar:State;1" },
+      { "@type": "Relationship", "name": "conflictsWith", "target": "dtmi:rcCar:Action;1" },
+      { "@type": "Relationship", "name": "canCombineWith", "target": "dtmi:rcCar:Action;1" },
+      { "@type": "Property", "name": "priority", "schema": "integer" }
+    ]
+  },
+  {
+    "@id": "dtmi:rcCar:State;1",
+    "@type": "Interface",
+    "contents": [
+      { "@type": "Property", "name": "stateType", "schema": "string" },
+      { "@type": "Property", "name": "value", "schema": "string" }
+    ]
+  }
+]
