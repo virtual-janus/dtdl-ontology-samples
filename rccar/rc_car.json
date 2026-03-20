@@ -12,6 +12,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Component;1",
     "@type": "Interface",
     "displayName": "Component",
@@ -26,6 +27,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Motor;1",
     "@type": "Interface",
     "extends": "dtmi:rcCar:Component;1",
@@ -36,6 +38,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Battery;1",
     "@type": "Interface",
     "extends": "dtmi:rcCar:Component;1",
@@ -46,6 +49,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:RemoteControl;1",
     "@type": "Interface",
     "contents": [
@@ -53,6 +57,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Action;1",
     "@type": "Interface",
     "contents": [
@@ -64,6 +69,7 @@
     ]
   },
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:State;1",
     "@type": "Interface",
     "contents": [
