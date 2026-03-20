@@ -1,0 +1,148 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:Component;1",
+    "@type": "Interface",
+    "displayName": "Component",
+    "contents": [
+      { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "attachedTo", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "mountedOn", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "poweredBy", "target": "dtmi:rcCar:Battery;1" },
+      { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:RC_Car;1",
+    "@type": "Interface",
+    "displayName": "RC Car",
+    "contents": [
+      { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "controlledBy", "target": "dtmi:rcCar:RemoteControl;1" },
+      { "@type": "Relationship", "name": "canPerform", "target": "dtmi:rcCar:Action;1" },
+      { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" }
+    ]
+  },
+
+  // ===== COMPONENTS =====
+
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Chassis;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Bodywork;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Axle;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Wheel;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Tyre;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:Motor;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:Gearbox;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "displayName": "Gearbox / Transmission",
+    "contents": [
+      { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:Driveshaft;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Relationship", "name": "drives", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:RemoteControl;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Relationship", "name": "sendsSignalTo", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Receiver;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Steering;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:Battery;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Property", "name": "chargeLevel", "schema": "double" }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:PowerSwitch;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:Component;1",
+    "contents": [
+      { "@type": "Relationship", "name": "controlsPowerTo", "target": "dtmi:rcCar:Component;1" }
+    ]
+  },
+
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Sensor;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Lights;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Antenna;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
+
+  // ===== ACTIONS =====
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:Action;1",
+    "@type": "Interface",
+    "contents": [
+      { "@type": "Relationship", "name": "requiresComponent", "target": "dtmi:rcCar:Component;1" },
+      { "@type": "Relationship", "name": "allowedInState", "target": "dtmi:rcCar:State;1" },
+      { "@type": "Relationship", "name": "conflictsWith", "target": "dtmi:rcCar:Action;1" },
+      { "@type": "Relationship", "name": "canCombineWith", "target": "dtmi:rcCar:Action;1" },
+      { "@type": "Property", "name": "priority", "schema": "integer" }
+    ]
+  },
+
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:ForwardMotion;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:ReverseMotion;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:TurnLeft;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:TurnRight;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
+  { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Stop;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
+
+  // ===== STATE =====
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:State;1",
+    "@type": "Interface",
+    "contents": [
+      { "@type": "Property", "name": "stateType", "schema": "string" },
+      { "@type": "Property", "name": "value", "schema": "string" }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:rcCar:BatteryState;1",
+    "@type": "Interface",
+    "extends": "dtmi:rcCar:State;1",
+    "contents": [
+      { "@type": "Property", "name": "chargeLevel", "schema": "double" }
+    ]
+  }
+]
