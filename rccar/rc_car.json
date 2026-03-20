@@ -85,10 +85,7 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Receiver;1",
     "@type": "Interface",
-    "extends": "dtmi:rcCar:Component;1",
-    "contents": [
-      { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:rcCar:Component;1" }
-    ]
+    "extends": "dtmi:rcCar:Component;1"
   },
   {
     "@context": "dtmi:dtdl:context;3",
@@ -131,9 +128,6 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Antenna;1",
     "@type": "Interface",
-    "extends": "dtmi:rcCar:Component;1",
-    "contents": [
-      { "@type": "Relationship", "name": "connectedTo", "target": "dtmi:rcCar:Receiver;1" }
-    ]
+    "extends": "dtmi:rcCar:Component;1"
   }
 ]
