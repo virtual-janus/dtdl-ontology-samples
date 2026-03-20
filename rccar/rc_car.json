@@ -36,10 +36,7 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Wheel;1",
     "@type": "Interface",
-    "extends": "dtmi:rcCar:Component;1",
-    "contents": [
-      { "@type": "Relationship", "name": "hasPart", "target": "dtmi:rcCar:Tyre;1" }
-    ]
+    "extends": "dtmi:rcCar:Component;1"
   },
   {
     "@context": "dtmi:dtdl:context;3",
