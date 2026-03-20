@@ -26,9 +26,7 @@
       { "@type": "Relationship", "name": "hasState", "target": "dtmi:rcCar:State;1" }
     ]
   },
-
-  // ===== COMPONENTS =====
-
+  
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Chassis;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Bodywork;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Axle;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
@@ -103,8 +101,6 @@
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Lights;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Antenna;1", "@type": "Interface", "extends": "dtmi:rcCar:Component;1" },
 
-  // ===== ACTIONS =====
-
   {
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:rcCar:Action;1",
@@ -123,8 +119,6 @@
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:TurnLeft;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:TurnRight;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
   { "@context": "dtmi:dtdl:context;3", "@id": "dtmi:rcCar:Stop;1", "@type": "Interface", "extends": "dtmi:rcCar:Action;1" },
-
-  // ===== STATE =====
 
   {
     "@context": "dtmi:dtdl:context;3",
