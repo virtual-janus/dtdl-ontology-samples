@@ -16,7 +16,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -27,111 +27,111 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization0;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "0. more than one region",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization1;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "1. right",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization2;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "2. left",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization3;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "3. both sides",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization4;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "4. front",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization5;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_5;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "5. back",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization6;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_6;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "6. proximal",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization7;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_7;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "7. distal",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization8;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "8. not specified",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:QAnatomicalLocalization9;1",
+        "@id": "dtmi:com:example:Q_Anatomical_Localization_9;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:QAnatomicalLocalization;1"
+            "dtmi:com:example:Q_Anatomical_Localization;1"
         ],
         "displayName": "9. not applicable",
         "description": ""
@@ -148,7 +148,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.0;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -159,7 +159,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.1;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -170,7 +170,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.2;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -181,7 +181,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.3;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -192,7 +192,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.4;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -203,7 +203,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.8;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -214,7 +214,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.9;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_9;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -225,7 +225,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.plus-0;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_plus_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -236,7 +236,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.plus-1;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_plus_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -247,7 +247,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.plus-2;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_plus_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -258,7 +258,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.plus-3;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_plus_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -269,7 +269,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.plus-4;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_plus_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -280,7 +280,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator.plus-8;1",
+        "@id": "dtmi:com:example:Q_Barrier_or_Facilitator_plus_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -302,7 +302,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.0;1",
+        "@id": "dtmi:com:example:Q_Capacity_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -313,7 +313,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.1;1",
+        "@id": "dtmi:com:example:Q_Capacity_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -324,7 +324,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.2;1",
+        "@id": "dtmi:com:example:Q_Capacity_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -335,7 +335,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.3;1",
+        "@id": "dtmi:com:example:Q_Capacity_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -346,7 +346,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.4;1",
+        "@id": "dtmi:com:example:Q_Capacity_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -357,7 +357,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.8;1",
+        "@id": "dtmi:com:example:Q_Capacity_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -368,7 +368,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Capacity.9;1",
+        "@id": "dtmi:com:example:Q_Capacity_9;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -390,7 +390,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.0;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -401,7 +401,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.1;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -412,7 +412,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.2;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -423,7 +423,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.3;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -434,7 +434,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.4;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -445,7 +445,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.8;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -456,7 +456,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Extent_of_Impairment.9;1",
+        "@id": "dtmi:com:example:Q_Extent_of_Impairment_9;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -478,7 +478,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.0;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -489,7 +489,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.1;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -500,7 +500,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.2;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -511,7 +511,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.3;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -522,7 +522,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.4;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -533,7 +533,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.5;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_5;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -544,7 +544,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.6;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_6;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -555,7 +555,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.7;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_7;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -566,7 +566,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.8;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -577,7 +577,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure.9;1",
+        "@id": "dtmi:com:example:Q_Nature_of_Change_in_Body_Structure_9;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -599,7 +599,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.0;1",
+        "@id": "dtmi:com:example:Q_Performance_0;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -610,7 +610,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.1;1",
+        "@id": "dtmi:com:example:Q_Performance_1;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -621,7 +621,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.2;1",
+        "@id": "dtmi:com:example:Q_Performance_2;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -632,7 +632,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.3;1",
+        "@id": "dtmi:com:example:Q_Performance_3;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -643,7 +643,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.4;1",
+        "@id": "dtmi:com:example:Q_Performance_4;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -654,7 +654,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.8;1",
+        "@id": "dtmi:com:example:Q_Performance_8;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -665,7 +665,7 @@
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:Q_Performance.9;1",
+        "@id": "dtmi:com:example:Q_Performance_9;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -703,13 +703,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b110. Consciousness functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b110-b139;1",
+        "@id": "dtmi:com:example:b110_b139;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -780,7 +780,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b114. Orientation functions",
         "description": ""
@@ -890,7 +890,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b117. Intellectual functions",
         "description": ""
@@ -901,7 +901,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b122. Global psychosocial functions",
         "description": ""
@@ -912,7 +912,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b126. Temperament and personality functions",
         "description": ""
@@ -1033,7 +1033,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b130. Energy and drive functions",
         "description": ""
@@ -1121,7 +1121,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b134. Sleep functions",
         "description": ""
@@ -1209,7 +1209,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b110-b139;1"
+            "dtmi:com:example:b110_b139;1"
         ],
         "displayName": "b139. Global mental functions, other specified and unspecified",
         "description": ""
@@ -1220,13 +1220,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b140. Attention functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b140-b189;1",
+        "@id": "dtmi:com:example:b140_b189;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -1308,7 +1308,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b144. Memory functions",
         "description": ""
@@ -1374,7 +1374,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b147. Psychomotor functions",
         "description": ""
@@ -1429,7 +1429,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b152. Emotional functions",
         "description": ""
@@ -1495,7 +1495,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b156. Perceptual functions",
         "description": ""
@@ -1594,7 +1594,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b160. Thought functions",
         "description": ""
@@ -1671,7 +1671,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b164. Higher-level cognitive functions",
         "description": ""
@@ -1781,7 +1781,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b167. Mental functions of language",
         "description": ""
@@ -1957,7 +1957,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b172. Calculation functions",
         "description": ""
@@ -2012,7 +2012,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b176. Mental function of sequencing complex movements",
         "description": ""
@@ -2023,7 +2023,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b180. Experience of self and time functions",
         "description": ""
@@ -2089,7 +2089,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b140-b189;1"
+            "dtmi:com:example:b140_b189;1"
         ],
         "displayName": "b189. Specific mental functions, other specified and unspecified",
         "description": ""
@@ -2133,13 +2133,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b210-b229;1"
+            "dtmi:com:example:b210_b229;1"
         ],
         "displayName": "b210. Seeing functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b210-b229;1",
+        "@id": "dtmi:com:example:b210_b229;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -2342,7 +2342,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b210-b229;1"
+            "dtmi:com:example:b210_b229;1"
         ],
         "displayName": "b215. Functions of structures adjoining the eye",
         "description": ""
@@ -2419,7 +2419,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b210-b229;1"
+            "dtmi:com:example:b210_b229;1"
         ],
         "displayName": "b220. Sensations associated with the eye and adjoining structure",
         "description": ""
@@ -2430,7 +2430,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b210-b229;1"
+            "dtmi:com:example:b210_b229;1"
         ],
         "displayName": "b229. Seeing and related functions, other specified and unspecif",
         "description": ""
@@ -2441,13 +2441,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b230-b249;1"
+            "dtmi:com:example:b230_b249;1"
         ],
         "displayName": "b230. Hearing functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b230-b249;1",
+        "@id": "dtmi:com:example:b230_b249;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -2540,7 +2540,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b230-b249;1"
+            "dtmi:com:example:b230_b249;1"
         ],
         "displayName": "b235. Vestibular functions",
         "description": ""
@@ -2606,7 +2606,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b230-b249;1"
+            "dtmi:com:example:b230_b249;1"
         ],
         "displayName": "b240. Sensations associated with hearing and vestibular function",
         "description": ""
@@ -2705,7 +2705,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b230-b249;1"
+            "dtmi:com:example:b230_b249;1"
         ],
         "displayName": "b249. Hearing and vestibular functions, other specified and unsp",
         "description": ""
@@ -2716,13 +2716,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b250-b279;1"
+            "dtmi:com:example:b250_b279;1"
         ],
         "displayName": "b250. Taste function",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b250-b279;1",
+        "@id": "dtmi:com:example:b250_b279;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -2738,7 +2738,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b250-b279;1"
+            "dtmi:com:example:b250_b279;1"
         ],
         "displayName": "b255. Smell function",
         "description": ""
@@ -2749,7 +2749,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b250-b279;1"
+            "dtmi:com:example:b250_b279;1"
         ],
         "displayName": "b260. Proprioceptive function",
         "description": ""
@@ -2760,7 +2760,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b250-b279;1"
+            "dtmi:com:example:b250_b279;1"
         ],
         "displayName": "b265. Touch function",
         "description": ""
@@ -2771,7 +2771,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b250-b279;1"
+            "dtmi:com:example:b250_b279;1"
         ],
         "displayName": "b270. Sensory functions related to temperature and other stimuli",
         "description": ""
@@ -2848,7 +2848,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b250-b279;1"
+            "dtmi:com:example:b250_b279;1"
         ],
         "displayName": "b279. Additional sensory functions, other specified and unspecif",
         "description": ""
@@ -2859,13 +2859,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b280-b289;1"
+            "dtmi:com:example:b280_b289;1"
         ],
         "displayName": "b280. Sensation of pain",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b280-b289;1",
+        "@id": "dtmi:com:example:b280_b289;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -3035,7 +3035,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b280-b289;1"
+            "dtmi:com:example:b280_b289;1"
         ],
         "displayName": "b289. Sensation of pain, other specified and unspecified",
         "description": ""
@@ -3310,13 +3310,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b410-b429;1"
+            "dtmi:com:example:b410_b429;1"
         ],
         "displayName": "b410. Heart functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b410-b429;1",
+        "@id": "dtmi:com:example:b410_b429;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -3398,7 +3398,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b410-b429;1"
+            "dtmi:com:example:b410_b429;1"
         ],
         "displayName": "b415. Blood vessel functions",
         "description": ""
@@ -3464,7 +3464,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b410-b429;1"
+            "dtmi:com:example:b410_b429;1"
         ],
         "displayName": "b420. Blood pressure functions",
         "description": ""
@@ -3530,7 +3530,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b410-b429;1"
+            "dtmi:com:example:b410_b429;1"
         ],
         "displayName": "b429. Functions of the cardiovascular system, other specified an",
         "description": ""
@@ -3541,13 +3541,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b430-b439;1"
+            "dtmi:com:example:b430_b439;1"
         ],
         "displayName": "b430. Haematological system functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b430-b439;1",
+        "@id": "dtmi:com:example:b430_b439;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -3629,7 +3629,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b430-b439;1"
+            "dtmi:com:example:b430_b439;1"
         ],
         "displayName": "b435. Immunological system functions",
         "description": ""
@@ -3750,7 +3750,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b430-b439;1"
+            "dtmi:com:example:b430_b439;1"
         ],
         "displayName": "b439. Functions of the haematological and immunological systems,",
         "description": ""
@@ -3761,13 +3761,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b440-b449;1"
+            "dtmi:com:example:b440_b449;1"
         ],
         "displayName": "b440. Respiration functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b440-b449;1",
+        "@id": "dtmi:com:example:b440_b449;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -3838,7 +3838,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b440-b449;1"
+            "dtmi:com:example:b440_b449;1"
         ],
         "displayName": "b445. Respiratory muscle functions",
         "description": ""
@@ -3904,7 +3904,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b440-b449;1"
+            "dtmi:com:example:b440_b449;1"
         ],
         "displayName": "b449. Functions of the respiratory system, other specified and u",
         "description": ""
@@ -3915,13 +3915,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b450-b469;1"
+            "dtmi:com:example:b450_b469;1"
         ],
         "displayName": "b450. Additional respiratory functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b450-b469;1",
+        "@id": "dtmi:com:example:b450_b469;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -3937,7 +3937,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b450-b469;1"
+            "dtmi:com:example:b450_b469;1"
         ],
         "displayName": "b455. Exercise tolerance functions",
         "description": ""
@@ -4003,7 +4003,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b450-b469;1"
+            "dtmi:com:example:b450_b469;1"
         ],
         "displayName": "b460. Sensations associated with cardiovascular and respiratory ",
         "description": ""
@@ -4014,7 +4014,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b450-b469;1"
+            "dtmi:com:example:b450_b469;1"
         ],
         "displayName": "b469. Additional functions and sensations of the cardiovascular ",
         "description": ""
@@ -4058,13 +4058,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b510. Ingestion functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b510-b539;1",
+        "@id": "dtmi:com:example:b510_b539;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -4234,7 +4234,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b515. Digestive functions",
         "description": ""
@@ -4311,7 +4311,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b520. Assimilation functions",
         "description": ""
@@ -4322,7 +4322,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b525. Defecation functions",
         "description": ""
@@ -4410,7 +4410,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b530. Weight maintenance functions",
         "description": ""
@@ -4421,7 +4421,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b535. Sensations associated with the digestive system",
         "description": ""
@@ -4487,7 +4487,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b510-b539;1"
+            "dtmi:com:example:b510_b539;1"
         ],
         "displayName": "b539. Functions related to the digestive system, other specified",
         "description": ""
@@ -4498,13 +4498,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b540-b559;1"
+            "dtmi:com:example:b540_b559;1"
         ],
         "displayName": "b540. General metabolic functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b540-b559;1",
+        "@id": "dtmi:com:example:b540_b559;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -4586,7 +4586,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b540-b559;1"
+            "dtmi:com:example:b540_b559;1"
         ],
         "displayName": "b545. Water, mineral and electrolyte balance functions",
         "description": ""
@@ -4696,7 +4696,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b540-b559;1"
+            "dtmi:com:example:b540_b559;1"
         ],
         "displayName": "b550. Thermoregulatory functions",
         "description": ""
@@ -4751,7 +4751,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b540-b559;1"
+            "dtmi:com:example:b540_b559;1"
         ],
         "displayName": "b555. Endocrine gland functions",
         "description": ""
@@ -4762,7 +4762,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b540-b559;1"
+            "dtmi:com:example:b540_b559;1"
         ],
         "displayName": "b559. Functions related to metabolism and the endocrine system, ",
         "description": ""
@@ -4806,13 +4806,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b610-b639;1"
+            "dtmi:com:example:b610_b639;1"
         ],
         "displayName": "b610. Urinary excretory functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b610-b639;1",
+        "@id": "dtmi:com:example:b610_b639;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -4872,7 +4872,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b610-b639;1"
+            "dtmi:com:example:b610_b639;1"
         ],
         "displayName": "b620. Urination functions",
         "description": ""
@@ -4938,7 +4938,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b610-b639;1"
+            "dtmi:com:example:b610_b639;1"
         ],
         "displayName": "b630. Sensations associated with urinary functions",
         "description": ""
@@ -4949,7 +4949,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b610-b639;1"
+            "dtmi:com:example:b610_b639;1"
         ],
         "displayName": "b639. Urinary functions, other specified and unspecified",
         "description": ""
@@ -4960,13 +4960,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b640-b679;1"
+            "dtmi:com:example:b640_b679;1"
         ],
         "displayName": "b640. Sexual functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b640-b679;1",
+        "@id": "dtmi:com:example:b640_b679;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -5048,7 +5048,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b640-b679;1"
+            "dtmi:com:example:b640_b679;1"
         ],
         "displayName": "b650. Menstruation functions",
         "description": ""
@@ -5114,7 +5114,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b640-b679;1"
+            "dtmi:com:example:b640_b679;1"
         ],
         "displayName": "b660. Procreation functions",
         "description": ""
@@ -5191,7 +5191,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b640-b679;1"
+            "dtmi:com:example:b640_b679;1"
         ],
         "displayName": "b670. Sensations associated with genital and reproductive functi",
         "description": ""
@@ -5257,7 +5257,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b640-b679;1"
+            "dtmi:com:example:b640_b679;1"
         ],
         "displayName": "b679. Genital and reproductive functions, other specified and un",
         "description": ""
@@ -5301,13 +5301,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b710-b729;1"
+            "dtmi:com:example:b710_b729;1"
         ],
         "displayName": "b710. Mobility of joint functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b710-b729;1",
+        "@id": "dtmi:com:example:b710_b729;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -5378,7 +5378,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b710-b729;1"
+            "dtmi:com:example:b710_b729;1"
         ],
         "displayName": "b715. Stability of joint functions",
         "description": ""
@@ -5444,7 +5444,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b710-b729;1"
+            "dtmi:com:example:b710_b729;1"
         ],
         "displayName": "b720. Mobility of bone functions",
         "description": ""
@@ -5521,7 +5521,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b710-b729;1"
+            "dtmi:com:example:b710_b729;1"
         ],
         "displayName": "b729. Functions of the joints and bones, other specified and uns",
         "description": ""
@@ -5532,13 +5532,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b730-b749;1"
+            "dtmi:com:example:b730_b749;1"
         ],
         "displayName": "b730. Muscle power functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b730-b749;1",
+        "@id": "dtmi:com:example:b730_b749;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -5653,7 +5653,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b730-b749;1"
+            "dtmi:com:example:b730_b749;1"
         ],
         "displayName": "b735. Muscle tone functions",
         "description": ""
@@ -5763,7 +5763,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b730-b749;1"
+            "dtmi:com:example:b730_b749;1"
         ],
         "displayName": "b740. Muscle endurance functions",
         "description": ""
@@ -5829,7 +5829,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b730-b749;1"
+            "dtmi:com:example:b730_b749;1"
         ],
         "displayName": "b749. Muscle functions, other specified and unspecified",
         "description": ""
@@ -5840,13 +5840,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b750. Motor reflex functions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b750-b789;1",
+        "@id": "dtmi:com:example:b750_b789;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -5917,7 +5917,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b755. Involuntary movement reaction functions",
         "description": ""
@@ -5928,7 +5928,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b760. Control of voluntary movement functions",
         "description": ""
@@ -6005,7 +6005,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b765. Involuntary movement functions",
         "description": ""
@@ -6082,7 +6082,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b770. Gait pattern functions",
         "description": ""
@@ -6093,7 +6093,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b780. Sensations related to muscles and movement functions",
         "description": ""
@@ -6148,7 +6148,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b750-b789;1"
+            "dtmi:com:example:b750_b789;1"
         ],
         "displayName": "b789. Movement functions, other specified and unspecified",
         "description": ""
@@ -6192,13 +6192,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b810-b849;1"
+            "dtmi:com:example:b810_b849;1"
         ],
         "displayName": "b810. Protective functions of the skin",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b810-b849;1",
+        "@id": "dtmi:com:example:b810_b849;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -6214,7 +6214,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b810-b849;1"
+            "dtmi:com:example:b810_b849;1"
         ],
         "displayName": "b820. Repair functions of the skin",
         "description": ""
@@ -6225,7 +6225,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b810-b849;1"
+            "dtmi:com:example:b810_b849;1"
         ],
         "displayName": "b830. Other functions of the skin",
         "description": ""
@@ -6236,7 +6236,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b810-b849;1"
+            "dtmi:com:example:b810_b849;1"
         ],
         "displayName": "b840. Sensation related to the skin",
         "description": ""
@@ -6247,7 +6247,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b810-b849;1"
+            "dtmi:com:example:b810_b849;1"
         ],
         "displayName": "b849. Functions of the skin, other specified and unspecified",
         "description": ""
@@ -6258,13 +6258,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b850-b869;1"
+            "dtmi:com:example:b850_b869;1"
         ],
         "displayName": "b850. Functions of hair",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:b850-b869;1",
+        "@id": "dtmi:com:example:b850_b869;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -6280,7 +6280,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b850-b869;1"
+            "dtmi:com:example:b850_b869;1"
         ],
         "displayName": "b860. Functions of nails",
         "description": ""
@@ -6291,7 +6291,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:b850-b869;1"
+            "dtmi:com:example:b850_b869;1"
         ],
         "displayName": "b869. Functions of the hair and nails, other specified and unspe",
         "description": ""
@@ -6346,13 +6346,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d110-d129;1"
+            "dtmi:com:example:d110_d129;1"
         ],
         "displayName": "d110. Watching",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d110-d129;1",
+        "@id": "dtmi:com:example:d110_d129;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -6368,7 +6368,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d110-d129;1"
+            "dtmi:com:example:d110_d129;1"
         ],
         "displayName": "d115. Listening",
         "description": ""
@@ -6379,7 +6379,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d110-d129;1"
+            "dtmi:com:example:d110_d129;1"
         ],
         "displayName": "d120. Other purposeful sensing",
         "description": ""
@@ -6390,7 +6390,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d110-d129;1"
+            "dtmi:com:example:d110_d129;1"
         ],
         "displayName": "d129. Purposeful sensory experiences, other specified and unspec",
         "description": ""
@@ -6401,13 +6401,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d130. Copying",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d130-d159;1",
+        "@id": "dtmi:com:example:d130_d159;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -6423,7 +6423,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d135. Rehearsing",
         "description": ""
@@ -6434,7 +6434,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d140. Learning to read",
         "description": ""
@@ -6445,7 +6445,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d145. Learning to write",
         "description": ""
@@ -6456,7 +6456,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d150. Learning to calculate",
         "description": ""
@@ -6467,7 +6467,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d155. Acquiring skills",
         "description": ""
@@ -6522,7 +6522,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d130-d159;1"
+            "dtmi:com:example:d130_d159;1"
         ],
         "displayName": "d159. Basic learning, other specified and unspecified",
         "description": ""
@@ -6533,13 +6533,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d160. Focusing attention",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d160-d179;1",
+        "@id": "dtmi:com:example:d160_d179;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -6555,7 +6555,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d163. Thinking",
         "description": ""
@@ -6566,7 +6566,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d166. Reading",
         "description": ""
@@ -6577,7 +6577,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d170. Writing",
         "description": ""
@@ -6588,7 +6588,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d172. Calculating",
         "description": ""
@@ -6599,7 +6599,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d175. Solving problems",
         "description": ""
@@ -6654,7 +6654,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d177. Making decisions",
         "description": ""
@@ -6665,7 +6665,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d160-d179;1"
+            "dtmi:com:example:d160_d179;1"
         ],
         "displayName": "d179. Applying knowledge, other specified and unspecified",
         "description": ""
@@ -7028,13 +7028,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d310-d329;1"
+            "dtmi:com:example:d310_d329;1"
         ],
         "displayName": "d310. Communicating with - receiving - spoken messages",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d310-d329;1",
+        "@id": "dtmi:com:example:d310_d329;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -7050,7 +7050,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d310-d329;1"
+            "dtmi:com:example:d310_d329;1"
         ],
         "displayName": "d315. Communicating with - receiving - nonverbal messages",
         "description": ""
@@ -7116,7 +7116,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d310-d329;1"
+            "dtmi:com:example:d310_d329;1"
         ],
         "displayName": "d320. Communicating with - receiving - formal sign language mess",
         "description": ""
@@ -7127,7 +7127,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d310-d329;1"
+            "dtmi:com:example:d310_d329;1"
         ],
         "displayName": "d325. Communicating with - receiving - written messages",
         "description": ""
@@ -7138,7 +7138,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d310-d329;1"
+            "dtmi:com:example:d310_d329;1"
         ],
         "displayName": "d329. Communicating - receiving, other specified and unspecified",
         "description": ""
@@ -7149,13 +7149,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d330-d349;1"
+            "dtmi:com:example:d330_d349;1"
         ],
         "displayName": "d330. Speaking",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d330-d349;1",
+        "@id": "dtmi:com:example:d330_d349;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -7171,7 +7171,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d330-d349;1"
+            "dtmi:com:example:d330_d349;1"
         ],
         "displayName": "d335. Producing nonverbal messages",
         "description": ""
@@ -7237,7 +7237,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d330-d349;1"
+            "dtmi:com:example:d330_d349;1"
         ],
         "displayName": "d340. Producing messages in formal sign language",
         "description": ""
@@ -7248,7 +7248,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d330-d349;1"
+            "dtmi:com:example:d330_d349;1"
         ],
         "displayName": "d345. Writing messages",
         "description": ""
@@ -7259,7 +7259,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d330-d349;1"
+            "dtmi:com:example:d330_d349;1"
         ],
         "displayName": "d349. Communication - producing, other specified and unspecified",
         "description": ""
@@ -7270,13 +7270,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d350-d369;1"
+            "dtmi:com:example:d350_d369;1"
         ],
         "displayName": "d350. Conversation",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d350-d369;1",
+        "@id": "dtmi:com:example:d350_d369;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -7369,7 +7369,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d350-d369;1"
+            "dtmi:com:example:d350_d369;1"
         ],
         "displayName": "d355. Discussion",
         "description": ""
@@ -7424,7 +7424,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d350-d369;1"
+            "dtmi:com:example:d350_d369;1"
         ],
         "displayName": "d360. Using communication devices and techniques",
         "description": ""
@@ -7490,7 +7490,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d350-d369;1"
+            "dtmi:com:example:d350_d369;1"
         ],
         "displayName": "d369. Conversation and use of communication devices and techniqu",
         "description": ""
@@ -7534,13 +7534,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d410-d429;1"
+            "dtmi:com:example:d410_d429;1"
         ],
         "displayName": "d410. Changing basic body position",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d410-d429;1",
+        "@id": "dtmi:com:example:d410_d429;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -7655,7 +7655,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d410-d429;1"
+            "dtmi:com:example:d410_d429;1"
         ],
         "displayName": "d415. Maintaining a body position",
         "description": ""
@@ -7743,7 +7743,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d410-d429;1"
+            "dtmi:com:example:d410_d429;1"
         ],
         "displayName": "d420. Transferring oneself",
         "description": ""
@@ -7798,7 +7798,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d410-d429;1"
+            "dtmi:com:example:d410_d429;1"
         ],
         "displayName": "d429. Changing and maintaining body position, other specified an",
         "description": ""
@@ -7809,13 +7809,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d430-d449;1"
+            "dtmi:com:example:d430_d449;1"
         ],
         "displayName": "d430. Lifting and carrying objects",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d430-d449;1",
+        "@id": "dtmi:com:example:d430_d449;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -7919,7 +7919,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d430-d449;1"
+            "dtmi:com:example:d430_d449;1"
         ],
         "displayName": "d435. Moving objects with lower extremities",
         "description": ""
@@ -7974,7 +7974,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d430-d449;1"
+            "dtmi:com:example:d430_d449;1"
         ],
         "displayName": "d440. Fine hand use",
         "description": ""
@@ -8051,7 +8051,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d430-d449;1"
+            "dtmi:com:example:d430_d449;1"
         ],
         "displayName": "d445. Hand and arm use",
         "description": ""
@@ -8150,7 +8150,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d430-d449;1"
+            "dtmi:com:example:d430_d449;1"
         ],
         "displayName": "d449. Carrying, moving and handling objects, other specified and",
         "description": ""
@@ -8161,13 +8161,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d450-d469;1"
+            "dtmi:com:example:d450_d469;1"
         ],
         "displayName": "d450. Walking",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d450-d469;1",
+        "@id": "dtmi:com:example:d450_d469;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -8249,7 +8249,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d450-d469;1"
+            "dtmi:com:example:d450_d469;1"
         ],
         "displayName": "d455. Moving around",
         "description": ""
@@ -8337,7 +8337,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d450-d469;1"
+            "dtmi:com:example:d450_d469;1"
         ],
         "displayName": "d460. Moving around in different locations",
         "description": ""
@@ -8403,7 +8403,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d450-d469;1"
+            "dtmi:com:example:d450_d469;1"
         ],
         "displayName": "d465. Moving around using equipment",
         "description": ""
@@ -8414,7 +8414,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d450-d469;1"
+            "dtmi:com:example:d450_d469;1"
         ],
         "displayName": "d469. Walking and moving, other specified and unspecified",
         "description": ""
@@ -8425,13 +8425,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d470-d489;1"
+            "dtmi:com:example:d470_d489;1"
         ],
         "displayName": "d470. Using transportation",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d470-d489;1",
+        "@id": "dtmi:com:example:d470_d489;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -8502,7 +8502,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d470-d489;1"
+            "dtmi:com:example:d470_d489;1"
         ],
         "displayName": "d475. Driving",
         "description": ""
@@ -8568,7 +8568,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d470-d489;1"
+            "dtmi:com:example:d470_d489;1"
         ],
         "displayName": "d480. Riding animals for transportation",
         "description": ""
@@ -8579,7 +8579,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d470-d489;1"
+            "dtmi:com:example:d470_d489;1"
         ],
         "displayName": "d489. Moving around using transportation, other specified and un",
         "description": ""
@@ -9052,13 +9052,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d610-d629;1"
+            "dtmi:com:example:d610_d629;1"
         ],
         "displayName": "d610. Acquiring a place to live",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d610-d629;1",
+        "@id": "dtmi:com:example:d610_d629;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -9129,7 +9129,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d610-d629;1"
+            "dtmi:com:example:d610_d629;1"
         ],
         "displayName": "d620. Acquisition of goods and services",
         "description": ""
@@ -9184,7 +9184,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d610-d629;1"
+            "dtmi:com:example:d610_d629;1"
         ],
         "displayName": "d629. Acquisition of necessities, other specified and unspecifie",
         "description": ""
@@ -9195,13 +9195,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d630-d649;1"
+            "dtmi:com:example:d630_d649;1"
         ],
         "displayName": "d630. Preparing meals",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d630-d649;1",
+        "@id": "dtmi:com:example:d630_d649;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -9261,7 +9261,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d630-d649;1"
+            "dtmi:com:example:d630_d649;1"
         ],
         "displayName": "d640. Doing housework",
         "description": ""
@@ -9360,7 +9360,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d630-d649;1"
+            "dtmi:com:example:d630_d649;1"
         ],
         "displayName": "d649. Household tasks, other specified and unspecified",
         "description": ""
@@ -9371,13 +9371,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d650-d669;1"
+            "dtmi:com:example:d650_d669;1"
         ],
         "displayName": "d650. Caring for household objects",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d650-d669;1",
+        "@id": "dtmi:com:example:d650_d669;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -9492,7 +9492,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d650-d669;1"
+            "dtmi:com:example:d650_d669;1"
         ],
         "displayName": "d660. Assisting others",
         "description": ""
@@ -9591,7 +9591,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d650-d669;1"
+            "dtmi:com:example:d650_d669;1"
         ],
         "displayName": "d669. Caring for household objects and assisting others, other s",
         "description": ""
@@ -9635,13 +9635,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d710-d729;1"
+            "dtmi:com:example:d710_d729;1"
         ],
         "displayName": "d710. Basic interpersonal interactions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d710-d729;1",
+        "@id": "dtmi:com:example:d710_d729;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -9745,7 +9745,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d710-d729;1"
+            "dtmi:com:example:d710_d729;1"
         ],
         "displayName": "d720. Complex interpersonal interactions",
         "description": ""
@@ -9833,7 +9833,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d710-d729;1"
+            "dtmi:com:example:d710_d729;1"
         ],
         "displayName": "d729. General interpersonal interactions, other specified and un",
         "description": ""
@@ -9844,13 +9844,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d730-d779;1"
+            "dtmi:com:example:d730_d779;1"
         ],
         "displayName": "d730. Relating with strangers",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d730-d779;1",
+        "@id": "dtmi:com:example:d730_d779;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -9866,7 +9866,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d730-d779;1"
+            "dtmi:com:example:d730_d779;1"
         ],
         "displayName": "d740. Formal relationships",
         "description": ""
@@ -9932,7 +9932,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d730-d779;1"
+            "dtmi:com:example:d730_d779;1"
         ],
         "displayName": "d750. Informal social relationships",
         "description": ""
@@ -10020,7 +10020,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d730-d779;1"
+            "dtmi:com:example:d730_d779;1"
         ],
         "displayName": "d760. Family relationships",
         "description": ""
@@ -10097,7 +10097,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d730-d779;1"
+            "dtmi:com:example:d730_d779;1"
         ],
         "displayName": "d770. Intimate relationships",
         "description": ""
@@ -10163,7 +10163,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d730-d779;1"
+            "dtmi:com:example:d730_d779;1"
         ],
         "displayName": "d779. Particular interpersonal relationships, other specified an",
         "description": ""
@@ -10207,13 +10207,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d810-d839;1"
+            "dtmi:com:example:d810_d839;1"
         ],
         "displayName": "d810. Informal education",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d810-d839;1",
+        "@id": "dtmi:com:example:d810_d839;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -10229,7 +10229,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d810-d839;1"
+            "dtmi:com:example:d810_d839;1"
         ],
         "displayName": "d815. Preschool education",
         "description": ""
@@ -10240,7 +10240,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d810-d839;1"
+            "dtmi:com:example:d810_d839;1"
         ],
         "displayName": "d820. School education",
         "description": ""
@@ -10251,7 +10251,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d810-d839;1"
+            "dtmi:com:example:d810_d839;1"
         ],
         "displayName": "d825. Vocational training",
         "description": ""
@@ -10262,7 +10262,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d810-d839;1"
+            "dtmi:com:example:d810_d839;1"
         ],
         "displayName": "d830. Higher education",
         "description": ""
@@ -10273,7 +10273,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d810-d839;1"
+            "dtmi:com:example:d810_d839;1"
         ],
         "displayName": "d839. Education, other specified and unspecified",
         "description": ""
@@ -10284,13 +10284,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d840-d859;1"
+            "dtmi:com:example:d840_d859;1"
         ],
         "displayName": "d840. Apprenticeship (work preparation)",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d840-d859;1",
+        "@id": "dtmi:com:example:d840_d859;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -10306,7 +10306,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d840-d859;1"
+            "dtmi:com:example:d840_d859;1"
         ],
         "displayName": "d845. Acquiring, keeping and terminating a job",
         "description": ""
@@ -10372,7 +10372,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d840-d859;1"
+            "dtmi:com:example:d840_d859;1"
         ],
         "displayName": "d850. Remunerative employment",
         "description": ""
@@ -10438,7 +10438,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d840-d859;1"
+            "dtmi:com:example:d840_d859;1"
         ],
         "displayName": "d855. Non-remunerative employment",
         "description": ""
@@ -10449,7 +10449,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d840-d859;1"
+            "dtmi:com:example:d840_d859;1"
         ],
         "displayName": "d859. Work and employment, other specified and unspecified",
         "description": ""
@@ -10460,13 +10460,13 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d860-d879;1"
+            "dtmi:com:example:d860_d879;1"
         ],
         "displayName": "d860. Basic economic transactions",
         "description": ""
     },
     {
-        "@id": "dtmi:com:example:d860-d879;1",
+        "@id": "dtmi:com:example:d860_d879;1",
         "@type": "Interface",
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
@@ -10482,7 +10482,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d860-d879;1"
+            "dtmi:com:example:d860_d879;1"
         ],
         "displayName": "d865. Complex economic transactions",
         "description": ""
@@ -10493,7 +10493,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d860-d879;1"
+            "dtmi:com:example:d860_d879;1"
         ],
         "displayName": "d870. Economic self-sufficiency",
         "description": ""
@@ -10548,7 +10548,7 @@
         "contents": [],
         "@context": "dtmi:dtdl:context;2",
         "extends": [
-            "dtmi:com:example:d860-d879;1"
+            "dtmi:com:example:d860_d879;1"
         ],
         "displayName": "d879. Economic life, other specified and unspecified",
         "description": ""
