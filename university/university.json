@@ -1,0 +1,83 @@
+[
+    {
+        "@id": "dtmi:com:example:universityPerson;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "file://workspaces/RdfToDtdlConverter/input/universityfullName",
+                "schema": "string",
+                "writable": true
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "description": ""
+    },
+    {
+        "@id": "dtmi:com:example:universityStudent;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "universityenrolledIn",
+                "target": "dtmi:com:example:universityCourse;1",
+                "displayName": "universityenrolledIn"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:com:example:universityPerson;1"
+        ],
+        "description": ""
+    },
+    {
+        "@id": "dtmi:com:example:universityProfessor;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Relationship",
+                "name": "universityteaches",
+                "target": "dtmi:com:example:universityCourse;1",
+                "displayName": "universityteaches"
+            },
+            {
+                "@type": "Relationship",
+                "name": "universitybelongsTo",
+                "target": "dtmi:com:example:universityDepartment;1",
+                "displayName": "universitybelongsTo"
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "extends": [
+            "dtmi:com:example:universityPerson;1"
+        ],
+        "description": ""
+    },
+    {
+        "@id": "dtmi:com:example:universityCourse;1",
+        "@type": "Interface",
+        "contents": [
+            {
+                "@type": "Property",
+                "name": "file://workspaces/RdfToDtdlConverter/input/universitycourseCode",
+                "schema": "string",
+                "writable": true
+            },
+            {
+                "@type": "Property",
+                "name": "file://workspaces/RdfToDtdlConverter/input/universitycredits",
+                "schema": "integer",
+                "writable": true
+            }
+        ],
+        "@context": "dtmi:dtdl:context;2",
+        "description": ""
+    },
+    {
+        "@id": "dtmi:com:example:universityDepartment;1",
+        "@type": "Interface",
+        "contents": [],
+        "@context": "dtmi:dtdl:context;2",
+        "description": ""
+    }
+]
