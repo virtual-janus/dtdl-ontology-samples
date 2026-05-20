@@ -5,7 +5,7 @@
         "contents": [
             {
                 "@type": "Property",
-                "name": "file://workspaces/RdfToDtdlConverter/input/universityfullName",
+                "name": "universityfullName",
                 "schema": "string",
                 "writable": true
             }
@@ -59,13 +59,13 @@
         "contents": [
             {
                 "@type": "Property",
-                "name": "file://workspaces/RdfToDtdlConverter/input/universitycourseCode",
+                "name": "universitycourseCode",
                 "schema": "string",
                 "writable": true
             },
             {
                 "@type": "Property",
-                "name": "file://workspaces/RdfToDtdlConverter/input/universitycredits",
+                "name": "universitycredits",
                 "schema": "integer",
                 "writable": true
             }
