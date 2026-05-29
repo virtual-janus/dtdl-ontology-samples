@@ -19,16 +19,6 @@
         "@type": "Telemetry",
         "name": "occupancyCount",
         "schema": "integer"
-      },
-      {
-        "@type": "Relationship",
-        "name": "equivalentTo",
-        "displayName": "Equivalent Source Space",
-        "target": [
-          "dtmi:aiccon:Room;1",
-          "dtmi:industrial:ProductionArea;1",
-          "dtmi:energy:ThermalZone;1"
-        ]
       }
     ]
   },
@@ -56,23 +46,6 @@
         "name": "dewPoint",
         "schema": "double",
         "comment": "degreeCelsius"
-      },
-
-      {
-        "@type": "Relationship",
-        "name": "mapsFrom",
-        "displayName": "Source Sensor Mapping",
-        "target": [
-          "dtmi:aiccon:ZoneTempSensor;1",
-          "dtmi:industrial:ProcessVariableSensor;1",
-          "dtmi:energy:ThermalNode;1"
-        ]
-      },
-
-      {
-        "@type": "Relationship",
-        "name": "monitors",
-        "target": "dtmi:canonical:Space;1"
       }
     ]
   },
@@ -91,73 +64,15 @@
       },
       {
         "@type": "Telemetry",
-        "name": "supplyTemperature",
-        "schema": "double",
-        "comment": "degreeCelsius"
-      },
-      {
-        "@type": "Telemetry",
-        "name": "returnTemperature",
-        "schema": "double",
-        "comment": "degreeCelsius"
-      },
-      {
-        "@type": "Telemetry",
-        "name": "pressure",
-        "schema": "double",
-        "comment": "pascal"
-      },
-      {
-        "@type": "Telemetry",
         "name": "energyConsumption",
         "schema": "double",
         "comment": "kilowatt"
       },
       {
-        "@type": "Telemetry",
-        "name": "emissionsRate",
-        "schema": "double",
-        "comment": "gramPerHour"
-      },
-      {
-        "@type": "Telemetry",
-        "name": "motorCurrent",
-        "schema": "double",
-        "comment": "ampere"
-      },
-
-      {
         "@type": "Property",
         "name": "temperatureSetpoint",
         "schema": "double",
         "comment": "degreeCelsius"
-      },
-      {
-        "@type": "Property",
-        "name": "operatingState",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "maintenanceStatus",
-        "schema": "string"
-      },
-
-      {
-        "@type": "Relationship",
-        "name": "controlsSpace",
-        "target": "dtmi:canonical:Space;1"
-      },
-
-      {
-        "@type": "Relationship",
-        "name": "mapsFrom",
-        "displayName": "Source HVAC Mapping",
-        "target": [
-          "dtmi:aiccon:AHU;1",
-          "dtmi:industrial:ThermalConditioningUnit;1",
-          "dtmi:energy:ClimateAsset;1"
-        ]
       }
     ]
   },
@@ -177,21 +92,35 @@
         "@type": "Property",
         "name": "controlMode",
         "schema": "string"
-      },
+      }
+    ]
+  },
 
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:canonical:OntologyMapping;1",
+    "@type": "Interface",
+    "displayName": "Ontology Mapping",
+    "contents": [
       {
-        "@type": "Relationship",
-        "name": "controls",
-        "target": "dtmi:canonical:HVACSystem;1"
+        "@type": "Property",
+        "name": "canonicalId",
+        "schema": "string"
       },
-
       {
-        "@type": "Relationship",
-        "name": "mapsFrom",
-        "displayName": "Source Control Mapping",
-        "target": [
-          "dtmi:industrial:PIDController;1"
-        ]
+        "@type": "Property",
+        "name": "sourceId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "mappingType",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "confidenceScore",
+        "schema": "double"
       }
     ]
   }
