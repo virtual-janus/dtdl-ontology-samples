@@ -14,13 +14,13 @@
         "@type": "Telemetry",
         "name": "carbonIntensity",
         "schema": "double",
-        "x-unit": "gramPerKilowattHour"
+        "comment": "gramPerKilowattHour"
       },
       {
         "@type": "Telemetry",
         "name": "energyDemand",
         "schema": "double",
-        "x-unit": "kilowatt"
+        "comment": "kilowatt"
       }
     ]
   },
@@ -35,13 +35,13 @@
         "@type": "Telemetry",
         "name": "ambientTemperature",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "humidityIndex",
         "schema": "double",
-        "x-unit": "percent"
+        "comment": "percent"
       },
       {
         "@type": "Property",
@@ -66,25 +66,25 @@
         "@type": "Telemetry",
         "name": "powerConsumption",
         "schema": "double",
-        "x-unit": "kilowatt"
+        "comment": "kilowatt"
       },
       {
         "@type": "Telemetry",
         "name": "airflowEnergyState",
         "schema": "double",
-        "x-unit": "percent"
+        "comment": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "co2EmissionRate",
         "schema": "double",
-        "x-unit": "gramPerHour"
+        "comment": "gramPerHour"
       },
       {
         "@type": "Property",
         "name": "efficiencyTargetTemp",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Property",
