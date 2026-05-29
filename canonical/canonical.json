@@ -3,16 +3,11 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:canonical:Space;1",
     "@type": "Interface",
-    "displayName": "Space",
+    "displayName": "Canonical Space",
     "contents": [
       {
         "@type": "Property",
-        "name": "spaceIdentifier",
-        "schema": "string"
-      },
-      {
-        "@type": "Property",
-        "name": "spaceType",
+        "name": "spaceId",
         "schema": "string"
       },
       {
@@ -26,10 +21,14 @@
         "schema": "integer"
       },
       {
-        "@type": "Telemetry",
-        "name": "thermalLoad",
-        "schema": "double",
-        "comment": "kilowatt"
+        "@type": "Relationship",
+        "name": "equivalentTo",
+        "displayName": "Equivalent Source Space",
+        "target": [
+          "dtmi:aiccon:Room;1",
+          "dtmi:industrial:ProductionArea;1",
+          "dtmi:energy:ThermalZone;1"
+        ]
       }
     ]
   },
@@ -38,7 +37,7 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:canonical:EnvironmentalSensor;1",
     "@type": "Interface",
-    "displayName": "Environmental Sensor",
+    "displayName": "Canonical Environmental Sensor",
     "contents": [
       {
         "@type": "Telemetry",
@@ -58,11 +57,18 @@
         "schema": "double",
         "comment": "degreeCelsius"
       },
+
       {
-        "@type": "Property",
-        "name": "sensorStatus",
-        "schema": "string"
+        "@type": "Relationship",
+        "name": "mapsFrom",
+        "displayName": "Source Sensor Mapping",
+        "target": [
+          "dtmi:aiccon:ZoneTempSensor;1",
+          "dtmi:industrial:ProcessVariableSensor;1",
+          "dtmi:energy:ThermalNode;1"
+        ]
       },
+
       {
         "@type": "Relationship",
         "name": "monitors",
@@ -75,7 +81,7 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:canonical:HVACSystem;1",
     "@type": "Interface",
-    "displayName": "HVAC System",
+    "displayName": "Canonical HVAC System",
     "contents": [
       {
         "@type": "Telemetry",
@@ -119,6 +125,7 @@
         "schema": "double",
         "comment": "ampere"
       },
+
       {
         "@type": "Property",
         "name": "temperatureSetpoint",
@@ -135,10 +142,22 @@
         "name": "maintenanceStatus",
         "schema": "string"
       },
+
       {
         "@type": "Relationship",
-        "name": "conditions",
+        "name": "controlsSpace",
         "target": "dtmi:canonical:Space;1"
+      },
+
+      {
+        "@type": "Relationship",
+        "name": "mapsFrom",
+        "displayName": "Source HVAC Mapping",
+        "target": [
+          "dtmi:aiccon:AHU;1",
+          "dtmi:industrial:ThermalConditioningUnit;1",
+          "dtmi:energy:ClimateAsset;1"
+        ]
       }
     ]
   },
@@ -147,7 +166,7 @@
     "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:canonical:ControlSystem;1",
     "@type": "Interface",
-    "displayName": "Control System",
+    "displayName": "Canonical Control System",
     "contents": [
       {
         "@type": "Telemetry",
@@ -159,10 +178,20 @@
         "name": "controlMode",
         "schema": "string"
       },
+
       {
         "@type": "Relationship",
         "name": "controls",
         "target": "dtmi:canonical:HVACSystem;1"
+      },
+
+      {
+        "@type": "Relationship",
+        "name": "mapsFrom",
+        "displayName": "Source Control Mapping",
+        "target": [
+          "dtmi:industrial:PIDController;1"
+        ]
       }
     ]
   }
