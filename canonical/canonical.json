@@ -1,0 +1,169 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:canonical:Space;1",
+    "@type": "Interface",
+    "displayName": "Space",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "spaceIdentifier",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "spaceType",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "occupancyState",
+        "schema": "string"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "occupancyCount",
+        "schema": "integer"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "thermalLoad",
+        "schema": "double",
+        "unit": "kilowatt"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:canonical:EnvironmentalSensor;1",
+    "@type": "Interface",
+    "displayName": "Environmental Sensor",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "humidity",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "dewPoint",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "sensorStatus",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "monitors",
+        "target": "dtmi:canonical:Space;1"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:canonical:HVACSystem;1",
+    "@type": "Interface",
+    "displayName": "HVAC System",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "fanSpeed",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "supplyTemperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "returnTemperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "pressure",
+        "schema": "double",
+        "unit": "pascal"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "energyConsumption",
+        "schema": "double",
+        "unit": "kilowatt"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "emissionsRate",
+        "schema": "double",
+        "unit": "gramPerHour"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "motorCurrent",
+        "schema": "double",
+        "unit": "ampere"
+      },
+      {
+        "@type": "Property",
+        "name": "temperatureSetpoint",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "operatingState",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "maintenanceStatus",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "conditions",
+        "target": "dtmi:canonical:Space;1"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:canonical:ControlSystem;1",
+    "@type": "Interface",
+    "displayName": "Control System",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "controlError",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "controlMode",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "controls",
+        "target": "dtmi:canonical:HVACSystem;1"
+      }
+    ]
+  }
+]
