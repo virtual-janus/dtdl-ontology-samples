@@ -29,7 +29,7 @@
         "@type": "Telemetry",
         "name": "thermalLoad",
         "schema": "double",
-        "x-unit": "kilowatt"
+        "comment": "kilowatt"
       }
     ]
   },
@@ -44,19 +44,19 @@
         "@type": "Telemetry",
         "name": "temperature",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "humidity",
         "schema": "double",
-        "x-unit": "percent"
+        "comment": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "dewPoint",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Property",
@@ -81,49 +81,49 @@
         "@type": "Telemetry",
         "name": "fanSpeed",
         "schema": "double",
-        "x-unit": "percent"
+        "comment": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "supplyTemperature",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "returnTemperature",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "pressure",
         "schema": "double",
-        "x-unit": "pascal"
+        "comment": "pascal"
       },
       {
         "@type": "Telemetry",
         "name": "energyConsumption",
         "schema": "double",
-        "x-unit": "kilowatt"
+        "comment": "kilowatt"
       },
       {
         "@type": "Telemetry",
         "name": "emissionsRate",
         "schema": "double",
-        "x-unit": "gramPerHour"
+        "comment": "gramPerHour"
       },
       {
         "@type": "Telemetry",
         "name": "motorCurrent",
         "schema": "double",
-        "x-unit": "ampere"
+        "comment": "ampere"
       },
       {
         "@type": "Property",
         "name": "temperatureSetpoint",
         "schema": "double",
-        "x-unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Property",
