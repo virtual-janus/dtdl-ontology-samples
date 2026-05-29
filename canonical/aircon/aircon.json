@@ -38,13 +38,13 @@
         "@type": "Telemetry",
         "name": "zoneTemp",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "relativeHumidity",
         "schema": "double",
-        "unit": "percent"
+        "x-unit": "percent"
       },
       {
         "@type": "Property",
@@ -69,31 +69,31 @@
         "@type": "Telemetry",
         "name": "supplyFanSpeed",
         "schema": "double",
-        "unit": "percent"
+        "x-unit": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "returnAirTemp",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "supplyAirTemp",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "staticPressure",
         "schema": "double",
-        "unit": "pascal"
+        "x-unit": "pascal"
       },
       {
         "@type": "Property",
         "name": "coolingSetpoint",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Property",
