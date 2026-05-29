@@ -29,7 +29,7 @@
         "@type": "Telemetry",
         "name": "thermalLoad",
         "schema": "double",
-        "unit": "kilowatt"
+        "x-unit": "kilowatt"
       }
     ]
   },
@@ -44,19 +44,19 @@
         "@type": "Telemetry",
         "name": "temperature",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "humidity",
         "schema": "double",
-        "unit": "percent"
+        "x-unit": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "dewPoint",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Property",
@@ -81,49 +81,49 @@
         "@type": "Telemetry",
         "name": "fanSpeed",
         "schema": "double",
-        "unit": "percent"
+        "x-unit": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "supplyTemperature",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "returnTemperature",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "pressure",
         "schema": "double",
-        "unit": "pascal"
+        "x-unit": "pascal"
       },
       {
         "@type": "Telemetry",
         "name": "energyConsumption",
         "schema": "double",
-        "unit": "kilowatt"
+        "x-unit": "kilowatt"
       },
       {
         "@type": "Telemetry",
         "name": "emissionsRate",
         "schema": "double",
-        "unit": "gramPerHour"
+        "x-unit": "gramPerHour"
       },
       {
         "@type": "Telemetry",
         "name": "motorCurrent",
         "schema": "double",
-        "unit": "ampere"
+        "x-unit": "ampere"
       },
       {
         "@type": "Property",
         "name": "temperatureSetpoint",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Property",
