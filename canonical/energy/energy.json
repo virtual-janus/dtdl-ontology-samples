@@ -1,0 +1,101 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:energy:ThermalZone;1",
+    "@type": "Interface",
+    "displayName": "Thermal Zone",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "zoneClassification",
+        "schema": "string"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "carbonIntensity",
+        "schema": "double",
+        "unit": "gramPerKilowattHour"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "energyDemand",
+        "schema": "double",
+        "unit": "kilowatt"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:energy:ThermalNode;1",
+    "@type": "Interface",
+    "displayName": "Thermal Node",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "ambientTemperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "humidityIndex",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Property",
+        "name": "utilizationState",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "associatedWith",
+        "target": "dtmi:energy:ThermalZone;1"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:energy:ClimateAsset;1",
+    "@type": "Interface",
+    "displayName": "Climate Asset",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "powerConsumption",
+        "schema": "double",
+        "unit": "kilowatt"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "airflowEnergyState",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "co2EmissionRate",
+        "schema": "double",
+        "unit": "gramPerHour"
+      },
+      {
+        "@type": "Property",
+        "name": "efficiencyTargetTemp",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "demandResponseMode",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "optimizes",
+        "target": "dtmi:energy:ThermalZone;1"
+      }
+    ]
+  }
+]
