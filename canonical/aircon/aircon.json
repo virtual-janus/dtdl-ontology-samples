@@ -1,0 +1,114 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:aiccon:Room;1",
+    "@type": "Interface",
+    "displayName": "Room",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "roomId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "roomName",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "occupancyMode",
+        "schema": "string"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "occupancyCount",
+        "schema": "integer"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:aiccon:ZoneTempSensor;1",
+    "@type": "Interface",
+    "displayName": "Zone Temperature Sensor",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "zoneTemp",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "relativeHumidity",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Property",
+        "name": "occupiedFlag",
+        "schema": "boolean"
+      },
+      {
+        "@type": "Relationship",
+        "name": "locatedIn",
+        "target": "dtmi:aiccon:Room;1"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:aiccon:AHU;1",
+    "@type": "Interface",
+    "displayName": "Air Handling Unit",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "supplyFanSpeed",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "returnAirTemp",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "supplyAirTemp",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "staticPressure",
+        "schema": "double",
+        "unit": "pascal"
+      },
+      {
+        "@type": "Property",
+        "name": "coolingSetpoint",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "operatingMode",
+        "schema": "string"
+      },
+      {
+        "@type": "Command",
+        "name": "resetAlarm"
+      },
+      {
+        "@type": "Relationship",
+        "name": "serves",
+        "target": "dtmi:aiccon:Room;1"
+      }
+    ]
+  }
+]
