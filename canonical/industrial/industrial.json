@@ -14,7 +14,7 @@
         "@type": "Telemetry",
         "name": "thermalLoad",
         "schema": "double",
-        "unit": "kilowatt"
+        "x-unit": "kilowatt"
       }
     ]
   },
@@ -29,13 +29,13 @@
         "@type": "Telemetry",
         "name": "processVariable",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Telemetry",
         "name": "dewPoint",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Property",
@@ -94,25 +94,25 @@
         "@type": "Telemetry",
         "name": "blowerRPM",
         "schema": "integer",
-        "unit": "revolutionsPerMinute"
+        "x-unit": "revolutionsPerMinute"
       },
       {
         "@type": "Telemetry",
         "name": "heatExchangerEfficiency",
         "schema": "double",
-        "unit": "percent"
+        "x-unit": "percent"
       },
       {
         "@type": "Telemetry",
         "name": "motorCurrent",
         "schema": "double",
-        "unit": "ampere"
+        "x-unit": "ampere"
       },
       {
         "@type": "Property",
         "name": "targetPV",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "x-unit": "degreeCelsius"
       },
       {
         "@type": "Property",
