@@ -1,0 +1,134 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:industrial:ProductionArea;1",
+    "@type": "Interface",
+    "displayName": "Production Area",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "areaCode",
+        "schema": "string"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "thermalLoad",
+        "schema": "double",
+        "unit": "kilowatt"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:industrial:ProcessVariableSensor;1",
+    "@type": "Interface",
+    "displayName": "Process Variable Sensor",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "processVariable",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "dewPoint",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "sensorHealth",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "calibrationState",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "installedIn",
+        "target": "dtmi:industrial:ProductionArea;1"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:industrial:PIDController;1",
+    "@type": "Interface",
+    "displayName": "PID Controller",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "kp",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "ki",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "kd",
+        "schema": "double"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "controlError",
+        "schema": "double"
+      }
+    ]
+  },
+
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:industrial:ThermalConditioningUnit;1",
+    "@type": "Interface",
+    "displayName": "Thermal Conditioning Unit",
+    "contents": [
+      {
+        "@type": "Telemetry",
+        "name": "blowerRPM",
+        "schema": "integer",
+        "unit": "revolutionsPerMinute"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "heatExchangerEfficiency",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@type": "Telemetry",
+        "name": "motorCurrent",
+        "schema": "double",
+        "unit": "ampere"
+      },
+      {
+        "@type": "Property",
+        "name": "targetPV",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "maintenanceState",
+        "schema": "string"
+      },
+      {
+        "@type": "Relationship",
+        "name": "regulatedBy",
+        "target": "dtmi:industrial:PIDController;1"
+      },
+      {
+        "@type": "Relationship",
+        "name": "conditions",
+        "target": "dtmi:industrial:ProductionArea;1"
+      }
+    ]
+  }
+]
