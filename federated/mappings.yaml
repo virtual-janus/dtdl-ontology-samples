@@ -1,0 +1,33 @@
+entityMappings:
+
+  dtmi:demo:bms:AirConditioningUnit;1:
+    canonical: dtmi:demo:canonical:CoolingUnit;1
+
+  dtmi:demo:mfg:HVACSystem;1:
+    canonical: dtmi:demo:canonical:CoolingUnit;1
+
+  dtmi:demo:ems:EnergyConsumer;1:
+    canonical: dtmi:demo:canonical:CoolingUnit;1
+
+propertyMappings:
+
+  dtmi:demo:bms:AirConditioningUnit;1:
+
+    assetId:
+      canonical: identifier
+
+    supplyTemperature:
+      canonical: temperature
+
+      sourceUnit: degreeCelsius
+      targetUnit: degreeCelsius
+
+  dtmi:demo:ems:EnergyConsumer;1:
+
+    returnAirTemp:
+      canonical: temperature
+
+      sourceUnit: degreeFahrenheit
+      targetUnit: degreeCelsius
+
+      transform: "(value - 32) * 5 / 9"
