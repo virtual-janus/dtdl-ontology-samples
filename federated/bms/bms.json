@@ -1,0 +1,37 @@
+[
+  {
+    "@id": "dtmi:demo:bms:Building;1",
+    "@type": "Interface",
+    "displayName": "Building",
+    "contents": [
+      {
+        "@type": "Relationship",
+        "name": "contains",
+        "target": "dtmi:demo:bms:AirConditioningUnit;1"
+      }
+    ]
+  },
+  {
+    "@id": "dtmi:demo:bms:AirConditioningUnit;1",
+    "@type": "Interface",
+    "displayName": "Air Conditioning Unit",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "assetId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "status",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "supplyTemperature",
+        "schema": "double",
+        "comment": "degreeCelsius"
+      }
+    ]
+  }
+]
