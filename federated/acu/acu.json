@@ -1,0 +1,24 @@
+[
+  {
+    "@id": "dtmi:demo:mfg:HVACSystem;1",
+    "@type": "Interface",
+    "displayName": "HVAC System",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "serialNumber",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "ratedCoolingCapacity",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "ratedPower",
+        "schema": "double"
+      }
+    ]
+  }
+]
