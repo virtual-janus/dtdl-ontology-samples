@@ -1,0 +1,24 @@
+[
+  {
+    "@id": "dtmi:demo:ems:EnergyConsumer;1",
+    "@type": "Interface",
+    "displayName": "Energy Consumer",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "equipmentRef",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "powerConsumption",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "returnAirTemp",
+        "schema": "double"
+      }
+    ]
+  }
+]
