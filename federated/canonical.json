@@ -1,0 +1,38 @@
+[
+  {
+    "@context": "dtmi:dtdl:context;3",
+    "@id": "dtmi:demo:canonical:CoolingUnit;1",
+    "@type": "Interface",
+    "displayName": "Cooling Unit",
+    "contents": [
+      {
+        "@type": "Property",
+        "name": "identifier",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "status",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@type": "Property",
+        "name": "power",
+        "schema": "double",
+        "unit": "kilowatt"
+      },
+      {
+        "@type": "Property",
+        "name": "coolingCapacity",
+        "schema": "double",
+        "unit": "kilowatt"
+      }
+    ]
+  }
+]
