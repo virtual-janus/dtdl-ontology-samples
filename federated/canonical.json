@@ -19,7 +19,7 @@
         "@type": "Property",
         "name": "temperature",
         "schema": "double",
-        "unit": "degreeCelsius"
+        "comment": "degreeCelsius"
       },
       {
         "@type": "Property",
