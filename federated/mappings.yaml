@@ -31,3 +31,12 @@ propertyMappings:
       targetUnit: degreeCelsius
 
       transform: "(value - 32) * 5 / 9"
+
+identityResolution:
+
+  CoolingUnit:
+
+    mappings:
+
+      AC-101:
+        manufacturerSerial: SN-987654
