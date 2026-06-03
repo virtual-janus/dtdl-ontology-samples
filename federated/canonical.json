@@ -25,13 +25,13 @@
         "@type": "Property",
         "name": "power",
         "schema": "double",
-        "unit": "kilowatt"
+        "comment": "kilowatt"
       },
       {
         "@type": "Property",
         "name": "coolingCapacity",
         "schema": "double",
-        "unit": "kilowatt"
+        "comment": "kilowatt"
       }
     ]
   }
