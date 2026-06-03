@@ -1,5 +1,6 @@
 [
   {
+    "@context": "dtmi:dtdl:context;3",
     "@id": "dtmi:demo:mfg:HVACSystem;1",
     "@type": "Interface",
     "displayName": "HVAC System",
