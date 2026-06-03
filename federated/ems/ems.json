@@ -1,5 +1,6 @@
 [
   {
+    "@context": "dtmi:dtdl:context;3",,
     "@id": "dtmi:demo:ems:EnergyConsumer;1",
     "@type": "Interface",
     "displayName": "Energy Consumer",
