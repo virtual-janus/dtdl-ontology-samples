@@ -1,13 +1,19 @@
 [
   {
     "@context": "dtmi:dtdl:context;3",
-    "@id": "dtmi:demo:canonical:CoolingUnit;1",
+    "@id": "dtmi:demo:canonical:AirConditioner;1",
     "@type": "Interface",
-    "displayName": "Cooling Unit",
+    "displayName": "Air Conditioner",
+
     "contents": [
       {
         "@type": "Property",
-        "name": "identifier",
+        "name": "assetId",
+        "schema": "string"
+      },
+      {
+        "@type": "Property",
+        "name": "serialNumber",
         "schema": "string"
       },
       {
@@ -17,21 +23,28 @@
       },
       {
         "@type": "Property",
-        "name": "temperature",
-        "schema": "double",
-        "comment": "degreeCelsius"
+        "name": "ratedCoolingCapacity",
+        "schema": "double"
       },
       {
         "@type": "Property",
-        "name": "power",
-        "schema": "double",
-        "comment": "kilowatt"
+        "name": "ratedPower",
+        "schema": "double"
       },
       {
         "@type": "Property",
-        "name": "coolingCapacity",
-        "schema": "double",
-        "comment": "kilowatt"
+        "name": "powerConsumption",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "supplyTemperature",
+        "schema": "double"
+      },
+      {
+        "@type": "Property",
+        "name": "returnAirTemperature",
+        "schema": "double"
       }
     ]
   }
